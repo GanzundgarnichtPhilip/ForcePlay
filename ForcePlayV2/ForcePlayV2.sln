@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForcePlayV2", "ForcePlayV2\ForcePlayV2.csproj", "{D30ABF55-268C-4F45-B93C-0D2050D8086B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D30ABF55-268C-4F45-B93C-0D2050D8086B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30ABF55-268C-4F45-B93C-0D2050D8086B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30ABF55-268C-4F45-B93C-0D2050D8086B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30ABF55-268C-4F45-B93C-0D2050D8086B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CC54A7B-D3DE-4C34-B156-53BB0C4E5664}
+	EndGlobalSection
+EndGlobal
