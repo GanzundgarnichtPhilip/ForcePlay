@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phili\\OneDrive\\Desktop\\Projekte\\Sack-Developments\\Gamelauncher\\ForcePlay\\Raphael suckt\\ForcePlay\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj": {}
+    "C:\\Users\\danie\\OneDrive\\Desktop\\Sack-Developments\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phili\\OneDrive\\Desktop\\Projekte\\Sack-Developments\\Gamelauncher\\ForcePlay\\Raphael suckt\\ForcePlay\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj": {
+    "C:\\Users\\danie\\OneDrive\\Desktop\\Sack-Developments\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phili\\OneDrive\\Desktop\\Projekte\\Sack-Developments\\Gamelauncher\\ForcePlay\\Raphael suckt\\ForcePlay\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Desktop\\Sack-Developments\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj",
         "projectName": "ForcePlayV2",
-        "projectPath": "C:\\Users\\phili\\OneDrive\\Desktop\\Projekte\\Sack-Developments\\Gamelauncher\\ForcePlay\\Raphael suckt\\ForcePlay\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj",
-        "packagesPath": "C:\\Users\\phili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phili\\OneDrive\\Desktop\\Projekte\\Sack-Developments\\Gamelauncher\\ForcePlay\\Raphael suckt\\ForcePlay\\ForcePlayV2\\ForcePlayV2\\obj\\",
+        "projectPath": "C:\\Users\\danie\\OneDrive\\Desktop\\Sack-Developments\\ForcePlayV2\\ForcePlayV2\\ForcePlayV2.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\OneDrive\\Desktop\\Sack-Developments\\ForcePlayV2\\ForcePlayV2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\phili\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
