@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menue));
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.NeuesSpielHinzufügen = new System.Windows.Forms.Button();
             this.Buttons_Leiste = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,15 +46,17 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // NeuesSpielHinzufügen
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.NeuesSpielHinzufügen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.NeuesSpielHinzufügen.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.NeuesSpielHinzufügen, "NeuesSpielHinzufügen");
+            this.NeuesSpielHinzufügen.ForeColor = System.Drawing.Color.White;
+            this.NeuesSpielHinzufügen.Name = "NeuesSpielHinzufügen";
+            this.NeuesSpielHinzufügen.UseVisualStyleBackColor = false;
+            this.NeuesSpielHinzufügen.Click += new System.EventHandler(this.button2_Click);
             // 
             // Buttons_Leiste
             // 
@@ -88,11 +90,12 @@
             this.ControlBox = false;
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Logo);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.NeuesSpielHinzufügen);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Buttons_Leiste);
             this.Name = "Menue";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Menue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Buttons_Leiste)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,9 +103,13 @@
 
         #endregion
         private Button button1;
-        private Button button2;
+        private Button NeuesSpielHinzufügen;
         private PictureBox Buttons_Leiste;
         private Label Logo;
         private Button button3;
+        private Button button5;
+        private CheckBox checkBox1;
+        private Button button4;
+        private Label label1;
     }
 }

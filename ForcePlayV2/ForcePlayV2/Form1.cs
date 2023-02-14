@@ -10,6 +10,20 @@ namespace ForcePlayV2
         private void button3_Click(object sender, EventArgs e)
         {
             Close();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menue_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
