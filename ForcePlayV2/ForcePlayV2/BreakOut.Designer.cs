@@ -112,6 +112,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(69, 30);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "blocks";
             // 
             // pictureBox2
             // 
@@ -121,6 +122,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(69, 30);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "blocks";
             // 
             // pictureBox3
             // 
@@ -130,6 +132,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(69, 30);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "blocks";
             // 
             // pictureBox4
             // 
@@ -139,6 +142,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(69, 30);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "blocks";
             // 
             // pictureBox5
             // 
@@ -148,6 +152,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(69, 30);
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "blocks";
             // 
             // pictureBox6
             // 
@@ -157,6 +162,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(69, 30);
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "blocks";
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox7
@@ -167,6 +173,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(69, 30);
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "blocks";
             // 
             // pictureBox8
             // 
@@ -176,6 +183,7 @@
             this.pictureBox8.Size = new System.Drawing.Size(69, 30);
             this.pictureBox8.TabIndex = 10;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "blocks";
             // 
             // pictureBox9
             // 
@@ -185,6 +193,7 @@
             this.pictureBox9.Size = new System.Drawing.Size(69, 30);
             this.pictureBox9.TabIndex = 11;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "blocks";
             // 
             // pictureBox10
             // 
@@ -194,6 +203,7 @@
             this.pictureBox10.Size = new System.Drawing.Size(69, 30);
             this.pictureBox10.TabIndex = 12;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Tag = "blocks";
             // 
             // pictureBox11
             // 
@@ -203,6 +213,7 @@
             this.pictureBox11.Size = new System.Drawing.Size(69, 30);
             this.pictureBox11.TabIndex = 13;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Tag = "blocks";
             // 
             // pictureBox12
             // 
@@ -212,6 +223,7 @@
             this.pictureBox12.Size = new System.Drawing.Size(69, 30);
             this.pictureBox12.TabIndex = 14;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Tag = "blocks";
             // 
             // pictureBox13
             // 
@@ -221,6 +233,7 @@
             this.pictureBox13.Size = new System.Drawing.Size(69, 30);
             this.pictureBox13.TabIndex = 15;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "blocks";
             // 
             // pictureBox14
             // 
@@ -230,6 +243,7 @@
             this.pictureBox14.Size = new System.Drawing.Size(69, 30);
             this.pictureBox14.TabIndex = 16;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Tag = "blocks";
             // 
             // pictureBox15
             // 
@@ -239,6 +253,7 @@
             this.pictureBox15.Size = new System.Drawing.Size(69, 30);
             this.pictureBox15.TabIndex = 17;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Tag = "blocks";
             // 
             // pictureBox16
             // 
@@ -248,6 +263,7 @@
             this.pictureBox16.Size = new System.Drawing.Size(69, 30);
             this.pictureBox16.TabIndex = 18;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Tag = "blocks";
             // 
             // pictureBox17
             // 
@@ -257,6 +273,7 @@
             this.pictureBox17.Size = new System.Drawing.Size(69, 30);
             this.pictureBox17.TabIndex = 19;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Tag = "blocks";
             // 
             // pictureBox18
             // 
@@ -266,6 +283,7 @@
             this.pictureBox18.Size = new System.Drawing.Size(69, 30);
             this.pictureBox18.TabIndex = 20;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "blocks";
             // 
             // gameTimer
             // 
@@ -278,7 +296,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox16);

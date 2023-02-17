@@ -29,6 +29,8 @@ namespace ForcePlayV2
         public BreakOut()
         {
             InitializeComponent();
+
+            setupGame();
         }
 
         private void setupGame()
@@ -37,9 +39,18 @@ namespace ForcePlayV2
             ballx = 5;  
             bally = 5;  
             playerSpeed = 12;
-            
 
-            gameTimer.Start();  
+            score.Text = "Score: " + highscore;
+
+            gameTimer.Start();
+
+            foreach(Control x in this.Controls)
+            {
+                if(x is PictureBox && (string)x.Tag == "blocks")
+                {
+                    x.BackColor = Color.FromArgb(50, 50, 50);
+                }
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
