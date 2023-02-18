@@ -40,7 +40,7 @@ namespace ForcePlayV2
             bally = 5;  
             playerSpeed = 12;
 
-            score.Text = "Score: " + highscore;
+            score.Text = $"Score: {highscore}";
 
             gameTimer.Start();
 
@@ -48,7 +48,7 @@ namespace ForcePlayV2
             {
                 if(x is PictureBox && (string)x.Tag == "blocks")
                 {
-                    x.BackColor = Color.FromArgb(50, 50, 50);
+                    x.BackColor = Color.FromArgb(rnd.Next(256),rnd.Next(256), rnd.Next(256));
                 }
             }
         }
