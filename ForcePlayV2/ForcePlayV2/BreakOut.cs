@@ -40,7 +40,7 @@ namespace ForcePlayV2
             bally = 5;  
             playerSpeed = 12;
 
-            score.Text = "Score: " + highscore;
+            score.Text = $"Score: {highscore}";
 
             gameTimer.Start();
 
