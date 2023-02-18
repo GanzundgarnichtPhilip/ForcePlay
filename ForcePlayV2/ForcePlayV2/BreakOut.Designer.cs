@@ -318,6 +318,7 @@
             this.Controls.Add(this.player);
             this.Controls.Add(this.score);
             this.Name = "BreakOut";
+            this.Load += new System.EventHandler(this.BreakOut_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();

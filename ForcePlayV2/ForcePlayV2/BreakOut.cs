@@ -48,7 +48,7 @@ namespace ForcePlayV2
             {
                 if(x is PictureBox && (string)x.Tag == "blocks")
                 {
-                    x.BackColor = Color.FromArgb(50, 50, 50);
+                    x.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                 }
             }
         }
@@ -71,14 +71,45 @@ namespace ForcePlayV2
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
 
+            if(goLeft == true && player.Left > 0)
+            {
+                player.Left -= playerSpeed;
+            }
+
+            if (goRight == true && player.Left < 700)
+            {
+                player.Left += playerSpeed;
+            }
+
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
+            if(e.KeyCode == Keys.Left) 
+            {
+                goLeft = true;
+            }
 
+            if(e.KeyCode == Keys.Right)
+            {
+                goRight = true;
+            }
         }
 
         private void keyisup(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                goLeft = false;
+            }
+
+            if (e.KeyCode == Keys.Right)
+            {
+                goRight = false;
+            }
+        }
+
+        private void BreakOut_Load(object sender, EventArgs e)
         {
 
         }
