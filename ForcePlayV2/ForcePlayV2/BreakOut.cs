@@ -65,6 +65,8 @@ namespace ForcePlayV2
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
 
+            score.Text = $"Score: {highscore}";
+
             if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerSpeed;
