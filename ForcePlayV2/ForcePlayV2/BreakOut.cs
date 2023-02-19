@@ -81,6 +81,24 @@ namespace ForcePlayV2
                 player.Left += playerSpeed;
             }
 
+            ball.Left += ballx;
+            ball.Top += bally;
+
+            if(ball.Left < 0 || ball.Left > 775)
+            {
+                ballx = -ballx;
+            }
+
+            if(ball.Top < 0 )
+            {
+                bally = -bally;
+            }
+
+            if(ball.Bounds.IntersectsWith(player.Bounds))
+            {
+                bally = rnd.Next(5, 12) * -1;
+            }
+
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
