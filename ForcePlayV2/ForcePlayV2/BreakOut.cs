@@ -52,12 +52,6 @@ namespace ForcePlayV2
                 }
             }
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void player_Click(object sender, EventArgs e)
         {
 
@@ -97,6 +91,18 @@ namespace ForcePlayV2
             if(ball.Bounds.IntersectsWith(player.Bounds))
             {
                 bally = rnd.Next(5, 12) * -1;
+
+                if(ballx < 0)
+                {
+                    ballx = rnd.Next(5, 12) * -1;
+                }
+
+                else
+                {
+                    ballx = rnd.Next(5, 12);
+                }
+
+
             }
 
         }
