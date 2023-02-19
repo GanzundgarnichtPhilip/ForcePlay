@@ -102,7 +102,6 @@
             this.ball.Size = new System.Drawing.Size(24, 21);
             this.ball.TabIndex = 2;
             this.ball.TabStop = false;
-            this.ball.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 

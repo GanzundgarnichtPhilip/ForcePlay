@@ -65,7 +65,7 @@ namespace ForcePlayV2
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
 
-            if(goLeft == true && player.Left > 0)
+            if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerSpeed;
             }
@@ -78,21 +78,21 @@ namespace ForcePlayV2
             ball.Left += ballx;
             ball.Top += bally;
 
-            if(ball.Left < 0 || ball.Left > 775)
+            if (ball.Left < 0 || ball.Left > 775)
             {
                 ballx = -ballx;
             }
 
-            if(ball.Top < 0 )
+            if (ball.Top < 0)
             {
                 bally = -bally;
             }
 
-            if(ball.Bounds.IntersectsWith(player.Bounds))
+            if (ball.Bounds.IntersectsWith(player.Bounds))
             {
                 bally = rnd.Next(5, 12) * -1;
 
-                if(ballx < 0)
+                if (ballx < 0)
                 {
                     ballx = rnd.Next(5, 12) * -1;
                 }
@@ -101,8 +101,23 @@ namespace ForcePlayV2
                 {
                     ballx = rnd.Next(5, 12);
                 }
+            }
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "blocks")
+                {
+                    if(ball.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        highscore += 1;
+
+                        bally = -bally;
+
+                        this.Controls.Remove(x); 
+                    }
 
 
+                }
             }
 
         }
