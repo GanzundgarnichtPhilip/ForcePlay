@@ -133,12 +133,12 @@ namespace ForcePlayV2
 
             if(highscore == 18)
             {
-
+                gameOver("Sieg!!! === 15 Punkte ;)");
             }
 
             if(ball.Top > 580)
             {
-                
+                gameOver("Game Over!!!");
             }
 
 
