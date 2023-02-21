@@ -12,6 +12,7 @@ namespace ForcePlayV2
 {
     public partial class BreakOut : Form
     {
+        //Festlegen der relevanten Variabeln
 
         bool goLeft;
         bool goRight;
@@ -22,17 +23,22 @@ namespace ForcePlayV2
         int bally;
         int playerSpeed;
 
-        Random rnd = new Random(); 
+        Random rnd = new Random(); // Die Random-Klasse für zufällige PictureBox - Farben
         
-        PictureBox[] blockArray;
+        PictureBox[] blockArray; // Array für alle PictureBoxen um sie platzieren zu können
 
         public BreakOut()
         {
             InitializeComponent();
 
+            // Die PictureBoxen werden platziert
             PlaceBlocks();
         }
-
+        /// <summary>
+        /// setupGame lädt das Spiel und legt die Farben der PictureBoxen fest. 
+        /// Zudem wird der Highscore ausgegeben.
+        /// Wichtige Parameter werden festgelegt.
+        /// </summary>
         private void setupGame()
         {
             isGameOver = false;
@@ -48,7 +54,7 @@ namespace ForcePlayV2
 
             player.Left = 347;
 
-
+            // Gametimer startet
             gameTimer.Start();
 
             foreach(Control x in this.Controls)
@@ -59,7 +65,11 @@ namespace ForcePlayV2
                 }
             }
         }
-
+        /// <summary>
+        /// Das Ende des Spiel wird in gameOver festgelet.
+        /// Message gibt die dazugehörigen Szenarien aus -> Game Over | win
+        /// </summary>
+        /// <param name="message"></param>
         private void gameOver(string message)
         {
             isGameOver = true;
@@ -67,18 +77,21 @@ namespace ForcePlayV2
 
             score.Text = $"Score: {highscore} {message}";
         }
-
+        /// <summary>
+        /// Alle 15 PictureBoxen werde durch feste Parameter platziert. 
+        /// Das Spielfeld wird somit voll. 
+        /// </summary>
         private void PlaceBlocks()
         {
-
+            // Es gibt 15 PictureBoxen im Spiel
             blockArray = new PictureBox[15];
-
 
             int a = 0;
 
             int top = 50;
             int left = 100;
 
+            // PictureBoxen werden platziert
             for(int i = 0; i < blockArray.Length; i++)
             {
                 blockArray[i] = new PictureBox();
@@ -102,20 +115,18 @@ namespace ForcePlayV2
                     this.Controls.Add(blockArray[i]);
                     left = left + 130;
                 }
-
-
             }
-
             setupGame();
         }
-
+        /// <summary>
+        /// Die PictureBoxen werden gelöscht
+        /// </summary>
         private void removeBlocks()
         {
             foreach(PictureBox x in blockArray)
             {
                 this.Controls.Remove(x);
             }
-
 
         }
 
@@ -128,40 +139,50 @@ namespace ForcePlayV2
         {
 
         }
-
+        /// <summary>
+        /// In mainGameTimerEvent werden die Funktionalitäten des Spiels festgehalten
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
 
             score.Text = $"Score: {highscore}";
 
+            // Bewegung links
             if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerSpeed;
             }
 
+            // Bewegung rechts
             if (goRight == true && player.Left < 700)
             {
                 player.Left += playerSpeed;
             }
 
+            // Ball bewegt sich
             ball.Left += ballx;
             ball.Top += bally;
 
+            // Grenzen des Ball in X-Richtung
             if (ball.Left < 0 || ball.Left > 775)
             {
                 ballx = -ballx;
             }
 
+            // Grenzen des Balls in Y-Richtung (Nur obere Grenze)
             if (ball.Top < 0)
             {
                 bally = -bally;
             }
 
+            // Interaktionen mit dem Spieler
             if (ball.Bounds.IntersectsWith(player.Bounds))
             {
                 ball.Top = 436;
 
-
+                // Ballgeschwindigkeit ist zufällig bei jeder Interaktion
                 bally = rnd.Next(5, 12) * -1;
 
                 if (ballx < 0)
@@ -175,6 +196,7 @@ namespace ForcePlayV2
                 }
             }
 
+            // Highscore wird beim Kontakt zwischen Ball und PictureBox erhöht
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "blocks")
@@ -185,17 +207,20 @@ namespace ForcePlayV2
 
                         bally = -bally;
 
+                        // Block wird bei Kontakt mit Ball enfernt
                         this.Controls.Remove(x); 
                     }
 
                 }
             }
 
+            // Siegbedingung
             if(highscore == 15)
             {
                 gameOver("Sieg!!! === 15 Punkte ;) >>> ENT");
             }
 
+            // Loserbedingung
             if(ball.Top > 580)
             {
                 gameOver("Game Over!!! >>> ENT");
@@ -205,6 +230,7 @@ namespace ForcePlayV2
 
         }
 
+        // Mit Pfeiltasten lässt sich der Player steuern.
         private void keyisdown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Left) 
@@ -218,6 +244,8 @@ namespace ForcePlayV2
             }
         }
 
+        // Die obere und untere Pfeiltasten werden verboten.
+        // Bewegung nur in X-Achse möglich.
         private void keyisup(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
