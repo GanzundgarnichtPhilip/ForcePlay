@@ -43,6 +43,12 @@ namespace ForcePlayV2
 
             score.Text = $"Score: {highscore}";
 
+            ball.Left = 376;
+            ball.Top = 328;
+
+            player.Left = 347;
+
+
             gameTimer.Start();
 
             foreach(Control x in this.Controls)
@@ -153,6 +159,9 @@ namespace ForcePlayV2
 
             if (ball.Bounds.IntersectsWith(player.Bounds))
             {
+                ball.Top = 436;
+
+
                 bally = rnd.Next(5, 12) * -1;
 
                 if (ballx < 0)
