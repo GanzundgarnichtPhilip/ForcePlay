@@ -52,6 +52,16 @@ namespace ForcePlayV2
                 }
             }
         }
+
+        private void gameOver(string message)
+        {
+            isGameOver = true;
+            gameTimer.Stop();
+
+            score.Text = $"Score: {highscore} {message}";
+        }
+
+
         private void player_Click(object sender, EventArgs e)
         {
 
@@ -118,9 +128,20 @@ namespace ForcePlayV2
                         this.Controls.Remove(x); 
                     }
 
-
                 }
             }
+
+            if(highscore == 18)
+            {
+
+            }
+
+            if(ball.Top > 580)
+            {
+                
+            }
+
+
 
         }
 
