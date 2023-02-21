@@ -35,6 +35,7 @@ namespace ForcePlayV2
 
         private void setupGame()
         {
+            isGameOver = false;
             highscore = 0;
             ballx = 5;  
             bally = 5;  
@@ -100,6 +101,15 @@ namespace ForcePlayV2
             }
 
             setupGame();
+        }
+
+        private void removeBlocks()
+        {
+            foreach(PictureBox x in blockArray)
+            {
+                this.Controls.Remove(x);
+            }
+
 
         }
 
@@ -174,12 +184,12 @@ namespace ForcePlayV2
 
             if(highscore == 15)
             {
-                gameOver("Sieg!!! === 15 Punkte ;)");
+                gameOver("Sieg!!! === 15 Punkte ;) >>> ENT");
             }
 
             if(ball.Top > 580)
             {
-                gameOver("Game Over!!!");
+                gameOver("Game Over!!! >>> ENT");
             }
 
 
@@ -209,6 +219,12 @@ namespace ForcePlayV2
             if (e.KeyCode == Keys.Right)
             {
                 goRight = false;
+            }
+
+            if(e.KeyCode == Keys.Enter && isGameOver == true)
+            {
+                removeBlocks();
+                PlaceBlocks();
             }
         }
 
