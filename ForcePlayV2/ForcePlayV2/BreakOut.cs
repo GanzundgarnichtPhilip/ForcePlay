@@ -22,15 +22,15 @@ namespace ForcePlayV2
         int bally;
         int playerSpeed;
 
-        Random rnd = new Random();  
-
-
+        Random rnd = new Random(); 
+        
+        PictureBox[] blockArray;
 
         public BreakOut()
         {
             InitializeComponent();
 
-            setupGame();
+            PlaceBlocks();
         }
 
         private void setupGame()
@@ -61,6 +61,47 @@ namespace ForcePlayV2
             score.Text = $"Score: {highscore} {message}";
         }
 
+        private void PlaceBlocks()
+        {
+
+            blockArray = new PictureBox[15];
+
+
+            int a = 0;
+
+            int top = 50;
+            int left = 100;
+
+            for(int i = 0; i < blockArray.Length; i++)
+            {
+                blockArray[i] = new PictureBox();
+                blockArray[i].Height = 32;
+                blockArray[i].Width = 100;
+                blockArray[i].Tag = "blocks";
+                blockArray[i].BackColor = Color.White;
+
+                if(a == 5)
+                {
+                    top = top + 50;
+                    left = 100;
+                    a = 0;
+                }
+
+                if(a < 5)
+                {
+                    a++;
+                    blockArray[i].Left = left;
+                    blockArray[i].Top = top;
+                    this.Controls.Add(blockArray[i]);
+                    left = left + 130;
+                }
+
+
+            }
+
+            setupGame();
+
+        }
 
         private void player_Click(object sender, EventArgs e)
         {
@@ -131,7 +172,7 @@ namespace ForcePlayV2
                 }
             }
 
-            if(highscore == 18)
+            if(highscore == 15)
             {
                 gameOver("Sieg!!! === 15 Punkte ;)");
             }
