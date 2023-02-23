@@ -37,17 +37,17 @@
             this.publisher = new System.Windows.Forms.TextBox();
             this.usk = new System.Windows.Forms.ComboBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SpielHinzufügenButton
             // 
+            this.SpielHinzufügenButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.SpielHinzufügenButton.Location = new System.Drawing.Point(12, 297);
             this.SpielHinzufügenButton.Name = "SpielHinzufügenButton";
             this.SpielHinzufügenButton.Size = new System.Drawing.Size(109, 97);
             this.SpielHinzufügenButton.TabIndex = 0;
             this.SpielHinzufügenButton.Text = "Submit";
-            this.SpielHinzufügenButton.UseVisualStyleBackColor = true;
+            this.SpielHinzufügenButton.UseVisualStyleBackColor = false;
             this.SpielHinzufügenButton.UseWaitCursor = true;
             // 
             // titel
@@ -129,23 +129,15 @@
             // 
             // exitButton
             // 
+            this.exitButton.BackColor = System.Drawing.Color.MistyRose;
             this.exitButton.Location = new System.Drawing.Point(127, 297);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(109, 97);
             this.exitButton.TabIndex = 8;
             this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.UseWaitCursor = true;
             this.exitButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-5, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(12, 15);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "*";
             // 
             // NeuesSpielHinzufügen
             // 
@@ -154,7 +146,6 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(245, 406);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.usk);
             this.Controls.Add(this.publisher);
@@ -166,7 +157,6 @@
             this.Controls.Add(this.SpielHinzufügenButton);
             this.Name = "NeuesSpielHinzufügen";
             this.UseWaitCursor = true;
-            this.Load += new System.EventHandler(this.NeuesSpielHinzufügen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
