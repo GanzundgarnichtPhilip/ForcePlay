@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menue));
+
             this.meineSpiele_button = new System.Windows.Forms.Button();
             this.neuesSpielHinzufügen_button = new System.Windows.Forms.Button();
             this.logo_label = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
             this.navigationBar_panel = new System.Windows.Forms.Panel();
             this.navigationBar_panel.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // meineSpiele_button
