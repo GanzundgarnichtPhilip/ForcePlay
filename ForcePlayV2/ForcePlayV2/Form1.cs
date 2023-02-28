@@ -11,5 +11,10 @@ namespace ForcePlayV2
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
