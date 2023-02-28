@@ -1,8 +1,8 @@
 namespace ForcePlayV2
 {
-    public partial class Menue : Form
+    public partial class menue : Form
     {
-        public Menue()
+        public menue()
         {
             InitializeComponent();
         }
@@ -24,6 +24,11 @@ namespace ForcePlayV2
         }
         private void button2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
