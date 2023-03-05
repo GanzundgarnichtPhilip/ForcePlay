@@ -29,76 +29,73 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menue));
-
-            this.meineSpiele_button = new System.Windows.Forms.Button();
-            this.neuesSpielHinzufügen_button = new System.Windows.Forms.Button();
-            this.logo_label = new System.Windows.Forms.Label();
-            this.exit_button = new System.Windows.Forms.Button();
-            this.navigationBar_panel = new System.Windows.Forms.Panel();
-            this.navigationBar_panel.SuspendLayout();
-
-            this.SuspendLayout();
+            meineSpiele_button = new Button();
+            neuesSpielHinzufügen_button = new Button();
+            logo_label = new Label();
+            exit_button = new Button();
+            navigationBar_panel = new Panel();
+            navigationBar_panel.SuspendLayout();
+            SuspendLayout();
             // 
             // meineSpiele_button
             // 
-            this.meineSpiele_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.meineSpiele_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.meineSpiele_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.meineSpiele_button, "meineSpiele_button");
-            this.meineSpiele_button.ForeColor = System.Drawing.Color.White;
-            this.meineSpiele_button.Name = "meineSpiele_button";
-            this.meineSpiele_button.UseVisualStyleBackColor = false;
+            meineSpiele_button.BackColor = Color.FromArgb(0, 0, 64);
+            meineSpiele_button.Cursor = Cursors.Hand;
+            meineSpiele_button.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(meineSpiele_button, "meineSpiele_button");
+            meineSpiele_button.ForeColor = Color.White;
+            meineSpiele_button.Name = "meineSpiele_button";
+            meineSpiele_button.UseVisualStyleBackColor = false;
             // 
             // neuesSpielHinzufügen_button
             // 
-            this.neuesSpielHinzufügen_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.neuesSpielHinzufügen_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.neuesSpielHinzufügen_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.neuesSpielHinzufügen_button, "neuesSpielHinzufügen_button");
-            this.neuesSpielHinzufügen_button.ForeColor = System.Drawing.Color.White;
-            this.neuesSpielHinzufügen_button.Name = "neuesSpielHinzufügen_button";
-            this.neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
+            neuesSpielHinzufügen_button.BackColor = Color.FromArgb(0, 0, 64);
+            neuesSpielHinzufügen_button.Cursor = Cursors.Hand;
+            neuesSpielHinzufügen_button.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(neuesSpielHinzufügen_button, "neuesSpielHinzufügen_button");
+            neuesSpielHinzufügen_button.ForeColor = Color.White;
+            neuesSpielHinzufügen_button.Name = "neuesSpielHinzufügen_button";
+            neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
             // 
             // logo_label
             // 
-            this.logo_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            resources.ApplyResources(this.logo_label, "logo_label");
-            this.logo_label.ForeColor = System.Drawing.Color.White;
-            this.logo_label.Name = "logo_label";
+            logo_label.BackColor = Color.FromArgb(0, 0, 64);
+            resources.ApplyResources(logo_label, "logo_label");
+            logo_label.ForeColor = Color.White;
+            logo_label.Name = "logo_label";
             // 
             // exit_button
             // 
-            this.exit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit_button.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.exit_button, "exit_button");
-            this.exit_button.ForeColor = System.Drawing.Color.White;
-            this.exit_button.Name = "exit_button";
-            this.exit_button.UseVisualStyleBackColor = false;
-            this.exit_button.Click += new System.EventHandler(this.button3_Click);
+            exit_button.BackColor = Color.FromArgb(0, 0, 64);
+            exit_button.Cursor = Cursors.Hand;
+            exit_button.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(exit_button, "exit_button");
+            exit_button.ForeColor = Color.White;
+            exit_button.Name = "exit_button";
+            exit_button.UseVisualStyleBackColor = false;
+            exit_button.Click += button3_Click;
             // 
             // navigationBar_panel
             // 
-            this.navigationBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.navigationBar_panel.Controls.Add(this.meineSpiele_button);
-            resources.ApplyResources(this.navigationBar_panel, "navigationBar_panel");
-            this.navigationBar_panel.Name = "navigationBar_panel";
+            navigationBar_panel.BackColor = Color.FromArgb(0, 0, 64);
+            navigationBar_panel.Controls.Add(meineSpiele_button);
+            resources.ApplyResources(navigationBar_panel, "navigationBar_panel");
+            navigationBar_panel.Name = "navigationBar_panel";
             // 
             // menue
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ControlBox = false;
-            this.Controls.Add(this.exit_button);
-            this.Controls.Add(this.logo_label);
-            this.Controls.Add(this.neuesSpielHinzufügen_button);
-            this.Controls.Add(this.navigationBar_panel);
-            this.Name = "menue";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.navigationBar_panel.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleMode = AutoScaleMode.Dpi;
+            BackColor = Color.Silver;
+            ControlBox = false;
+            Controls.Add(exit_button);
+            Controls.Add(logo_label);
+            Controls.Add(neuesSpielHinzufügen_button);
+            Controls.Add(navigationBar_panel);
+            Name = "menue";
+            WindowState = FormWindowState.Maximized;
+            navigationBar_panel.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
