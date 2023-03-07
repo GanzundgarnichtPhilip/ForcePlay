@@ -39,20 +39,20 @@
             // 
             // meineSpiele_button
             // 
+            resources.ApplyResources(meineSpiele_button, "meineSpiele_button");
             meineSpiele_button.BackColor = Color.FromArgb(0, 0, 64);
             meineSpiele_button.Cursor = Cursors.Hand;
             meineSpiele_button.FlatAppearance.BorderColor = Color.White;
-            resources.ApplyResources(meineSpiele_button, "meineSpiele_button");
             meineSpiele_button.ForeColor = Color.White;
             meineSpiele_button.Name = "meineSpiele_button";
             meineSpiele_button.UseVisualStyleBackColor = false;
             // 
             // neuesSpielHinzufügen_button
             // 
+            resources.ApplyResources(neuesSpielHinzufügen_button, "neuesSpielHinzufügen_button");
             neuesSpielHinzufügen_button.BackColor = Color.FromArgb(0, 0, 64);
             neuesSpielHinzufügen_button.Cursor = Cursors.Hand;
             neuesSpielHinzufügen_button.FlatAppearance.BorderColor = Color.White;
-            resources.ApplyResources(neuesSpielHinzufügen_button, "neuesSpielHinzufügen_button");
             neuesSpielHinzufügen_button.ForeColor = Color.White;
             neuesSpielHinzufügen_button.Name = "neuesSpielHinzufügen_button";
             neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
@@ -66,10 +66,10 @@
             // 
             // exit_button
             // 
+            resources.ApplyResources(exit_button, "exit_button");
             exit_button.BackColor = Color.FromArgb(0, 0, 64);
             exit_button.Cursor = Cursors.Hand;
             exit_button.FlatAppearance.BorderColor = Color.White;
-            resources.ApplyResources(exit_button, "exit_button");
             exit_button.ForeColor = Color.White;
             exit_button.Name = "exit_button";
             exit_button.UseVisualStyleBackColor = false;
@@ -95,7 +95,9 @@
             Name = "menue";
             WindowState = FormWindowState.Maximized;
             navigationBar_panel.ResumeLayout(false);
+            navigationBar_panel.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
