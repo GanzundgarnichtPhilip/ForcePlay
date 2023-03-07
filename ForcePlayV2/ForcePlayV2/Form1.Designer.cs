@@ -34,6 +34,7 @@
             logo_label = new Label();
             exit_button = new Button();
             navigationBar_panel = new Panel();
+            content_panel = new Panel();
             navigationBar_panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             meineSpiele_button.ForeColor = Color.White;
             meineSpiele_button.Name = "meineSpiele_button";
             meineSpiele_button.UseVisualStyleBackColor = false;
+            meineSpiele_button.Click += meineSpiele_button_Click;
             // 
             // neuesSpielHinzufügen_button
             // 
@@ -73,7 +75,7 @@
             exit_button.ForeColor = Color.White;
             exit_button.Name = "exit_button";
             exit_button.UseVisualStyleBackColor = false;
-            exit_button.Click += button3_Click;
+            exit_button.Click += exit_button_Click;
             // 
             // navigationBar_panel
             // 
@@ -82,12 +84,18 @@
             resources.ApplyResources(navigationBar_panel, "navigationBar_panel");
             navigationBar_panel.Name = "navigationBar_panel";
             // 
+            // content_panel
+            // 
+            resources.ApplyResources(content_panel, "content_panel");
+            content_panel.Name = "content_panel";
+            // 
             // menue
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Silver;
             ControlBox = false;
+            Controls.Add(content_panel);
             Controls.Add(exit_button);
             Controls.Add(logo_label);
             Controls.Add(neuesSpielHinzufügen_button);
@@ -106,5 +114,6 @@
         private Label logo_label;
         private Button exit_button;
         private Panel navigationBar_panel;
+        private Panel content_panel;
     }
 }

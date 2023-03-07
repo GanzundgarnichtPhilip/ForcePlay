@@ -351,7 +351,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;neuesSpielHinzufügen_button.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="logo_label.Font" type="System.Drawing.Font, System.Drawing">
     <value>Agency FB, 48pt, style=Bold, Italic</value>
@@ -384,7 +384,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;logo_label.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="exit_button.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -517,7 +517,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;exit_button.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="navigationBar_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -541,7 +541,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;navigationBar_panel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="content_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="content_panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>430, 0</value>
+  </data>
+  <data name="content_panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>974, 777</value>
+  </data>
+  <data name="content_panel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;content_panel.Name" xml:space="preserve">
+    <value>content_panel</value>
+  </data>
+  <data name="&gt;&gt;content_panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;content_panel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;content_panel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
