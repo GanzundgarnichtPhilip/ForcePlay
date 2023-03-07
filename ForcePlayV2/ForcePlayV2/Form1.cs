@@ -13,17 +13,36 @@ namespace ForcePlayV2
             // Hier wird ein Objekt des 'Meine Spiele' Forms generiert.
 
             meineSpiele.TopLevel = false;
-            // Hier wird festgelegt, dass das 'Meine Spiele' Form nicht als die vorderste Anwendung gezählt wird.
-            // -> Das ist wichtig, damit das 'Meine Spiele' Form als eine Teilanwendung genutzt werden kann.
+            // Hier wird festgelegt, dass das 'MeineSpiele' Form nicht als die vorderste Anwendung gezählt wird.
+            // -> Das ist wichtig, damit das 'MeineSpiele' Form als eine Teilanwendung genutzt werden kann.
 
             content_panel.Controls.Add(meineSpiele);
-            // Hier wird das 'Meine Spiele' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
+            // Hier wird das 'MeineSpiele' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
 
             meineSpiele.BringToFront();
-            // Hier wird die Sichtbarkeit des 'Meine Spiele' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+            // Hier wird die Sichtbarkeit des 'MeineSpiele' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
 
             meineSpiele.Show();
-            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'Meine Spiele') ermöglicht.
+            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermöglicht.
+        }
+
+        private void neuesSpielHinzufügen_button_Click(object sender, EventArgs e)
+        {
+            NeuesSpielHinzufügen neuesSpielHinzufügen = new NeuesSpielHinzufügen();
+            // Hier wird ein Objekt des 'NeuesSpielHinzufügen' Forms generiert.
+
+            neuesSpielHinzufügen.TopLevel = false;
+            // Hier wird festgelegt, dass das 'NeuesSpielHinzufügen' Form nicht als die vorderste Anwendung gezählt wird.
+            // -> Das ist wichtig, damit das 'NeuesSpielHinzufügen' Form als eine Teilanwendung genutzt werden kann.
+
+            content_panel.Controls.Add(neuesSpielHinzufügen);
+            // Hier wird das 'NeuesSpielHinzufügen' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
+
+            neuesSpielHinzufügen.BringToFront();
+            // Hier wird die Sichtbarkeit des 'NeuesSpielHinzufügen' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+
+            neuesSpielHinzufügen.Show();
+            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufügen') ermöglicht.
         }
 
         private void exit_button_Click(object sender, EventArgs e)

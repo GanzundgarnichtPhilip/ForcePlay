@@ -58,6 +58,7 @@
             neuesSpielHinzufügen_button.ForeColor = Color.White;
             neuesSpielHinzufügen_button.Name = "neuesSpielHinzufügen_button";
             neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
+            neuesSpielHinzufügen_button.Click += neuesSpielHinzufügen_button_Click;
             // 
             // logo_label
             // 
