@@ -1,8 +1,8 @@
 namespace ForcePlayV2
 {
-    public partial class Menue : Form
+    public partial class menue : Form
     {
-        public Menue()
+        public menue()
         {
             InitializeComponent();
         }
