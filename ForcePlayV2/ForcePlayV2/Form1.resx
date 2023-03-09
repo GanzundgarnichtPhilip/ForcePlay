@@ -184,6 +184,12 @@
   <data name="meineSpiele_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 200</value>
   </data>
+  <data name="meineSpiele_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
+  </data>
+  <data name="meineSpiele_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
+  </data>
   <data name="meineSpiele_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -325,6 +331,12 @@
   </data>
   <data name="neuesSpielHinzufügen_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 315</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
   </data>
   <data name="neuesSpielHinzufügen_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -491,6 +503,12 @@
   </data>
   <data name="exit_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 430</value>
+  </data>
+  <data name="exit_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
+  </data>
+  <data name="exit_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
   </data>
   <data name="exit_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
