@@ -1,13 +1,13 @@
 namespace ForcePlayV2
 {
-    public partial class menue : Form
+    public partial class Menue : Form
     {
-        public menue()
+        public Menue()
         {
             InitializeComponent();
         }
 
-        private void meineSpiele_button_Click(object sender, EventArgs e)
+        private void MeineSpiele_button_Click(object sender, EventArgs e)
         {
             MeineSpiele meineSpiele = new MeineSpiele();
             // Hier wird ein Objekt des 'Meine Spiele' Forms generiert.
@@ -26,7 +26,7 @@ namespace ForcePlayV2
             // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermöglicht.
         }
 
-        private void neuesSpielHinzufügen_button_Click(object sender, EventArgs e)
+        private void NeuesSpielHinzufügen_button_Click(object sender, EventArgs e)
         {
             NeuesSpielHinzufügen neuesSpielHinzufügen = new NeuesSpielHinzufügen();
             // Hier wird ein Objekt des 'NeuesSpielHinzufügen' Forms generiert.
@@ -45,7 +45,7 @@ namespace ForcePlayV2
             // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufügen') ermöglicht.
         }
 
-        private void exit_button_Click(object sender, EventArgs e)
+        private void Exit_button_Click(object sender, EventArgs e)
         {
             Close();
         }
