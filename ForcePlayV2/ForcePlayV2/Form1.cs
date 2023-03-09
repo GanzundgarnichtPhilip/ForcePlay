@@ -9,8 +9,28 @@ namespace ForcePlayV2
 
         private void meineSpiele_button_Click(object sender, EventArgs e)
         {
+            foreach (Form form in Application.OpenForms)
+            // Hier werden nach offenen Forms gesucht und unter der Variable 'form' initialisiert.
+            // -> Die Schleifenanweisung 'foreach' sorgt dafür, dass jedes Formular durchlaufen bzw. geprüft wird.
+            // -> Der Opperator 'in' prüft, ob das aktuelle Element der Sammlung 'offenen Forms' zugehört.
+            {
+                if (form is MeineSpiele)
+                // Falls ein Form der Klasse 'MeineSpiele' geöffnet ist, wird es geschlossen.
+                {
+                    form.Close();
+                    break;
+                }
+
+                if (form is NeuesSpielHinzufügen)
+                // Falls ein Form der Klasse 'NeuesSpielHinzufügen' geöffnet ist, wird es geschlossen.
+                {
+                    form.Close();
+                    break;
+                }
+            }
+
             MeineSpiele meineSpiele = new MeineSpiele();
-            // Hier wird ein Objekt des 'Meine Spiele' Forms generiert.
+            // Hier wird ein Objekt des 'MeineSpiele' Forms generiert.
 
             meineSpiele.TopLevel = false;
             // Hier wird festgelegt, dass das 'MeineSpiele' Form nicht als die vorderste Anwendung gezählt wird.
@@ -28,6 +48,26 @@ namespace ForcePlayV2
 
         private void neuesSpielHinzufügen_button_Click(object sender, EventArgs e)
         {
+            foreach (Form form in Application.OpenForms)
+            // Hier werden nach offenen Forms gesucht und unter der Variable 'form' initialisiert.
+            // -> Die Schleifenanweisung 'foreach' sorgt dafür, dass jedes Formular durchlaufen bzw. geprüft wird.
+            // -> Der Opperator 'in' prüft, ob das aktuelle Element der Sammlung 'offenen Forms' zugehört.
+            {
+                if (form is MeineSpiele)
+                // Falls ein Form der Klasse 'MeineSpiele' geöffnet ist, wird es geschlossen.
+                {
+                    form.Close();
+                    break;
+                }
+
+                if (form is NeuesSpielHinzufügen)
+                // Falls ein Form der Klasse 'NeuesSpielHinzufügen' geöffnet ist, wird es geschlossen.
+                {
+                    form.Close();
+                    break;
+                }
+            }
+
             NeuesSpielHinzufügen neuesSpielHinzufügen = new NeuesSpielHinzufügen();
             // Hier wird ein Objekt des 'NeuesSpielHinzufügen' Forms generiert.
 
