@@ -60,7 +60,7 @@
             meineSpiele_button.Text = "Meine Spiele";
             meineSpiele_button.TextImageRelation = TextImageRelation.ImageBeforeText;
             meineSpiele_button.UseVisualStyleBackColor = false;
-            meineSpiele_button.Click += MeineSpiele_button_Click;
+            meineSpiele_button.Click += meineSpiele_button_Click;
             // 
             // neuesSpielHinzufügen_button
             // 
@@ -84,7 +84,7 @@
             neuesSpielHinzufügen_button.Text = "Neues Spiel hinzufügen";
             neuesSpielHinzufügen_button.TextImageRelation = TextImageRelation.ImageBeforeText;
             neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
-            neuesSpielHinzufügen_button.Click += NeuesSpielHinzufügen_button_Click;
+            neuesSpielHinzufügen_button.Click += neuesSpielHinzufügen_button_Click;
             // 
             // logo_label
             // 
@@ -121,7 +121,7 @@
             exit_button.Text = "Verlassen";
             exit_button.TextImageRelation = TextImageRelation.ImageBeforeText;
             exit_button.UseVisualStyleBackColor = false;
-            exit_button.Click += Exit_button_Click;
+            exit_button.Click += exit_button_Click;
             // 
             // navigationBar_panel
             // 
@@ -134,6 +134,11 @@
             navigationBar_panel.TabIndex = 7;
             // 
             // content_panel
+            // 
+            resources.ApplyResources(content_panel, "content_panel");
+            content_panel.Name = "content_panel";
+            // 
+            // menue
             // 
             content_panel.Dock = DockStyle.Fill;
             content_panel.Location = new Point(430, 0);

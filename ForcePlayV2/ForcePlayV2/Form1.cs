@@ -7,45 +7,43 @@ namespace ForcePlayV2
             InitializeComponent();
         }
 
-        private void MeineSpiele_button_Click(object sender, EventArgs e)
+        private void meineSpiele_button_Click(object sender, EventArgs e)
         {
             MeineSpiele meineSpiele = new MeineSpiele();
             // Hier wird ein Objekt des 'Meine Spiele' Forms generiert.
 
             meineSpiele.TopLevel = false;
-            // Hier wird festgelegt, dass das 'MeineSpiele' Form nicht als die vorderste Anwendung gezählt wird.
+            // Hier wird festgelegt, dass das 'MeineSpiele' Form nicht als die vorderste Anwendung gezÃ¤hlt wird.
             // -> Das ist wichtig, damit das 'MeineSpiele' Form als eine Teilanwendung genutzt werden kann.
 
             content_panel.Controls.Add(meineSpiele);
-            // Hier wird das 'MeineSpiele' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
+            // Hier wird das 'MeineSpiele' Form dem Content-Panel hinzugefÃ¼gt, sodass es angezeigt werden kann.
 
             meineSpiele.BringToFront();
             // Hier wird die Sichtbarkeit des 'MeineSpiele' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
 
             meineSpiele.Show();
-            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermöglicht.
+            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermÃ¶glicht.
         }
-
-        private void NeuesSpielHinzufügen_button_Click(object sender, EventArgs e)
+        private void neuesSpielHinzufÃ¼gen_button_Click(object sender, EventArgs e)
         {
-            NeuesSpielHinzufügen neuesSpielHinzufügen = new NeuesSpielHinzufügen();
-            // Hier wird ein Objekt des 'NeuesSpielHinzufügen' Forms generiert.
+            NeuesSpielHinzufÃ¼gen neuesSpielHinzufÃ¼gen = new NeuesSpielHinzufÃ¼gen();
+            // Hier wird ein Objekt des 'NeuesSpielHinzufÃ¼gen' Forms generiert.
 
-            neuesSpielHinzufügen.TopLevel = false;
-            // Hier wird festgelegt, dass das 'NeuesSpielHinzufügen' Form nicht als die vorderste Anwendung gezählt wird.
-            // -> Das ist wichtig, damit das 'NeuesSpielHinzufügen' Form als eine Teilanwendung genutzt werden kann.
+            neuesSpielHinzufÃ¼gen.TopLevel = false;
+            // Hier wird festgelegt, dass das 'NeuesSpielHinzufÃ¼gen' Form nicht als die vorderste Anwendung gezÃ¤hlt wird.
+            // -> Das ist wichtig, damit das 'NeuesSpielHinzufÃ¼gen' Form als eine Teilanwendung genutzt werden kann.
 
-            content_panel.Controls.Add(neuesSpielHinzufügen);
-            // Hier wird das 'NeuesSpielHinzufügen' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
+            content_panel.Controls.Add(neuesSpielHinzufÃ¼gen);
+            // Hier wird das 'NeuesSpielHinzufÃ¼gen' Form dem Content-Panel hinzugefÃ¼gt, sodass es angezeigt werden kann.
 
-            neuesSpielHinzufügen.BringToFront();
-            // Hier wird die Sichtbarkeit des 'NeuesSpielHinzufügen' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+            neuesSpielHinzufÃ¼gen.BringToFront();
+            // Hier wird die Sichtbarkeit des 'NeuesSpielHinzufÃ¼gen' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
 
-            neuesSpielHinzufügen.Show();
-            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufügen') ermöglicht.
+            neuesSpielHinzufÃ¼gen.Show();
+            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufÃ¼gen') ermÃ¶glicht.
         }
-
-        private void Exit_button_Click(object sender, EventArgs e)
+        private void exit_button_Click(object sender, EventArgs e)
         {
             Close();
         }
