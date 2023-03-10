@@ -7,22 +7,22 @@ namespace ForcePlayV2
             InitializeComponent();
         }
 
-        private void meineSpiele_button_Click(object sender, EventArgs e)
+        private void MeineSpiele_button_Click(object sender, EventArgs e)
         {
             foreach (Form form in Application.OpenForms)
             // Hier werden nach offenen Forms gesucht und unter der Variable 'form' initialisiert.
-            // -> Die Schleifenanweisung 'foreach' sorgt daf�r, dass jedes Formular durchlaufen bzw. gepr�ft wird.
-            // -> Der Opperator 'in' pr�ft, ob das aktuelle Element der Sammlung 'offenen Forms' zugeh�rt.
+            // -> Die Schleifenanweisung 'foreach' sorgt dafuer, dass jedes Formular durchlaufen bzw. geprueft wird.
+            // -> Der Opperator 'in' prueft, ob das aktuelle Element der Sammlung 'offenen Forms' zugehoert.
             {
                 if (form is MeineSpiele)
-                // Falls ein Form der Klasse 'MeineSpiele' ge�ffnet ist, wird es geschlossen.
+                // Falls ein Form der Klasse 'MeineSpiele' geoeffnet ist, wird es geschlossen.
                 {
                     form.Close();
                     break;
                 }
 
-                if (form is NeuesSpielHinzuf�gen)
-                // Falls ein Form der Klasse 'NeuesSpielHinzuf�gen' ge�ffnet ist, wird es geschlossen.
+                if (form is NeuesSpielHinzufuegen)
+                // Falls ein Form der Klasse 'NeuesSpielHinzufuegen' geoeffnet ist, wird es geschlossen.
                 {
                     form.Close();
                     break;
@@ -43,49 +43,50 @@ namespace ForcePlayV2
             // Hier wird die Sichtbarkeit des 'MeineSpiele' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
 
             meineSpiele.Show();
-            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermöglicht.
+            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermoeglicht.
         }
-        private void neuesSpielHinzufügen_button_Click(object sender, EventArgs e)
+        private void NeuesSpielHinzufügen_button_Click(object sender, EventArgs e)
         {
             foreach (Form form in Application.OpenForms)
             // Hier werden nach offenen Forms gesucht und unter der Variable 'form' initialisiert.
-            // -> Die Schleifenanweisung 'foreach' sorgt daf�r, dass jedes Formular durchlaufen bzw. gepr�ft wird.
-            // -> Der Opperator 'in' pr�ft, ob das aktuelle Element der Sammlung 'offenen Forms' zugeh�rt.
+            // -> Die Schleifenanweisung 'foreach' sorgt dafuer, dass jedes Formular durchlaufen bzw. geprueft wird.
+            // -> Der Opperator 'in' prueft, ob das aktuelle Element der Sammlung 'offenen Forms' zugehoert.
             {
                 if (form is MeineSpiele)
-                // Falls ein Form der Klasse 'MeineSpiele' ge�ffnet ist, wird es geschlossen.
+                // Falls ein Form der Klasse 'MeineSpiele' geoeffnet ist, wird es geschlossen.
                 {
                     form.Close();
                     break;
                 }
 
-                if (form is NeuesSpielHinzuf�gen)
-                // Falls ein Form der Klasse 'NeuesSpielHinzuf�gen' ge�ffnet ist, wird es geschlossen.
+                if (form is NeuesSpielHinzufuegen)
+                // Falls ein Form der Klasse 'NeuesSpielHinzufuegen' geoeffnet ist, wird es geschlossen.
                 {
                     form.Close();
                     break;
                 }
             }
 
-            NeuesSpielHinzuf�gen neuesSpielHinzuf�gen = new NeuesSpielHinzuf�gen();
-            // Hier wird ein Objekt des 'NeuesSpielHinzuf�gen' Forms generiert.
+            NeuesSpielHinzufuegen neuesSpielHinzufügen = new NeuesSpielHinzufuegen();
+            // Hier wird ein Objekt des 'NeuesSpielHinzufuegen' Forms generiert.
 
             neuesSpielHinzufügen.TopLevel = false;
-            // Hier wird festgelegt, dass das 'NeuesSpielHinzufügen' Form nicht als die vorderste Anwendung gezählt wird.
-            // -> Das ist wichtig, damit das 'NeuesSpielHinzufügen' Form als eine Teilanwendung genutzt werden kann.
+            // Hier wird festgelegt, dass das 'NeuesSpielHinzufuegen' Form nicht als die vorderste Anwendung gezählt wird.
+            // -> Das ist wichtig, damit das 'NeuesSpielHinzufuegen' Form als eine Teilanwendung genutzt werden kann.
 
             content_panel.Controls.Add(neuesSpielHinzufügen);
-            // Hier wird das 'NeuesSpielHinzufügen' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
+            // Hier wird das 'NeuesSpielHinzufuegen' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
 
             neuesSpielHinzufügen.BringToFront();
-            // Hier wird die Sichtbarkeit des 'NeuesSpielHinzufügen' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+            // Hier wird die Sichtbarkeit des 'NeuesSpielHinzufuegen' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
 
             neuesSpielHinzufügen.Show();
-            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufügen') ermöglicht.
+            // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufuegen') ermoeglicht.
         }
-        private void exit_button_Click(object sender, EventArgs e)
+        private void Exit_button_Click(object sender, EventArgs e)
         {
             Close();
+            // Das Menue (und zugleich das ganze Programm) wird geschlossen.
         }
     }
 }

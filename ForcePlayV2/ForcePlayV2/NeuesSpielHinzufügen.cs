@@ -1,8 +1,8 @@
 ﻿namespace ForcePlayV2
 {
-    public partial class NeuesSpielHinzufügen : Form
+    public partial class NeuesSpielHinzufuegen : Form
     {
-        public NeuesSpielHinzufügen()
+        public NeuesSpielHinzufuegen()
         {
             InitializeComponent();
         }
