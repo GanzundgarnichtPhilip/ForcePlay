@@ -134,6 +134,7 @@
             // 
             exitButton.BackColor = Color.MistyRose;
             exitButton.Location = new Point(159, 371);
+
             exitButton.Margin = new Padding(4, 4, 4, 4);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(136, 121);
