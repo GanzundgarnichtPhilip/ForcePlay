@@ -12,7 +12,7 @@ namespace ForcePlayV2
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new menue());
+            Application.Run(new Menue());
 
         }
     }
