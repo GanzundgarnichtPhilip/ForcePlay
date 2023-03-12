@@ -43,7 +43,10 @@ namespace ForcePlayV2
             spiel.Publisher = publisher.Text;
             spiel.Usk = usk.Text;
 
-            prüfung.Text = usk.Text;
+            if (!spiel.pruefung())
+                prüfung.Text = "Problem";
+
+            else prüfung.Text = "Perfekt";
 
             titel.Clear();
             zuletztGespielt.Clear();
