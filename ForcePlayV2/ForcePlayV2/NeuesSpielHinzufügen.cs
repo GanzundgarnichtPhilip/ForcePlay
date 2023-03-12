@@ -5,6 +5,7 @@ namespace ForcePlayV2
 {
     public partial class NeuesSpielHinzufuegen : Form
     {
+        List<Spiele> spieleVerwalten = new List<Spiele>();
 
         public NeuesSpielHinzufuegen()
         {
@@ -47,6 +48,8 @@ namespace ForcePlayV2
                 prüfung.Text = "Problem";
 
             else prüfung.Text = "Perfekt";
+
+            spieleVerwalten.Append(spiel);
 
             titel.Clear();
             zuletztGespielt.Clear();

@@ -19,8 +19,6 @@ namespace ForcePlayV2
         string publisher;
         string usk;
 
-        List<string> spieleVerwalten = new List<String>();
-
         // Um Fehleingaben micht prüfen zu müssen, werden allen Attributen direkt ein Wert zugewiesen.
         public Spiele()
         {
@@ -87,7 +85,6 @@ namespace ForcePlayV2
 
                 default: return false;
             }
-
 
         }
 
