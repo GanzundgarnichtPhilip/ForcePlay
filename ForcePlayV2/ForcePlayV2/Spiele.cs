@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,29 +42,6 @@ namespace ForcePlayV2
         public string Publisher { get => publisher; set => publisher = value; }
         public string Usk { get => usk; set => usk = value; }
 
-        /// <summary>
-        /// Diese Methode soll Spiele der jeweiligen Liste hinzufügen
-        /// </summary>
-        public void SpieleHinzufügen()
-        {
-
-        }
-
-        /// <summary>
-        /// Diese Methode soll Spiele löschen
-        /// </summary>
-        public void SpieleLöschen()
-        {
-
-        }
-
-        /// <summary>
-        /// Diese Methode soll die Spiele starten können
-        /// </summary>
-        public void SpieleStarten()
-        {
-
-        }
     }
 }
 
