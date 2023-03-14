@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForcePlayV2
 {
-    class Spiele
+     class Spiele
     {
 
         // Die Attribute der Spiele
@@ -18,6 +18,8 @@ namespace ForcePlayV2
         string kategorie;
         string publisher;
         string usk;
+
+        List<string> spieleVerwalten = new List<String>();
 
         // Um Fehleingaben micht prüfen zu müssen, werden allen Attributen direkt ein Wert zugewiesen.
         public Spiele()
@@ -39,7 +41,7 @@ namespace ForcePlayV2
         public string Kategorie { get => kategorie; set => kategorie = value; }
         public string Publisher { get => publisher; set => publisher = value; }
         public string Usk { get => usk; set => usk = value; }
-
+        
         public bool pruefung()
         {
 
