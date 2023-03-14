@@ -42,10 +42,9 @@
             // SpielHinzufügenButton
             // 
             SpielHinzufügenButton.BackColor = Color.LightGoldenrodYellow;
-            SpielHinzufügenButton.Location = new Point(15, 371);
-            SpielHinzufügenButton.Margin = new Padding(4, 4, 4, 4);
+            SpielHinzufügenButton.Location = new Point(12, 297);
             SpielHinzufügenButton.Name = "SpielHinzufügenButton";
-            SpielHinzufügenButton.Size = new Size(136, 121);
+            SpielHinzufügenButton.Size = new Size(109, 97);
             SpielHinzufügenButton.TabIndex = 0;
             SpielHinzufügenButton.Text = "Submit";
             SpielHinzufügenButton.UseVisualStyleBackColor = false;
@@ -53,11 +52,10 @@
             // 
             // titel
             // 
-            titel.Location = new Point(49, 15);
-            titel.Margin = new Padding(4, 4, 4, 4);
+            titel.Location = new Point(39, 12);
             titel.Name = "titel";
             titel.PlaceholderText = "Titel";
-            titel.Size = new Size(228, 27);
+            titel.Size = new Size(183, 23);
             titel.TabIndex = 1;
             titel.TextAlign = HorizontalAlignment.Center;
             titel.UseWaitCursor = true;
@@ -65,67 +63,60 @@
             // 
             // Installationsdatum
             // 
-            Installationsdatum.Location = new Point(49, 65);
-            Installationsdatum.Margin = new Padding(4, 4, 4, 4);
+            Installationsdatum.Location = new Point(39, 52);
             Installationsdatum.Name = "Installationsdatum";
             Installationsdatum.PlaceholderText = "Installationsdatum";
-            Installationsdatum.Size = new Size(228, 27);
+            Installationsdatum.Size = new Size(183, 23);
             Installationsdatum.TabIndex = 2;
             Installationsdatum.TextAlign = HorizontalAlignment.Center;
             Installationsdatum.UseWaitCursor = true;
             // 
             // zuletztGespielt
             // 
-            zuletztGespielt.Location = new Point(49, 118);
-            zuletztGespielt.Margin = new Padding(4, 4, 4, 4);
+            zuletztGespielt.Location = new Point(39, 94);
             zuletztGespielt.Name = "zuletztGespielt";
             zuletztGespielt.PlaceholderText = "Zuletzt gespielt";
-            zuletztGespielt.Size = new Size(228, 27);
+            zuletztGespielt.Size = new Size(183, 23);
             zuletztGespielt.TabIndex = 3;
             zuletztGespielt.TextAlign = HorizontalAlignment.Center;
             zuletztGespielt.UseWaitCursor = true;
             // 
             // installationspfad
             // 
-            installationspfad.Location = new Point(49, 171);
-            installationspfad.Margin = new Padding(4, 4, 4, 4);
+            installationspfad.Location = new Point(39, 137);
             installationspfad.Name = "installationspfad";
             installationspfad.PlaceholderText = "Installationspfad";
-            installationspfad.Size = new Size(228, 27);
+            installationspfad.Size = new Size(183, 23);
             installationspfad.TabIndex = 4;
             installationspfad.TextAlign = HorizontalAlignment.Center;
             installationspfad.UseWaitCursor = true;
             // 
             // kategorie
             // 
-            kategorie.Location = new Point(49, 219);
-            kategorie.Margin = new Padding(4, 4, 4, 4);
+            kategorie.Location = new Point(39, 175);
             kategorie.Name = "kategorie";
             kategorie.PlaceholderText = "Kategorie";
-            kategorie.Size = new Size(228, 27);
+            kategorie.Size = new Size(183, 23);
             kategorie.TabIndex = 5;
             kategorie.TextAlign = HorizontalAlignment.Center;
             kategorie.UseWaitCursor = true;
             // 
             // publisher
             // 
-            publisher.Location = new Point(49, 266);
-            publisher.Margin = new Padding(4, 4, 4, 4);
+            publisher.Location = new Point(39, 213);
             publisher.Name = "publisher";
             publisher.PlaceholderText = "Publisher";
-            publisher.Size = new Size(228, 27);
+            publisher.Size = new Size(183, 23);
             publisher.TabIndex = 6;
             publisher.TextAlign = HorizontalAlignment.Center;
-            publisher.UseWaitCursor = true;
             // 
             // usk
             // 
             usk.FormattingEnabled = true;
             usk.Items.AddRange(new object[] { "0", "6", "12", "16", "18" });
-            usk.Location = new Point(49, 318);
-            usk.Margin = new Padding(4, 4, 4, 4);
+            usk.Location = new Point(39, 254);
             usk.Name = "usk";
-            usk.Size = new Size(228, 28);
+            usk.Size = new Size(183, 23);
             usk.TabIndex = 7;
             usk.UseWaitCursor = true;
             usk.SelectedIndexChanged += usk_SelectedIndexChanged;
@@ -133,11 +124,9 @@
             // exitButton
             // 
             exitButton.BackColor = Color.MistyRose;
-            exitButton.Location = new Point(159, 371);
-
-            exitButton.Margin = new Padding(4, 4, 4, 4);
+            exitButton.Location = new Point(127, 297);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(136, 121);
+            exitButton.Size = new Size(109, 97);
             exitButton.TabIndex = 8;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = false;
@@ -146,11 +135,11 @@
             // 
             // NeuesSpielHinzufügen
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             BackColor = Color.Silver;
-            ClientSize = new Size(306, 508);
+            ClientSize = new Size(245, 406);
             ControlBox = false;
             Controls.Add(exitButton);
             Controls.Add(usk);
@@ -161,7 +150,6 @@
             Controls.Add(Installationsdatum);
             Controls.Add(titel);
             Controls.Add(SpielHinzufügenButton);
-            Margin = new Padding(4, 4, 4, 4);
             Name = "NeuesSpielHinzufügen";
             UseWaitCursor = true;
             WindowState = FormWindowState.Maximized;

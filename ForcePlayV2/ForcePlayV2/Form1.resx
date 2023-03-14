@@ -590,7 +590,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="infobutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 442</value>
+    <value>-2, 438</value>
   </data>
   <data name="infobutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

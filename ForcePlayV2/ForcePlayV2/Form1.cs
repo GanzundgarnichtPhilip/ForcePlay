@@ -96,7 +96,12 @@ namespace ForcePlayV2
 
         private void infobutton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Help");
+            MessageBox.Show("1. Installationspfad bitte manuell eingeben -> Echter\n" +
+                            "2. Alle anderen Daten bitte manuell eingeben\n" +
+                            "3. Navigation mit den Buttons\n" +
+                            "4. Alle Datenfelder müssen eingegeben werden\n" +
+                            "5. (C) Raphael Tack, Daniel Sauer und Philip Danull\n" +
+                            "6. Bei weiteren Problemen, melden Sie sich bitte beim Support");
         }
     }
 }
