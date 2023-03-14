@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,29 +41,55 @@ namespace ForcePlayV2
         public string Kategorie { get => kategorie; set => kategorie = value; }
         public string Publisher { get => publisher; set => publisher = value; }
         public string Usk { get => usk; set => usk = value; }
-
-        /// <summary>
-        /// Diese Methode soll Spiele der jeweiligen Liste hinzufügen
-        /// </summary>
-        public void SpieleHinzufügen()
+        
+        public bool pruefung()
         {
+
+            if (titel == "")
+                return false;
+
+            if (installationsdatum == "")
+                return false;
+
+            if (installationspfad == "")
+                return false;
+
+            if (zuletzt == "")
+                return false;
+
+            if (kategorie == "")
+                return false;
+
+            if (publisher == "")
+                return false;
+
+            switch (usk)
+            {
+                case "0":
+                    return true;
+                    break;
+
+                case "6":
+                    return true;
+                    break;
+
+                case "12":
+                    return true;
+                    break;
+
+                case "16":
+                    return true;
+                    break;
+
+                case "18":
+                    return true;
+                    break;
+
+                default: return false;
+            }
 
         }
 
-        /// <summary>
-        /// Diese Methode soll Spiele löschen
-        /// </summary>
-        public void SpieleLöschen()
-        {
-
-        }
-
-        /// <summary>
-        /// Diese Methode soll die Spiele starten können
-        /// </summary>
-        public void SpieleStarten()
-        {
-
-        }
     }
 }
+
