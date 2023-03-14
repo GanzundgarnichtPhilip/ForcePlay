@@ -5,6 +5,7 @@ namespace ForcePlayV2
 {
     public partial class NeuesSpielHinzufuegen : Form
     {
+        // Liste der Spiele
         List<Spiele> spieleVerwalten = new List<Spiele>();
 
         public NeuesSpielHinzufuegen()
@@ -23,7 +24,11 @@ namespace ForcePlayV2
         {
 
         }
-
+        /// <summary>
+        /// Das Form wird geschlossen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -34,8 +39,10 @@ namespace ForcePlayV2
         /// </summary>
         private void SpielHinzufügenButton_Click(object sender, EventArgs e)
         {
+            // Objekt von der Klasse Spiel wird erzeugt
             var spiel = new Spiele();
 
+            // Alle Daten werden den Attributen zugewiesen.
             spiel.Titel = titel.Text;
             spiel.Zuletzt = zuletztGespielt.Text;
             spiel.Installationsdatum = Installationsdatum.Text;
@@ -44,13 +51,16 @@ namespace ForcePlayV2
             spiel.Publisher = publisher.Text;
             spiel.Usk = usk.Text;
 
+            // Eingabe wird überprüft
             if (!spiel.pruefung())
                 prüfung.Text = "Problem";
 
             else prüfung.Text = "Perfekt";
 
-            spieleVerwalten.Append(spiel);
+            // Spiel wird der Liste hinzugefügt.
+            spieleVerwalten.Add(spiel);
 
+            // Textfelder werden gecleart
             titel.Clear();
             zuletztGespielt.Clear();
             installationspfad.Clear();
