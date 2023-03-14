@@ -21,7 +21,7 @@ namespace ForcePlayV2
                     break;
                 }
 
-                if (form is NeuesSpielHinzuf�gen)
+                if (form is NeuesSpielHinzufügen)
                 // Falls ein Form der Klasse 'NeuesSpielHinzuf�gen' ge�ffnet ist, wird es geschlossen.
                 {
                     form.Close();
@@ -59,7 +59,7 @@ namespace ForcePlayV2
                     break;
                 }
 
-                if (form is NeuesSpielHinzuf�gen)
+                if (form is NeuesSpielHinzufügen)
                 // Falls ein Form der Klasse 'NeuesSpielHinzuf�gen' ge�ffnet ist, wird es geschlossen.
                 {
                     form.Close();
@@ -67,7 +67,7 @@ namespace ForcePlayV2
                 }
             }
 
-            NeuesSpielHinzuf�gen neuesSpielHinzuf�gen = new NeuesSpielHinzuf�gen();
+            NeuesSpielHinzufügen neuesSpielHinzufügen = new NeuesSpielHinzufügen();
             // Hier wird ein Objekt des 'NeuesSpielHinzuf�gen' Forms generiert.
 
             neuesSpielHinzufügen.TopLevel = false;
@@ -78,6 +78,7 @@ namespace ForcePlayV2
             // Hier wird das 'NeuesSpielHinzufügen' Form dem Content-Panel hinzugefügt, sodass es angezeigt werden kann.
 
             neuesSpielHinzufügen.BringToFront();
+            neuesSpielHinzufügen.BringToFront();
             // Hier wird die Sichtbarkeit des 'NeuesSpielHinzufügen' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
 
             neuesSpielHinzufügen.Show();
@@ -86,6 +87,16 @@ namespace ForcePlayV2
         private void exit_button_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void content_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void infobutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Help");
         }
     }
 }

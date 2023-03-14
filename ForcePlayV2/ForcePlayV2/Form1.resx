@@ -57,7 +57,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="meineSpiele_button.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="meineSpiele_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="meineSpiele_button.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Agency FB, 19.800001pt, style=Bold</value>
+  </data>
   <data name="meineSpiele_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
@@ -164,6 +175,61 @@
         CiiigAooooAKKKKACiiigAooooA//9k=
 </value>
   </data>
+  <data name="meineSpiele_button.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="meineSpiele_button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="meineSpiele_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 160</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="meineSpiele_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="meineSpiele_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="meineSpiele_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="meineSpiele_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="meineSpiele_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="meineSpiele_button.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="meineSpiele_button.Text" xml:space="preserve">
+    <value>Meine Spiele</value>
+  </data>
+  <data name="meineSpiele_button.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;meineSpiele_button.Name" xml:space="preserve">
+    <value>meineSpiele_button</value>
+  </data>
+  <data name="&gt;&gt;meineSpiele_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;meineSpiele_button.Parent" xml:space="preserve">
+    <value>navigationBar_panel</value>
+  </data>
+  <data name="&gt;&gt;meineSpiele_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Agency FB, 19.800001pt, style=Bold</value>
+  </data>
   <data name="neuesSpielHinzufügen_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
@@ -268,13 +334,22 @@
     <value>NoControl</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 315</value>
+    <value>0, 252</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="neuesSpielHinzufügen_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
   </data>
   <data name="neuesSpielHinzufügen_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="neuesSpielHinzufügen_button.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -306,8 +381,11 @@
   <data name="logo_label.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="logo_label.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
   <data name="logo_label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 120</value>
+    <value>344, 96</value>
   </data>
   <data name="logo_label.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -434,13 +512,22 @@
     <value>NoControl</value>
   </data>
   <data name="exit_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 430</value>
+    <value>0, 344</value>
+  </data>
+  <data name="exit_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="exit_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="exit_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
   </data>
   <data name="exit_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="exit_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="exit_button.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -463,14 +550,95 @@
   <data name="&gt;&gt;exit_button.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="infobutton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="infobutton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="infobutton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Agency FB, 19.800001pt, style=Bold</value>
+  </data>
+  <data name="infobutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        ugAAAboB6KsBBgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAS2SURBVHhe5Zu/
+        axRBFMcX490FVNBGbNRC/QPExohgYW1jYWEhCDaKnaWViI2gtoJYCCIxMT+VgIWYi8YYo6hFEH/grwR/
+        RM3lsjEhenvjvNnbOLf33dvd25llYIuP5F5h3veb23kz781ajDGtWHfZGmu4csAqOqesEecC54ZVrAzz
+        z685dntXqVroLi/ne8qlfO/8x1y//TQ/uDC4esA+a/XaG9H/qRIYTIr1kG2xhp0TVrE6xEUucVgQ7Z2z
+        wdycZYWe+ZncoN2ZG1rcjX5XUmCwFaz7rJ0LOsV5KQsMAwoPoNA9t0TfDquvtB7l0AowGAeri7VZI5Vj
+        XMy0X1wUkNAwuBGV3MDCNf678yinOMBgVPizfJCLeOUXFQckMCrciOX8wPx5lFtUYDAM6x7bysWPIUFx
+        QcLikr81Z6++s7gH5RoGDDaDP+t7eeLf/UJaBQlqhUJXyckN/j6Bcm4GDAbBy9lRnvSyX0QSkJgk8LXh
+        Kso9CBj0Ixa6YeciEpAUJCIpuT77WdQFEgZlhPhitR8lrwIkQAWFnvLXKCbAoIyuv7wHSl4V9E1AmmRg
+        0KP2zMPEVYESV0nYmgCDRG21V7rgyWwYddi+F1V2fGKR7bg9B5NXRbPqgIOizqsrdTKbxhx2/VuVTS8x
+        wcQvR1CcqbCdQ2UoIClUIoP2CQ0BEVS0yfGzbdxhk7Yr3G8A8ZSz/54NRSSFNktQa0PA3d5CAUloG3HY
+        nZ/14v0GEI9+OmxdFxaRFLRtrv8gSl6yvX0Q9Lz7xSMDCFoXkICk0NnBXxrrDXBPdVBAUk6+jW7AlXfL
+        UIAK6BRZp3nlB/c839KRNgpnPkQ3oPvzX5i8CugoLfcT/hvgNjNg8io4NBndgHOTSzB5VVBTBRkQq5MT
+        l82PHfZ+MdwAqgQdd+dh4qqgzlKdAaKHB5JWzfE3jd8CvwGX3+p7/mW8HqNrgGhg4qRVsopz+n2VfQ4w
+        oPPTH7ZWUwn0Q43W/wa43VuYtA52PXPY2Y9VNvCDsUc/HNY79ZcdHl2AieqCus1Cu+jbh7SudYKSS4Wb
+        s4zmDnTio6EFTC4NYHIpIYYvPAmt5S8MlFhaiBmDGFeBxFSw5qFb/5tBNd/PkbHfMGHV0BiODLiBklcB
+        1X655CHkKuAx9KUCE1YNzSLp9EeDSiggKcYb0FMu0RpAU1ooICmmG0BTaTLA9ieuCnkN6OM13zQDaDSv
+        1QCZS1PRD0NpG6DtEZAx0YDaI6BvEZQx0QB3EdRYBmWMNECUQY0bIRkTDXA3QilthY38BoitcEqHIRMN
+        cA9DKR2HjTPAOw6n1RAxzYCVhoj4J4WWmGkG1LfEUmiKGmeA3BQVP2hui5tkQENbvGaA1nJokgF4MKJ5
+        NGaKAYGjMfFB8XB0+7grnBidaxQfZMATDpmgw4jA4aj4oHg83vEc/9VlkAEySESrhI7HRUDhBQnTDAi9
+        ILESVHRFxiQDIl+REUFFl6QKD9y+YDNoEtwMJCYusS9JEbqvyXmghFUT+5qcR6YvSnpk+qos4ZbGDF+W
+        JoQJWb0uL5PZFyZkatUhm6/MeGT6pSmZ2rY5e6/NyYgFMqsvTsrU+gnZe3UWkcmXp4Mw+/V5Zv0DxtIc
+        XwZxF5kAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="infobutton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="infobutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 442</value>
+  </data>
+  <data name="infobutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="infobutton.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="infobutton.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="infobutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 80</value>
+  </data>
+  <data name="infobutton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="infobutton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="infobutton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;infobutton.Name" xml:space="preserve">
+    <value>infobutton</value>
+  </data>
+  <data name="&gt;&gt;infobutton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infobutton.Parent" xml:space="preserve">
+    <value>navigationBar_panel</value>
+  </data>
+  <data name="&gt;&gt;infobutton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="navigationBar_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="navigationBar_panel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 120pt</value>
   </data>
   <data name="navigationBar_panel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="navigationBar_panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <data name="navigationBar_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 777</value>
+    <value>344, 622</value>
   </data>
   <data name="navigationBar_panel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -491,10 +659,13 @@
     <value>Fill</value>
   </data>
   <data name="content_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 0</value>
+    <value>344, 0</value>
+  </data>
+  <data name="content_panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="content_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 777</value>
+    <value>779, 622</value>
   </data>
   <data name="content_panel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -515,13 +686,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1404, 777</value>
+    <value>1123, 622</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>menue</value>
+    <value>Menue</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
