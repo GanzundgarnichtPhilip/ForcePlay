@@ -20,7 +20,6 @@ namespace ForcePlayV2
                     form.Close();
                     break;
                 }
-
                 if (form is NeuesSpielHinzufuegen)
                 // Falls ein Form der Klasse 'NeuesSpielHinzufuegen' geoeffnet ist, wird es geschlossen.
                 {
@@ -58,7 +57,6 @@ namespace ForcePlayV2
                     form.Close();
                     break;
                 }
-
                 if (form is NeuesSpielHinzufuegen)
                 // Falls ein Form der Klasse 'NeuesSpielHinzufuegen' geoeffnet ist, wird es geschlossen.
                 {
@@ -66,7 +64,6 @@ namespace ForcePlayV2
                     break;
                 }
             }
-
             NeuesSpielHinzufuegen neuesSpielHinzufügen = new NeuesSpielHinzufuegen();
             // Hier wird ein Objekt des 'NeuesSpielHinzufuegen' Forms generiert.
 
@@ -87,6 +84,21 @@ namespace ForcePlayV2
         {
             Close();
             // Das Menue (und zugleich das ganze Programm) wird geschlossen.
+        }
+
+        private void content_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void infobutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Installationspfad bitte manuell eingeben -> Echter\n" +
+                            "2. Alle anderen Daten bitte manuell eingeben\n" +
+                            "3. Navigation mit den Buttons\n" +
+                            "4. Alle Datenfelder müssen eingegeben werden\n" +
+                            "5. (C) Raphael Tack, Daniel Sauer und Philip Danull\n" +
+                            "6. Bei weiteren Problemen, melden Sie sich bitte beim Support");
         }
     }
 }
