@@ -1,6 +1,6 @@
 ﻿namespace ForcePlayV2
 {
-    partial class NeuesSpielHinzufügen
+    partial class NeuesSpielHinzufuegen
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@
             publisher = new TextBox();
             usk = new ComboBox();
             exitButton = new Button();
+            prüfung = new Label();
             SuspendLayout();
             // 
             // SpielHinzufügenButton
@@ -48,7 +49,7 @@
             SpielHinzufügenButton.TabIndex = 0;
             SpielHinzufügenButton.Text = "Submit";
             SpielHinzufügenButton.UseVisualStyleBackColor = false;
-            SpielHinzufügenButton.UseWaitCursor = true;
+            SpielHinzufügenButton.Click += SpielHinzufügenButton_Click;
             // 
             // titel
             // 
@@ -58,7 +59,6 @@
             titel.Size = new Size(183, 23);
             titel.TabIndex = 1;
             titel.TextAlign = HorizontalAlignment.Center;
-            titel.UseWaitCursor = true;
             titel.TextChanged += textBox1_TextChanged;
             // 
             // Installationsdatum
@@ -69,7 +69,6 @@
             Installationsdatum.Size = new Size(183, 23);
             Installationsdatum.TabIndex = 2;
             Installationsdatum.TextAlign = HorizontalAlignment.Center;
-            Installationsdatum.UseWaitCursor = true;
             // 
             // zuletztGespielt
             // 
@@ -79,7 +78,6 @@
             zuletztGespielt.Size = new Size(183, 23);
             zuletztGespielt.TabIndex = 3;
             zuletztGespielt.TextAlign = HorizontalAlignment.Center;
-            zuletztGespielt.UseWaitCursor = true;
             // 
             // installationspfad
             // 
@@ -89,7 +87,6 @@
             installationspfad.Size = new Size(183, 23);
             installationspfad.TabIndex = 4;
             installationspfad.TextAlign = HorizontalAlignment.Center;
-            installationspfad.UseWaitCursor = true;
             // 
             // kategorie
             // 
@@ -99,7 +96,6 @@
             kategorie.Size = new Size(183, 23);
             kategorie.TabIndex = 5;
             kategorie.TextAlign = HorizontalAlignment.Center;
-            kategorie.UseWaitCursor = true;
             // 
             // publisher
             // 
@@ -118,7 +114,6 @@
             usk.Name = "usk";
             usk.Size = new Size(183, 23);
             usk.TabIndex = 7;
-            usk.UseWaitCursor = true;
             usk.SelectedIndexChanged += usk_SelectedIndexChanged;
             // 
             // exitButton
@@ -130,17 +125,26 @@
             exitButton.TabIndex = 8;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = false;
-            exitButton.UseWaitCursor = true;
             exitButton.Click += button1_Click;
             // 
-            // NeuesSpielHinzufügen
+            // prüfung
+            // 
+            prüfung.AutoSize = true;
+            prüfung.Location = new Point(228, 140);
+            prüfung.Name = "prüfung";
+            prüfung.Size = new Size(38, 15);
+            prüfung.TabIndex = 9;
+            prüfung.Text = "label1";
+            // 
+            // NeuesSpielHinzufuegen
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             BackColor = Color.Silver;
-            ClientSize = new Size(245, 406);
+            ClientSize = new Size(339, 406);
             ControlBox = false;
+            Controls.Add(prüfung);
             Controls.Add(exitButton);
             Controls.Add(usk);
             Controls.Add(publisher);
@@ -150,8 +154,7 @@
             Controls.Add(Installationsdatum);
             Controls.Add(titel);
             Controls.Add(SpielHinzufügenButton);
-            Name = "NeuesSpielHinzufügen";
-            UseWaitCursor = true;
+            Name = "NeuesSpielHinzufuegen";
             WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();
@@ -169,5 +172,6 @@
         private ComboBox usk;
         private Button exitButton;
         private Label label2;
+        private Label prüfung;
     }
 }

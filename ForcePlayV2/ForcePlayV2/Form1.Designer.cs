@@ -48,7 +48,7 @@
             meineSpiele_button.ForeColor = Color.White;
             meineSpiele_button.Name = "meineSpiele_button";
             meineSpiele_button.UseVisualStyleBackColor = false;
-            meineSpiele_button.Click += meineSpiele_button_Click;
+            meineSpiele_button.Click += MeineSpiele_button_Click;
             // 
             // neuesSpielHinzufügen_button
             // 
@@ -59,7 +59,7 @@
             neuesSpielHinzufügen_button.ForeColor = Color.White;
             neuesSpielHinzufügen_button.Name = "neuesSpielHinzufügen_button";
             neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
-            neuesSpielHinzufügen_button.Click += neuesSpielHinzufügen_button_Click;
+            neuesSpielHinzufügen_button.Click += NeuesSpielHinzufügen_button_Click;
             // 
             // logo_label
             // 
@@ -77,7 +77,7 @@
             exit_button.ForeColor = Color.White;
             exit_button.Name = "exit_button";
             exit_button.UseVisualStyleBackColor = false;
-            exit_button.Click += exit_button_Click;
+            exit_button.Click += Exit_button_Click;
             // 
             // navigationBar_panel
             // 
