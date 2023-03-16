@@ -57,10 +57,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="meineSpiele_button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="meineSpiele_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -182,24 +178,25 @@
     <value>NoControl</value>
   </data>
   <data name="meineSpiele_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 160</value>
+    <value>0, 200</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="meineSpiele_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="meineSpiele_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="meineSpiele_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="meineSpiele_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="meineSpiele_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="meineSpiele_button.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -220,9 +217,6 @@
   </data>
   <data name="&gt;&gt;meineSpiele_button.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="neuesSpielHinzufügen_button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="neuesSpielHinzufügen_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -334,22 +328,22 @@
     <value>NoControl</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 252</value>
+    <value>0, 315</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="neuesSpielHinzufügen_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="neuesSpielHinzufügen_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="neuesSpielHinzufügen_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="neuesSpielHinzufügen_button.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -385,7 +379,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="logo_label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 96</value>
+    <value>430, 120</value>
   </data>
   <data name="logo_label.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -407,9 +401,6 @@
   </data>
   <data name="&gt;&gt;logo_label.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="exit_button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="exit_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -512,22 +503,22 @@
     <value>NoControl</value>
   </data>
   <data name="exit_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 344</value>
+    <value>0, 430</value>
   </data>
   <data name="exit_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="exit_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="exit_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="exit_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="exit_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+    <value>430, 100</value>
   </data>
   <data name="exit_button.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -550,79 +541,150 @@
   <data name="&gt;&gt;exit_button.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="infobutton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="infobutton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="info_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="infobutton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="info_button.Font" type="System.Drawing.Font, System.Drawing">
     <value>Agency FB, 19.800001pt, style=Bold</value>
   </data>
-  <data name="infobutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="info_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        ugAAAboB6KsBBgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAS2SURBVHhe5Zu/
-        axRBFMcX490FVNBGbNRC/QPExohgYW1jYWEhCDaKnaWViI2gtoJYCCIxMT+VgIWYi8YYo6hFEH/grwR/
-        RM3lsjEhenvjvNnbOLf33dvd25llYIuP5F5h3veb23kz781ajDGtWHfZGmu4csAqOqesEecC54ZVrAzz
-        z685dntXqVroLi/ne8qlfO/8x1y//TQ/uDC4esA+a/XaG9H/qRIYTIr1kG2xhp0TVrE6xEUucVgQ7Z2z
-        wdycZYWe+ZncoN2ZG1rcjX5XUmCwFaz7rJ0LOsV5KQsMAwoPoNA9t0TfDquvtB7l0AowGAeri7VZI5Vj
-        XMy0X1wUkNAwuBGV3MDCNf678yinOMBgVPizfJCLeOUXFQckMCrciOX8wPx5lFtUYDAM6x7bysWPIUFx
-        QcLikr81Z6++s7gH5RoGDDaDP+t7eeLf/UJaBQlqhUJXyckN/j6Bcm4GDAbBy9lRnvSyX0QSkJgk8LXh
-        Kso9CBj0Ixa6YeciEpAUJCIpuT77WdQFEgZlhPhitR8lrwIkQAWFnvLXKCbAoIyuv7wHSl4V9E1AmmRg
-        0KP2zMPEVYESV0nYmgCDRG21V7rgyWwYddi+F1V2fGKR7bg9B5NXRbPqgIOizqsrdTKbxhx2/VuVTS8x
-        wcQvR1CcqbCdQ2UoIClUIoP2CQ0BEVS0yfGzbdxhk7Yr3G8A8ZSz/54NRSSFNktQa0PA3d5CAUloG3HY
-        nZ/14v0GEI9+OmxdFxaRFLRtrv8gSl6yvX0Q9Lz7xSMDCFoXkICk0NnBXxrrDXBPdVBAUk6+jW7AlXfL
-        UIAK6BRZp3nlB/c839KRNgpnPkQ3oPvzX5i8CugoLfcT/hvgNjNg8io4NBndgHOTSzB5VVBTBRkQq5MT
-        l82PHfZ+MdwAqgQdd+dh4qqgzlKdAaKHB5JWzfE3jd8CvwGX3+p7/mW8HqNrgGhg4qRVsopz+n2VfQ4w
-        oPPTH7ZWUwn0Q43W/wa43VuYtA52PXPY2Y9VNvCDsUc/HNY79ZcdHl2AieqCus1Cu+jbh7SudYKSS4Wb
-        s4zmDnTio6EFTC4NYHIpIYYvPAmt5S8MlFhaiBmDGFeBxFSw5qFb/5tBNd/PkbHfMGHV0BiODLiBklcB
-        1X655CHkKuAx9KUCE1YNzSLp9EeDSiggKcYb0FMu0RpAU1ooICmmG0BTaTLA9ieuCnkN6OM13zQDaDSv
-        1QCZS1PRD0NpG6DtEZAx0YDaI6BvEZQx0QB3EdRYBmWMNECUQY0bIRkTDXA3QilthY38BoitcEqHIRMN
-        cA9DKR2HjTPAOw6n1RAxzYCVhoj4J4WWmGkG1LfEUmiKGmeA3BQVP2hui5tkQENbvGaA1nJokgF4MKJ5
-        NGaKAYGjMfFB8XB0+7grnBidaxQfZMATDpmgw4jA4aj4oHg83vEc/9VlkAEySESrhI7HRUDhBQnTDAi9
-        ILESVHRFxiQDIl+REUFFl6QKD9y+YDNoEtwMJCYusS9JEbqvyXmghFUT+5qcR6YvSnpk+qos4ZbGDF+W
-        JoQJWb0uL5PZFyZkatUhm6/MeGT6pSmZ2rY5e6/NyYgFMqsvTsrU+gnZe3UWkcmXp4Mw+/V5Zv0DxtIc
-        XwZxF5kAAAAASUVORK5CYII=
+        /9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+        AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+        AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABVAFUDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+Deiiiv8AQA+XCiv0Y/4Jx/8ABLb9rX/gqB8VZvh1+zf4NhXw
+        54dezn+J3xk8YSXWjfCj4V6VeFzDd+KvEUVpdyXGrXkUU76N4S0G01XxRrK291dWmljStP1XU9P/AHe1
+        vUv+Der/AIIzs/hO18DXH/BaH9tnw03keJdc8QXmj6Z+yb4J8UWeY77SrWzkj8WeAdShguVjLWS6F8et
+        Qtry2vLO98VeFbwSadF85mXEuFwWK/s3B4bFZxm/LGby3LYQnUoQn8FXHYirOnhcvpSuuWeKrQlJO9On
+        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
 </value>
   </data>
-  <data name="infobutton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="info_button.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="infobutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, 438</value>
+  <data name="info_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 545</value>
   </data>
-  <data name="infobutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="info_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="infobutton.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+  <data name="info_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
   </data>
-  <data name="infobutton.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+  <data name="info_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
   </data>
-  <data name="infobutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 80</value>
+  <data name="info_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 100</value>
   </data>
-  <data name="infobutton.TabIndex" type="System.Int32, mscorlib">
+  <data name="info_button.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="infobutton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="info_button.Text" xml:space="preserve">
+    <value>Information</value>
   </data>
-  <data name="infobutton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="info_button.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
   </data>
-  <data name="&gt;&gt;infobutton.Name" xml:space="preserve">
-    <value>infobutton</value>
+  <data name="&gt;&gt;info_button.Name" xml:space="preserve">
+    <value>info_button</value>
   </data>
-  <data name="&gt;&gt;infobutton.Type" xml:space="preserve">
+  <data name="&gt;&gt;info_button.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;infobutton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;info_button.Parent" xml:space="preserve">
     <value>navigationBar_panel</value>
   </data>
-  <data name="&gt;&gt;infobutton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;info_button.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="navigationBar_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -638,7 +700,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="navigationBar_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 622</value>
+    <value>430, 778</value>
   </data>
   <data name="navigationBar_panel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -659,13 +721,13 @@
     <value>Fill</value>
   </data>
   <data name="content_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 0</value>
+    <value>430, 0</value>
   </data>
   <data name="content_panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="content_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>779, 622</value>
+    <value>974, 778</value>
   </data>
   <data name="content_panel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -686,10 +748,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
+    <value>120, 120</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1123, 622</value>
+    <value>1404, 778</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

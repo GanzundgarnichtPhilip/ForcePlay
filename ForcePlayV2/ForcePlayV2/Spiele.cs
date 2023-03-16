@@ -67,23 +67,18 @@ namespace ForcePlayV2
             {
                 case "0":
                     return true;
-                    break;
 
                 case "6":
                     return true;
-                    break;
 
                 case "12":
                     return true;
-                    break;
 
                 case "16":
                     return true;
-                    break;
 
                 case "18":
                     return true;
-                    break;
 
                 default: return false;
             }

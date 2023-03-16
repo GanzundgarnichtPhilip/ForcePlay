@@ -35,9 +35,9 @@
             // 
             // ueberschrift_label
             // 
-            ueberschrift_label.BackColor = Color.Maroon;
+            ueberschrift_label.BackColor = Color.Silver;
             ueberschrift_label.Font = new Font("Agency FB", 28.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            ueberschrift_label.ForeColor = Color.White;
+            ueberschrift_label.ForeColor = Color.Black;
             ueberschrift_label.Location = new Point(0, 0);
             ueberschrift_label.MaximumSize = new Size(530, 85);
             ueberschrift_label.MinimumSize = new Size(530, 85);
@@ -83,7 +83,7 @@
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
-            BackColor = Color.Maroon;
+            BackColor = Color.Silver;
             ClientSize = new Size(524, 309);
             ControlBox = false;
             Controls.Add(ok_button);

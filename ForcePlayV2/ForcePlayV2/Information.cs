@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ForcePlayV2
 {
-    public partial class Fehlermeldung : Form
+    public partial class Informationsanzeige : Form
     {
-        public Fehlermeldung()
+        public Informationsanzeige()
         {
             InitializeComponent();
         }

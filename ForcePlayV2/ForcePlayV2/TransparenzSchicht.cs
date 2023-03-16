@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ForcePlayV2
 {
-    public partial class Fehlermeldung : Form
+    public partial class Transparenzschicht : Form
     {
-        public Fehlermeldung()
+        public Transparenzschicht()
         {
             InitializeComponent();
-        }
-
-        private void Ok_button_Click(object sender, EventArgs e)
-        {
-            // Das Form wird geschlossen.
-            Close();
         }
     }
 }
