@@ -51,23 +51,52 @@ namespace ForcePlayV2
             spiel.Publisher = publisher.Text;
             spiel.Usk = usk.Text;
 
-            // Eingabe wird überprüft
-            if (!spiel.pruefung())
-                prüfung.Text = "Problem";
+            // Überprüfung der Eingabe.
+            // -> Falls einem Attribut kein Wert zugewiesen wurde, poppt ein Form der Klasse 'Fehlermeldung' auf.
+            if (spiel.Titel == ""
+                || spiel.Zuletzt == ""
+                || spiel.Installationsdatum == ""
+                || spiel.Installationspfad == ""
+                || spiel.Kategorie == ""
+                || spiel.Publisher == ""
+                || spiel.Usk == "")
+            {
+                // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
+                Fehlermeldung fehlermeldung = new Fehlermeldung();
 
-            else prüfung.Text = "Perfekt";
+                // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
+                fehlermeldung.TopLevel = true;
 
-            // Spiel wird der Liste hinzugefügt.
-            spieleVerwalten.Add(spiel);
+                // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                fehlermeldung.BringToFront();
+                
+                // Hier poppt das Form 'Fehlermeldung' auf.
+                fehlermeldung.ShowDialog();
 
-            // Textfelder werden gecleart
-            titel.Clear();
-            zuletztGespielt.Clear();
-            installationspfad.Clear();
-            Installationsdatum.Clear();
-            kategorie.Clear();
-            publisher.Clear();
-            usk.Text = "";
+                // Textfelder werden gecleart.
+                titel.Clear();
+                zuletztGespielt.Clear();
+                installationspfad.Clear();
+                Installationsdatum.Clear();
+                kategorie.Clear();
+                publisher.Clear();
+                usk.Text = "";
+            }
+
+            else
+            {
+                // Spiel wird der Liste hinzugefügt.
+                spieleVerwalten.Add(spiel);
+
+                // Textfelder werden gecleart.
+                titel.Clear();
+                zuletztGespielt.Clear();
+                installationspfad.Clear();
+                Installationsdatum.Clear();
+                kategorie.Clear();
+                publisher.Clear();
+                usk.Text = "";
+            }
 
         }
 
