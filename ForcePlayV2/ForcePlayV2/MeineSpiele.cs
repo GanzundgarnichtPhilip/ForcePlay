@@ -65,5 +65,29 @@ namespace ForcePlayV2
                 instPfad.Text = spiele.Installationspfad;
             }
         }
+
+        private void del_button_Click(object sender, EventArgs e)
+        {
+            int i = spieleListBox.SelectedIndex;
+            if(i != -1)
+            {
+                // Objekt das man ausgewählt hat wird gelöscht
+                spieleList.RemoveAt(i);
+                Text_Clear();
+                spieleBindingSource.ResetBindings(false);
+            }
+        }
+
+        //Methode um TextBoxen zu leeren
+        private void Text_Clear()
+        {
+            titel.Clear();
+            publisher.Clear();
+            genres.Clear();
+            zuletztGesp.Clear();
+            usk.Clear();
+            instDatum.Clear();
+            instPfad.Clear();
+        }
     }
 }

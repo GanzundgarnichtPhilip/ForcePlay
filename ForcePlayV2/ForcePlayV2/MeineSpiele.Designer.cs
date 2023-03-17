@@ -43,6 +43,7 @@
             this.instDatum = new System.Windows.Forms.TextBox();
             this.instPfad = new System.Windows.Forms.TextBox();
             this.titel = new System.Windows.Forms.TextBox();
+            this.del_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // publisher_label
@@ -201,6 +202,17 @@
             this.titel.Size = new System.Drawing.Size(492, 61);
             this.titel.TabIndex = 26;
             // 
+            // del_button
+            // 
+            this.del_button.BackColor = System.Drawing.Color.MistyRose;
+            this.del_button.Location = new System.Drawing.Point(863, 548);
+            this.del_button.Name = "del_button";
+            this.del_button.Size = new System.Drawing.Size(164, 146);
+            this.del_button.TabIndex = 27;
+            this.del_button.Text = "Delete";
+            this.del_button.UseVisualStyleBackColor = false;
+            this.del_button.Click += new System.EventHandler(this.del_button_Click);
+            // 
             // MeineSpiele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -209,6 +221,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1685, 898);
             this.ControlBox = false;
+            this.Controls.Add(this.del_button);
             this.Controls.Add(this.titel);
             this.Controls.Add(this.instPfad);
             this.Controls.Add(this.instDatum);
@@ -251,5 +264,6 @@
         private TextBox instDatum;
         private TextBox instPfad;
         private TextBox titel;
+        private Button del_button;
     }
 }
