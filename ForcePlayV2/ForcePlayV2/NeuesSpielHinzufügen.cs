@@ -40,6 +40,9 @@ namespace ForcePlayV2
         /// </summary>
         private void SpielHinzufügenButton_Click(object sender, EventArgs e)
         {
+            // Objekt des MeineSpiele-Forms wird erzeugt, um ReceiveData-Methode aufrufen zu können
+            MeineSpiele meineSpiele = new MeineSpiele();
+
             // Objekt von der Klasse Spiel wird erzeugt
             var spiel = new Spiele();
 
@@ -51,7 +54,6 @@ namespace ForcePlayV2
             spiel.Kategorie = kategorie.Text;
             spiel.Publisher = publisher.Text;
             spiel.Usk = usk.Text;
-
             // Überprüfung der Eingabe.
             // -> Falls einem Attribut kein Wert zugewiesen wurde, poppt ein Form der Klasse 'Fehlermeldung' auf.
             if (spiel.Titel == ""
