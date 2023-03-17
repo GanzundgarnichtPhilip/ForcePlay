@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NeuesSpielHinzufuegen));
             SpielHinzufügenButton = new Button();
             titel = new TextBox();
             installationsdatum = new TextBox();
             zuletztGespielt = new TextBox();
-            installationspfad = new TextBox();
             kategorie = new TextBox();
             publisher = new TextBox();
             usk = new ComboBox();
@@ -44,6 +44,8 @@
             zuletztGespielt2_label = new Label();
             titel2_label = new Label();
             installationsdatum2_label = new Label();
+            installationspfad = new TextBox();
+            explorer_Button = new Button();
             SuspendLayout();
             // 
             // SpielHinzufügenButton
@@ -51,7 +53,7 @@
             SpielHinzufügenButton.BackColor = Color.FromArgb(255, 255, 192);
             SpielHinzufügenButton.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             SpielHinzufügenButton.Location = new Point(216, 424);
-            SpielHinzufügenButton.Margin = new Padding(4, 4, 4, 4);
+            SpielHinzufügenButton.Margin = new Padding(4);
             SpielHinzufügenButton.Name = "SpielHinzufügenButton";
             SpielHinzufügenButton.Size = new Size(270, 100);
             SpielHinzufügenButton.TabIndex = 0;
@@ -63,7 +65,7 @@
             // 
             titel.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
             titel.Location = new Point(216, 20);
-            titel.Margin = new Padding(4, 4, 4, 4);
+            titel.Margin = new Padding(4);
             titel.Name = "titel";
             titel.Size = new Size(870, 47);
             titel.TabIndex = 1;
@@ -73,7 +75,7 @@
             // 
             installationsdatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             installationsdatum.Location = new Point(216, 305);
-            installationsdatum.Margin = new Padding(4, 4, 4, 4);
+            installationsdatum.Margin = new Padding(4);
             installationsdatum.Name = "installationsdatum";
             installationsdatum.Size = new Size(870, 37);
             installationsdatum.TabIndex = 2;
@@ -82,25 +84,16 @@
             // 
             zuletztGespielt.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             zuletztGespielt.Location = new Point(216, 195);
-            zuletztGespielt.Margin = new Padding(4, 4, 4, 4);
+            zuletztGespielt.Margin = new Padding(4);
             zuletztGespielt.Name = "zuletztGespielt";
             zuletztGespielt.Size = new Size(870, 37);
             zuletztGespielt.TabIndex = 3;
-            // 
-            // installationspfad
-            // 
-            installationspfad.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            installationspfad.Location = new Point(216, 360);
-            installationspfad.Margin = new Padding(4, 4, 4, 4);
-            installationspfad.Name = "installationspfad";
-            installationspfad.Size = new Size(870, 37);
-            installationspfad.TabIndex = 4;
             // 
             // kategorie
             // 
             kategorie.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             kategorie.Location = new Point(216, 140);
-            kategorie.Margin = new Padding(4, 4, 4, 4);
+            kategorie.Margin = new Padding(4);
             kategorie.Name = "kategorie";
             kategorie.Size = new Size(870, 37);
             kategorie.TabIndex = 5;
@@ -109,7 +102,7 @@
             // 
             publisher.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             publisher.Location = new Point(216, 85);
-            publisher.Margin = new Padding(4, 4, 4, 4);
+            publisher.Margin = new Padding(4);
             publisher.Name = "publisher";
             publisher.Size = new Size(870, 37);
             publisher.TabIndex = 6;
@@ -121,7 +114,7 @@
             usk.FormattingEnabled = true;
             usk.Items.AddRange(new object[] { "0", "6", "12", "16", "18" });
             usk.Location = new Point(216, 250);
-            usk.Margin = new Padding(4, 4, 4, 4);
+            usk.Margin = new Padding(4);
             usk.Name = "usk";
             usk.Size = new Size(870, 37);
             usk.TabIndex = 7;
@@ -132,7 +125,7 @@
             exitButton.BackColor = Color.FromArgb(255, 192, 255);
             exitButton.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             exitButton.Location = new Point(816, 424);
-            exitButton.Margin = new Padding(4, 4, 4, 4);
+            exitButton.Margin = new Padding(4);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(270, 100);
             exitButton.TabIndex = 8;
@@ -218,6 +211,25 @@
             installationsdatum2_label.TabIndex = 20;
             installationsdatum2_label.Text = "Installationsdatum";
             // 
+            // installationspfad
+            // 
+            installationspfad.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            installationspfad.Location = new Point(216, 360);
+            installationspfad.Margin = new Padding(4);
+            installationspfad.Name = "installationspfad";
+            installationspfad.Size = new Size(830, 37);
+            installationspfad.TabIndex = 4;
+            // 
+            // explorer_Button
+            // 
+            explorer_Button.Image = (Image)resources.GetObject("explorer_Button.Image");
+            explorer_Button.Location = new Point(1048, 359);
+            explorer_Button.Name = "explorer_Button";
+            explorer_Button.Size = new Size(38, 38);
+            explorer_Button.TabIndex = 27;
+            explorer_Button.UseVisualStyleBackColor = true;
+            explorer_Button.Click += Explorer_Button_Click;
+            // 
             // NeuesSpielHinzufuegen
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
@@ -226,6 +238,7 @@
             BackColor = Color.Silver;
             ClientSize = new Size(1148, 611);
             ControlBox = false;
+            Controls.Add(explorer_Button);
             Controls.Add(kategorie2_label);
             Controls.Add(publisher2_label);
             Controls.Add(usk2_label);
@@ -242,7 +255,7 @@
             Controls.Add(installationsdatum);
             Controls.Add(titel);
             Controls.Add(SpielHinzufügenButton);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "NeuesSpielHinzufuegen";
             WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
@@ -255,7 +268,6 @@
         private TextBox titel;
         private TextBox installationsdatum;
         private TextBox zuletztGespielt;
-        private TextBox installationspfad;
         private TextBox kategorie;
         private TextBox publisher;
         private ComboBox usk;
@@ -267,5 +279,7 @@
         private Label zuletztGespielt2_label;
         private Label titel2_label;
         private Label installationsdatum2_label;
+        private TextBox installationspfad;
+        private Button explorer_Button;
     }
 }

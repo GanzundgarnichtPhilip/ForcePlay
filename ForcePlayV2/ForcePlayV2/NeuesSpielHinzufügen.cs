@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -117,5 +118,9 @@ namespace ForcePlayV2
 
         }
 
+        private void Explorer_Button_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe");
+        }
     }
 }
