@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ForcePlayV2
@@ -35,7 +36,7 @@ namespace ForcePlayV2
             installationsdatum.Clear();
             kategorie.Clear();
             publisher.Clear();
-            usk.Text = "";
+            usk.Text = null;
         }
 
         /// <summary>
@@ -44,14 +45,14 @@ namespace ForcePlayV2
         private void SpielHinzufügenButton_Click(object sender, EventArgs e)
         {
             // Überprüfung der Eingabe.
-            // -> Falls einem Attribut kein neuer Wert zugewiesen wurde, poppt ein Form der Klasse 'Fehlermeldung' und 'Transparentschicht' auf.
+            // -> Falls einem Attribut kein neuer Wert zugewiesen wurde, poppt ein Form der Klasse 'FehlermeldungNeuesSpielHinzufügen' und 'Transparentschicht' auf.
             if (titel.Text == ""
                 || zuletztGespielt.Text == ""
                 || installationsdatum.Text == ""
                 || installationspfad.Text == ""
                 || kategorie.Text == ""
                 || publisher.Text == ""
-                || usk.Text == "")
+                || usk.Text == null)
             {
                 // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
                 using Transparenzschicht transparenzschicht = new Transparenzschicht();
@@ -79,7 +80,7 @@ namespace ForcePlayV2
                 installationsdatum.Clear();
                 kategorie.Clear();
                 publisher.Clear();
-                usk.Text = "";
+                usk.Text = null;
             }
 
             else
@@ -111,7 +112,7 @@ namespace ForcePlayV2
                 installationsdatum.Clear();
                 kategorie.Clear();
                 publisher.Clear();
-                usk.Text = "";
+                usk.Text = null;
             }
 
         }
