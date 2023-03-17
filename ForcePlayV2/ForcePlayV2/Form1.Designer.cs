@@ -34,17 +34,17 @@
             logo_label = new Label();
             exit_button = new Button();
             navigationBar_panel = new Panel();
-            infobutton = new Button();
+            info_button = new Button();
             content_panel = new Panel();
             navigationBar_panel.SuspendLayout();
             SuspendLayout();
             // 
             // meineSpiele_button
             // 
-            resources.ApplyResources(meineSpiele_button, "meineSpiele_button");
             meineSpiele_button.BackColor = Color.FromArgb(0, 0, 64);
             meineSpiele_button.Cursor = Cursors.Hand;
             meineSpiele_button.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(meineSpiele_button, "meineSpiele_button");
             meineSpiele_button.ForeColor = Color.White;
             meineSpiele_button.Name = "meineSpiele_button";
             meineSpiele_button.UseVisualStyleBackColor = false;
@@ -52,10 +52,10 @@
             // 
             // neuesSpielHinzufügen_button
             // 
-            resources.ApplyResources(neuesSpielHinzufügen_button, "neuesSpielHinzufügen_button");
             neuesSpielHinzufügen_button.BackColor = Color.FromArgb(0, 0, 64);
             neuesSpielHinzufügen_button.Cursor = Cursors.Hand;
             neuesSpielHinzufügen_button.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(neuesSpielHinzufügen_button, "neuesSpielHinzufügen_button");
             neuesSpielHinzufügen_button.ForeColor = Color.White;
             neuesSpielHinzufügen_button.Name = "neuesSpielHinzufügen_button";
             neuesSpielHinzufügen_button.UseVisualStyleBackColor = false;
@@ -70,10 +70,10 @@
             // 
             // exit_button
             // 
-            resources.ApplyResources(exit_button, "exit_button");
             exit_button.BackColor = Color.FromArgb(0, 0, 64);
             exit_button.Cursor = Cursors.Hand;
             exit_button.FlatAppearance.BorderColor = Color.White;
+            resources.ApplyResources(exit_button, "exit_button");
             exit_button.ForeColor = Color.White;
             exit_button.Name = "exit_button";
             exit_button.UseVisualStyleBackColor = false;
@@ -82,19 +82,19 @@
             // navigationBar_panel
             // 
             navigationBar_panel.BackColor = Color.FromArgb(0, 0, 64);
-            navigationBar_panel.Controls.Add(infobutton);
+            navigationBar_panel.Controls.Add(info_button);
             navigationBar_panel.Controls.Add(meineSpiele_button);
             resources.ApplyResources(navigationBar_panel, "navigationBar_panel");
             navigationBar_panel.Name = "navigationBar_panel";
             // 
-            // infobutton
+            // info_button
             // 
-            resources.ApplyResources(infobutton, "infobutton");
-            infobutton.Cursor = Cursors.Hand;
-            infobutton.ForeColor = Color.White;
-            infobutton.Name = "infobutton";
-            infobutton.UseVisualStyleBackColor = true;
-            infobutton.Click += infobutton_Click;
+            info_button.Cursor = Cursors.Hand;
+            resources.ApplyResources(info_button, "info_button");
+            info_button.ForeColor = Color.White;
+            info_button.Name = "info_button";
+            info_button.UseVisualStyleBackColor = false;
+            info_button.Click += Infobutton_Click;
             // 
             // content_panel
             // 
@@ -116,9 +116,7 @@
             Name = "Menue";
             WindowState = FormWindowState.Maximized;
             navigationBar_panel.ResumeLayout(false);
-            navigationBar_panel.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -128,6 +126,6 @@
         private Button exit_button;
         private Panel navigationBar_panel;
         private Panel content_panel;
-        private Button infobutton;
+        private Button info_button;
     }
 }

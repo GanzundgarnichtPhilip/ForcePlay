@@ -91,14 +91,26 @@ namespace ForcePlayV2
 
         }
 
-        private void infobutton_Click(object sender, EventArgs e)
+        private void Infobutton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. Installationspfad bitte manuell eingeben -> Echter\n" +
-                            "2. Alle anderen Daten bitte manuell eingeben\n" +
-                            "3. Navigation mit den Buttons\n" +
-                            "4. Alle Datenfelder müssen eingegeben werden\n" +
-                            "5. (C) Raphael Tack, Daniel Sauer und Philip Danull\n" +
-                            "6. Bei weiteren Problemen, melden Sie sich bitte beim Support");
+            // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+            using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+            // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+            // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+            transparenzschicht.Show();
+
+            // Hier wird ein Objekt des 'Informationsanzeige' Forms generiert.
+            Informationsanzeige informationsanzeige = new Informationsanzeige();
+
+            // Hier wird festgelegt, dass das 'Informationsanzeige' Form als die vorderste Anwendung gezählt wird.
+            informationsanzeige.TopLevel = true;
+
+            // Hier wird die Sichtbarkeit des 'Informationsanzeige' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+            informationsanzeige.BringToFront();
+
+            // Hier poppt das Form 'Informationsanzeige' auf.
+            informationsanzeige.ShowDialog();
         }
     }
 }

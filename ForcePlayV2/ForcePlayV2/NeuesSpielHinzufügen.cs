@@ -29,8 +29,9 @@ namespace ForcePlayV2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
+            // Das Form wird geschlossen.
             Close();
         }
 
@@ -61,6 +62,13 @@ namespace ForcePlayV2
                 || spiel.Publisher == ""
                 || spiel.Usk == "")
             {
+                // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                transparenzschicht.Show();
+
                 // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
                 Fehlermeldung fehlermeldung = new Fehlermeldung();
 
@@ -69,7 +77,7 @@ namespace ForcePlayV2
 
                 // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
                 fehlermeldung.BringToFront();
-                
+
                 // Hier poppt das Form 'Fehlermeldung' auf.
                 fehlermeldung.ShowDialog();
 

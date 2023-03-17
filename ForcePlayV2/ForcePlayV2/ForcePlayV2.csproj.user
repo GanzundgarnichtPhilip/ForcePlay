@@ -10,10 +10,16 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MeineSpiele.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NeuesSpielHinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TransparenzSchicht.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
