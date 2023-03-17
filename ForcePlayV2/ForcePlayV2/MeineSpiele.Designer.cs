@@ -46,6 +46,7 @@
             this.del_button = new System.Windows.Forms.Button();
             this.sfChanges_button = new System.Windows.Forms.Button();
             this.fehlerMeldung_label = new System.Windows.Forms.Label();
+            this.startGame_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // publisher_label
@@ -237,6 +238,17 @@
             this.fehlerMeldung_label.Size = new System.Drawing.Size(0, 36);
             this.fehlerMeldung_label.TabIndex = 0;
             // 
+            // startGame_button
+            // 
+            this.startGame_button.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.startGame_button.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.startGame_button.Location = new System.Drawing.Point(535, 548);
+            this.startGame_button.Name = "startGame_button";
+            this.startGame_button.Size = new System.Drawing.Size(124, 106);
+            this.startGame_button.TabIndex = 29;
+            this.startGame_button.Text = "Start";
+            this.startGame_button.UseVisualStyleBackColor = false;
+            // 
             // MeineSpiele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -245,6 +257,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1685, 898);
             this.ControlBox = false;
+            this.Controls.Add(this.startGame_button);
             this.Controls.Add(this.fehlerMeldung_label);
             this.Controls.Add(this.sfChanges_button);
             this.Controls.Add(this.del_button);
@@ -293,5 +306,6 @@
         private Button del_button;
         private Button sfChanges_button;
         private Label fehlerMeldung_label;
+        private Button startGame_button;
     }
 }
