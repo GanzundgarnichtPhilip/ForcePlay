@@ -126,30 +126,41 @@ namespace ForcePlayV2
 
         private void StartGame_button_Click(object sender, EventArgs e)
         {
-            // Falls ein gültiger Installationspfad vorhanden ist, kann die Anwendung gestartet werden.
-            if (instPfad.Text != "")
+            // Hier wird ein Objekt der Process-Klasse erstellt.
+            // -> Die Process-Klasse ermöglicht es eine Anwendung zu starten.
+            Process spielStart = new Process();
+
+            // Hier wird der auszuführende Pfad erfasst.
+            spielStart.StartInfo.FileName = instPfad.Text;
+
+            // Hier wird geprüft, ob das angegebene Verzeichnis vorhanden ist
+            if (File.Exists(spielStart.StartInfo.FileName))
             {
-                // Hier wird der Pfad (wo das Spiel sich befindet) unter der Variable 'spielPfad' deklariert.
-                string spielPfad = instPfad.Text;
-
-                // Hier wird ein Objekt der Process-Klasse erstellt.
-                // -> Die Process-Klasse ermöglicht es eine Anwendung zu starten.
-                Process spielStart = new Process();
-
-                // Hier wird der auszuführende Pfad erfasst.
-                spielStart.StartInfo.FileName = spielPfad;
-
-                // Hier wird das Arbeitsverzeichnis auf den auszuführenden Pfad gesetzt.
-                // -> Dies ist nötig, damit das Verzeichnis korrekt ausgeführt werden kann.
-                spielStart.StartInfo.WorkingDirectory = System.IO.Path.GetDirectoryName(spielPfad);
-
-                // Hier wird das Spiel gestartet.
+                // Hier wird die Anwendung gestartet.
                 spielStart.Start();
             }
 
+            // Falls das angegeben Verzeichnis nicht existiert, poppt eine Fehlermeldung auf.
             else
             {
-                // FEHLERMELDUNG
+                // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                transparenzschicht.Show();
+
+                // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
+                FehlermeldungMeineSpiele fehlermeldung = new FehlermeldungMeineSpiele();
+
+                // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
+                fehlermeldung.TopLevel = true;
+
+                // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                fehlermeldung.BringToFront();
+
+                // Hier poppt das Form 'Fehlermeldung' auf.
+                fehlermeldung.ShowDialog();
             }
         }
     }

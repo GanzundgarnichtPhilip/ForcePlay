@@ -55,7 +55,7 @@ namespace ForcePlayV2
                 transparenzschicht.Show();
 
                 // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
-                Fehlermeldung fehlermeldung = new Fehlermeldung();
+                FehlermeldungNeuesSpielHinzufügen fehlermeldung = new FehlermeldungNeuesSpielHinzufügen();
 
                 // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
                 fehlermeldung.TopLevel = true;
