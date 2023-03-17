@@ -36,7 +36,6 @@ namespace ForcePlayV2
             kategorie.Clear();
             publisher.Clear();
             usk.Text = "";
-
         }
 
         /// <summary>
