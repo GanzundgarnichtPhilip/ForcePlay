@@ -37,104 +37,186 @@
             publisher = new TextBox();
             usk = new ComboBox();
             exitButton = new Button();
+            kategorie2_label = new Label();
+            publisher2_label = new Label();
+            usk2_label = new Label();
+            installationspfad2_label = new Label();
+            zuletztGespielt2_label = new Label();
+            titel2_label = new Label();
+            installationsdatum2_label = new Label();
             SuspendLayout();
             // 
             // SpielHinzufügenButton
             // 
             SpielHinzufügenButton.BackColor = Color.LightGoldenrodYellow;
-            SpielHinzufügenButton.Location = new Point(15, 371);
+            SpielHinzufügenButton.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            SpielHinzufügenButton.Location = new Point(216, 424);
             SpielHinzufügenButton.Margin = new Padding(4);
             SpielHinzufügenButton.Name = "SpielHinzufügenButton";
-            SpielHinzufügenButton.Size = new Size(136, 121);
+            SpielHinzufügenButton.Size = new Size(270, 100);
             SpielHinzufügenButton.TabIndex = 0;
-            SpielHinzufügenButton.Text = "Submit";
+            SpielHinzufügenButton.Text = "Hinzufügen";
             SpielHinzufügenButton.UseVisualStyleBackColor = false;
             SpielHinzufügenButton.Click += SpielHinzufügenButton_Click;
             // 
             // titel
             // 
-            titel.Location = new Point(49, 15);
+            titel.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            titel.Location = new Point(216, 20);
             titel.Margin = new Padding(4);
             titel.Name = "titel";
-            titel.PlaceholderText = "Titel";
-            titel.Size = new Size(228, 27);
+            titel.Size = new Size(870, 47);
             titel.TabIndex = 1;
-            titel.TextAlign = HorizontalAlignment.Center;
             titel.TextChanged += textBox1_TextChanged;
             // 
             // installationsdatum
             // 
-            installationsdatum.Location = new Point(49, 65);
+            installationsdatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            installationsdatum.Location = new Point(216, 305);
             installationsdatum.Margin = new Padding(4);
             installationsdatum.Name = "installationsdatum";
-            installationsdatum.PlaceholderText = "Installationsdatum";
-            installationsdatum.Size = new Size(228, 27);
+            installationsdatum.Size = new Size(870, 37);
             installationsdatum.TabIndex = 2;
-            installationsdatum.TextAlign = HorizontalAlignment.Center;
             // 
             // zuletztGespielt
             // 
-            zuletztGespielt.Location = new Point(49, 118);
+            zuletztGespielt.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            zuletztGespielt.Location = new Point(216, 195);
             zuletztGespielt.Margin = new Padding(4);
             zuletztGespielt.Name = "zuletztGespielt";
-            zuletztGespielt.PlaceholderText = "Zuletzt gespielt";
-            zuletztGespielt.Size = new Size(228, 27);
+            zuletztGespielt.Size = new Size(870, 37);
             zuletztGespielt.TabIndex = 3;
-            zuletztGespielt.TextAlign = HorizontalAlignment.Center;
             // 
             // installationspfad
             // 
-            installationspfad.Location = new Point(49, 171);
+            installationspfad.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            installationspfad.Location = new Point(216, 360);
             installationspfad.Margin = new Padding(4);
             installationspfad.Name = "installationspfad";
-            installationspfad.PlaceholderText = "Installationspfad";
-            installationspfad.Size = new Size(228, 27);
+            installationspfad.Size = new Size(870, 37);
             installationspfad.TabIndex = 4;
-            installationspfad.TextAlign = HorizontalAlignment.Center;
             // 
             // kategorie
             // 
-            kategorie.Location = new Point(49, 219);
+            kategorie.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            kategorie.Location = new Point(216, 140);
             kategorie.Margin = new Padding(4);
             kategorie.Name = "kategorie";
-            kategorie.PlaceholderText = "Kategorie";
-            kategorie.Size = new Size(228, 27);
+            kategorie.Size = new Size(870, 37);
             kategorie.TabIndex = 5;
-            kategorie.TextAlign = HorizontalAlignment.Center;
             // 
             // publisher
             // 
-            publisher.Location = new Point(49, 266);
+            publisher.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            publisher.Location = new Point(216, 85);
             publisher.Margin = new Padding(4);
             publisher.Name = "publisher";
-            publisher.PlaceholderText = "Publisher";
-            publisher.Size = new Size(228, 27);
+            publisher.Size = new Size(870, 37);
             publisher.TabIndex = 6;
-            publisher.TextAlign = HorizontalAlignment.Center;
             // 
             // usk
             // 
             usk.DropDownStyle = ComboBoxStyle.DropDownList;
+            usk.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             usk.FormattingEnabled = true;
             usk.Items.AddRange(new object[] { "0", "6", "12", "16", "18" });
-            usk.Location = new Point(49, 318);
+            usk.Location = new Point(216, 250);
             usk.Margin = new Padding(4);
             usk.Name = "usk";
-            usk.Size = new Size(228, 28);
+            usk.Size = new Size(870, 37);
             usk.TabIndex = 7;
             usk.SelectedIndexChanged += usk_SelectedIndexChanged;
             // 
             // exitButton
             // 
             exitButton.BackColor = Color.MistyRose;
-            exitButton.Location = new Point(159, 371);
+            exitButton.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            exitButton.Location = new Point(816, 424);
             exitButton.Margin = new Padding(4);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(136, 121);
+            exitButton.Size = new Size(270, 100);
             exitButton.TabIndex = 8;
-            exitButton.Text = "Exit";
+            exitButton.Text = "Abbrechen";
             exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += Button1_Click;
+            // 
+            // kategorie2_label
+            // 
+            kategorie2_label.AutoSize = true;
+            kategorie2_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            kategorie2_label.Location = new Point(25, 140);
+            kategorie2_label.Margin = new Padding(2, 0, 2, 0);
+            kategorie2_label.Name = "kategorie2_label";
+            kategorie2_label.Size = new Size(58, 29);
+            kategorie2_label.TabIndex = 26;
+            kategorie2_label.Text = "Genre";
+            // 
+            // publisher2_label
+            // 
+            publisher2_label.AutoSize = true;
+            publisher2_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            publisher2_label.Location = new Point(25, 85);
+            publisher2_label.Margin = new Padding(2, 0, 2, 0);
+            publisher2_label.Name = "publisher2_label";
+            publisher2_label.Size = new Size(84, 29);
+            publisher2_label.TabIndex = 25;
+            publisher2_label.Text = "Publisher";
+            // 
+            // usk2_label
+            // 
+            usk2_label.AutoSize = true;
+            usk2_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            usk2_label.Location = new Point(25, 250);
+            usk2_label.Margin = new Padding(2, 0, 2, 0);
+            usk2_label.Name = "usk2_label";
+            usk2_label.Size = new Size(124, 29);
+            usk2_label.TabIndex = 24;
+            usk2_label.Text = "USK-Einstufung";
+            // 
+            // installationspfad2_label
+            // 
+            installationspfad2_label.AutoSize = true;
+            installationspfad2_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            installationspfad2_label.Location = new Point(25, 362);
+            installationspfad2_label.Margin = new Padding(2, 0, 2, 0);
+            installationspfad2_label.Name = "installationspfad2_label";
+            installationspfad2_label.Size = new Size(133, 29);
+            installationspfad2_label.TabIndex = 23;
+            installationspfad2_label.Text = "Installationspfad";
+            // 
+            // zuletztGespielt2_label
+            // 
+            zuletztGespielt2_label.AutoSize = true;
+            zuletztGespielt2_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            zuletztGespielt2_label.Location = new Point(25, 195);
+            zuletztGespielt2_label.Margin = new Padding(2, 0, 2, 0);
+            zuletztGespielt2_label.Name = "zuletztGespielt2_label";
+            zuletztGespielt2_label.Size = new Size(123, 29);
+            zuletztGespielt2_label.TabIndex = 22;
+            zuletztGespielt2_label.Text = "Zuletzt gespielt";
+            // 
+            // titel2_label
+            // 
+            titel2_label.AutoSize = true;
+            titel2_label.Font = new Font("Agency FB", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            titel2_label.Location = new Point(25, 20);
+            titel2_label.Margin = new Padding(2, 0, 2, 0);
+            titel2_label.Name = "titel2_label";
+            titel2_label.Size = new Size(132, 41);
+            titel2_label.TabIndex = 21;
+            titel2_label.Text = "Game Titel";
+            // 
+            // installationsdatum2_label
+            // 
+            installationsdatum2_label.AutoSize = true;
+            installationsdatum2_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
+            installationsdatum2_label.ImeMode = ImeMode.NoControl;
+            installationsdatum2_label.Location = new Point(25, 305);
+            installationsdatum2_label.Margin = new Padding(2, 0, 2, 0);
+            installationsdatum2_label.Name = "installationsdatum2_label";
+            installationsdatum2_label.Size = new Size(148, 29);
+            installationsdatum2_label.TabIndex = 20;
+            installationsdatum2_label.Text = "Installationsdatum";
             // 
             // NeuesSpielHinzufuegen
             // 
@@ -142,8 +224,15 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             BackColor = Color.Silver;
-            ClientSize = new Size(424, 508);
+            ClientSize = new Size(1147, 611);
             ControlBox = false;
+            Controls.Add(kategorie2_label);
+            Controls.Add(publisher2_label);
+            Controls.Add(usk2_label);
+            Controls.Add(installationspfad2_label);
+            Controls.Add(zuletztGespielt2_label);
+            Controls.Add(titel2_label);
+            Controls.Add(installationsdatum2_label);
             Controls.Add(exitButton);
             Controls.Add(usk);
             Controls.Add(publisher);
@@ -171,5 +260,12 @@
         private TextBox publisher;
         private ComboBox usk;
         private Button exitButton;
+        private Label kategorie2_label;
+        private Label publisher2_label;
+        private Label usk2_label;
+        private Label installationspfad2_label;
+        private Label zuletztGespielt2_label;
+        private Label titel2_label;
+        private Label installationsdatum2_label;
     }
 }

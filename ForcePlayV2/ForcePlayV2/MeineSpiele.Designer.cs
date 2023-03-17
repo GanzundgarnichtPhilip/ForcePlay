@@ -52,7 +52,7 @@
             // publisher_label
             // 
             publisher_label.AutoSize = true;
-            publisher_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            publisher_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
             publisher_label.ImeMode = ImeMode.NoControl;
             publisher_label.Location = new Point(359, 89);
             publisher_label.Margin = new Padding(2, 0, 2, 0);
@@ -79,29 +79,29 @@
             // titel_label
             // 
             titel_label.AutoSize = true;
-            titel_label.Font = new Font("Agency FB", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            titel_label.Font = new Font("Agency FB", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             titel_label.Location = new Point(359, 20);
             titel_label.Margin = new Padding(2, 0, 2, 0);
             titel_label.Name = "titel_label";
-            titel_label.Size = new Size(123, 42);
+            titel_label.Size = new Size(132, 41);
             titel_label.TabIndex = 13;
             titel_label.Text = "Game Titel";
             // 
             // genres_label
             // 
             genres_label.AutoSize = true;
-            genres_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            genres_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
             genres_label.Location = new Point(359, 152);
             genres_label.Margin = new Padding(2, 0, 2, 0);
             genres_label.Name = "genres_label";
-            genres_label.Size = new Size(67, 29);
+            genres_label.Size = new Size(58, 29);
             genres_label.TabIndex = 14;
-            genres_label.Text = "Genres";
+            genres_label.Text = "Genre";
             // 
             // zuletztGesp_label
             // 
             zuletztGesp_label.AutoSize = true;
-            zuletztGesp_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            zuletztGesp_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
             zuletztGesp_label.Location = new Point(359, 214);
             zuletztGesp_label.Margin = new Padding(2, 0, 2, 0);
             zuletztGesp_label.Name = "zuletztGesp_label";
@@ -112,7 +112,7 @@
             // instPfad_label
             // 
             instPfad_label.AutoSize = true;
-            instPfad_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instPfad_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
             instPfad_label.Location = new Point(359, 402);
             instPfad_label.Margin = new Padding(2, 0, 2, 0);
             instPfad_label.Name = "instPfad_label";
@@ -123,7 +123,7 @@
             // instDatum_label
             // 
             instDatum_label.AutoSize = true;
-            instDatum_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instDatum_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
             instDatum_label.Location = new Point(359, 339);
             instDatum_label.Margin = new Padding(2, 0, 2, 0);
             instDatum_label.Name = "instDatum_label";
@@ -134,7 +134,7 @@
             // usk_label
             // 
             usk_label.AutoSize = true;
-            usk_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            usk_label.Font = new Font("Agency FB", 15F, FontStyle.Italic, GraphicsUnit.Point);
             usk_label.Location = new Point(359, 277);
             usk_label.Margin = new Padding(2, 0, 2, 0);
             usk_label.Name = "usk_label";
@@ -144,56 +144,56 @@
             // 
             // publisher
             // 
-            publisher.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            publisher.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             publisher.Location = new Point(532, 93);
             publisher.Margin = new Padding(2);
             publisher.Name = "publisher";
-            publisher.Size = new Size(870, 41);
+            publisher.Size = new Size(870, 37);
             publisher.TabIndex = 20;
             // 
             // genres
             // 
-            genres.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            genres.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             genres.Location = new Point(532, 156);
             genres.Margin = new Padding(2);
             genres.Name = "genres";
-            genres.Size = new Size(870, 41);
+            genres.Size = new Size(870, 37);
             genres.TabIndex = 21;
             // 
             // usk
             // 
-            usk.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            usk.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             usk.Location = new Point(532, 281);
             usk.Margin = new Padding(2);
             usk.Name = "usk";
-            usk.Size = new Size(870, 41);
+            usk.Size = new Size(870, 37);
             usk.TabIndex = 23;
             // 
             // instDatum
             // 
-            instDatum.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instDatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             instDatum.Location = new Point(532, 343);
             instDatum.Margin = new Padding(2);
             instDatum.Name = "instDatum";
-            instDatum.Size = new Size(870, 41);
+            instDatum.Size = new Size(870, 37);
             instDatum.TabIndex = 24;
             // 
             // instPfad
             // 
-            instPfad.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instPfad.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             instPfad.Location = new Point(532, 406);
             instPfad.Margin = new Padding(2);
             instPfad.Name = "instPfad";
-            instPfad.Size = new Size(870, 41);
+            instPfad.Size = new Size(870, 37);
             instPfad.TabIndex = 25;
             // 
             // titel
             // 
-            titel.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            titel.Font = new Font("Agency FB", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
             titel.Location = new Point(532, 20);
             titel.Margin = new Padding(2);
             titel.Name = "titel";
-            titel.Size = new Size(870, 52);
+            titel.Size = new Size(870, 47);
             titel.TabIndex = 26;
             // 
             // del_button
@@ -237,11 +237,11 @@
             // 
             // zuletztGesp
             // 
-            zuletztGesp.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            zuletztGesp.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             zuletztGesp.Location = new Point(532, 219);
             zuletztGesp.Margin = new Padding(2);
             zuletztGesp.Name = "zuletztGesp";
-            zuletztGesp.Size = new Size(870, 41);
+            zuletztGesp.Size = new Size(870, 37);
             zuletztGesp.TabIndex = 22;
             // 
             // fehlerMeldung_label
