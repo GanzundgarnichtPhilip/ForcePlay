@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             publisher_label = new Label();
-            spiele = new ListBox();
+            spieleListBox = new ListBox();
             titel_label = new Label();
             genres_label = new Label();
             zuletztGesp_label = new Label();
@@ -43,6 +43,10 @@
             instDatum = new TextBox();
             instPfad = new TextBox();
             titel = new TextBox();
+            del_button = new Button();
+            sfChanges_button = new Button();
+            fehlerMeldung_label = new Label();
+            startGame_button = new Button();
             SuspendLayout();
             // 
             // publisher_label
@@ -57,18 +61,20 @@
             publisher_label.TabIndex = 12;
             publisher_label.Text = "Publisher";
             // 
-            // spiele
+            // spieleListBox
             // 
-            spiele.BackColor = Color.White;
-            spiele.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            spiele.ForeColor = Color.Black;
-            spiele.FormattingEnabled = true;
-            spiele.ItemHeight = 29;
-            spiele.Location = new Point(10, 10);
-            spiele.Margin = new Padding(2);
-            spiele.Name = "spiele";
-            spiele.Size = new Size(247, 700);
-            spiele.TabIndex = 9;
+            spieleListBox.BackColor = Color.White;
+            spieleListBox.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            spieleListBox.ForeColor = Color.Black;
+            spieleListBox.FormattingEnabled = true;
+            spieleListBox.ItemHeight = 29;
+            spieleListBox.Location = new Point(10, 10);
+            spieleListBox.Margin = new Padding(2);
+            spieleListBox.Name = "spieleListBox";
+            spieleListBox.Size = new Size(247, 671);
+            spieleListBox.Sorted = true;
+            spieleListBox.TabIndex = 9;
+            spieleListBox.SelectedIndexChanged += SpieleListBox_SelectedIndexChanged;
             // 
             // titel_label
             // 
@@ -80,7 +86,6 @@
             titel_label.Size = new Size(123, 42);
             titel_label.TabIndex = 13;
             titel_label.Text = "Game Titel";
-            titel_label.Click += label1_Click;
             // 
             // genres_label
             // 
@@ -136,7 +141,6 @@
             usk_label.Size = new Size(124, 29);
             usk_label.TabIndex = 19;
             usk_label.Text = "USK-Einstufung";
-            usk_label.Click += usk_Click;
             // 
             // publisher
             // 
@@ -201,6 +205,55 @@
             titel.Size = new Size(411, 52);
             titel.TabIndex = 26;
             // 
+            // del_button
+            // 
+            del_button.BackColor = Color.MistyRose;
+            del_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            del_button.Location = new Point(752, 457);
+            del_button.Margin = new Padding(2, 2, 2, 2);
+            del_button.Name = "del_button";
+            del_button.Size = new Size(103, 88);
+            del_button.TabIndex = 27;
+            del_button.Text = "Delete";
+            del_button.UseVisualStyleBackColor = false;
+            del_button.Click += Del_button_Click;
+            // 
+            // sfChanges_button
+            // 
+            sfChanges_button.BackColor = Color.SpringGreen;
+            sfChanges_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            sfChanges_button.Location = new Point(599, 457);
+            sfChanges_button.Margin = new Padding(2, 2, 2, 2);
+            sfChanges_button.Name = "sfChanges_button";
+            sfChanges_button.Size = new Size(103, 88);
+            sfChanges_button.TabIndex = 28;
+            sfChanges_button.Text = "Safe Changes";
+            sfChanges_button.UseVisualStyleBackColor = false;
+            sfChanges_button.Click += SfChanges_button_Click;
+            // 
+            // fehlerMeldung_label
+            // 
+            fehlerMeldung_label.AutoSize = true;
+            fehlerMeldung_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            fehlerMeldung_label.Location = new Point(870, 218);
+            fehlerMeldung_label.Margin = new Padding(2, 0, 2, 0);
+            fehlerMeldung_label.Name = "fehlerMeldung_label";
+            fehlerMeldung_label.Size = new Size(0, 29);
+            fehlerMeldung_label.TabIndex = 0;
+            // 
+            // startGame_button
+            // 
+            startGame_button.BackColor = Color.LightGoldenrodYellow;
+            startGame_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            startGame_button.Location = new Point(446, 457);
+            startGame_button.Margin = new Padding(2, 2, 2, 2);
+            startGame_button.Name = "startGame_button";
+            startGame_button.Size = new Size(103, 88);
+            startGame_button.TabIndex = 29;
+            startGame_button.Text = "Start";
+            startGame_button.UseVisualStyleBackColor = false;
+            startGame_button.Click += StartGame_button_Click;
+            // 
             // MeineSpiele
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
@@ -209,6 +262,10 @@
             BackColor = Color.Silver;
             ClientSize = new Size(1404, 748);
             ControlBox = false;
+            Controls.Add(startGame_button);
+            Controls.Add(fehlerMeldung_label);
+            Controls.Add(sfChanges_button);
+            Controls.Add(del_button);
             Controls.Add(titel);
             Controls.Add(instPfad);
             Controls.Add(instDatum);
@@ -223,10 +280,12 @@
             Controls.Add(genres_label);
             Controls.Add(titel_label);
             Controls.Add(publisher_label);
-            Controls.Add(spiele);
+            Controls.Add(spieleListBox);
             Margin = new Padding(2);
             Name = "MeineSpiele";
             WindowState = FormWindowState.Maximized;
+            Activated += MeineSpiele_Activated;
+            Load += MeineSpiele_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -234,7 +293,7 @@
         #endregion
 
         private Label publisher_label;
-        public ListBox spiele;
+        public ListBox spieleListBox;
         private Label titel_label;
         private Label genres_label;
         private Label zuletztGesp_label;
@@ -248,5 +307,9 @@
         private TextBox instDatum;
         private TextBox instPfad;
         private TextBox titel;
+        private Button del_button;
+        private Button sfChanges_button;
+        private Label fehlerMeldung_label;
+        private Button startGame_button;
     }
 }
