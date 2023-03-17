@@ -198,7 +198,7 @@
             // 
             // del_button
             // 
-            del_button.BackColor = Color.MistyRose;
+            del_button.BackColor = Color.FromArgb(255, 192, 255);
             del_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             del_button.Location = new Point(1132, 468);
             del_button.Margin = new Padding(2);
@@ -211,7 +211,7 @@
             // 
             // sfChanges_button
             // 
-            sfChanges_button.BackColor = Color.SpringGreen;
+            sfChanges_button.BackColor = Color.FromArgb(192, 255, 192);
             sfChanges_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             sfChanges_button.Location = new Point(833, 468);
             sfChanges_button.Margin = new Padding(2);
@@ -224,7 +224,7 @@
             // 
             // startGame_button
             // 
-            startGame_button.BackColor = Color.LightGoldenrodYellow;
+            startGame_button.BackColor = Color.FromArgb(255, 255, 192);
             startGame_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             startGame_button.Location = new Point(532, 468);
             startGame_button.Margin = new Padding(2);
