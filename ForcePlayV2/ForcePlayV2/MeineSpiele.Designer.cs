@@ -44,6 +44,8 @@
             this.instPfad = new System.Windows.Forms.TextBox();
             this.titel = new System.Windows.Forms.TextBox();
             this.del_button = new System.Windows.Forms.Button();
+            this.sfChanges_button = new System.Windows.Forms.Button();
+            this.fehlerMeldung_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // publisher_label
@@ -205,13 +207,35 @@
             // del_button
             // 
             this.del_button.BackColor = System.Drawing.Color.MistyRose;
-            this.del_button.Location = new System.Drawing.Point(863, 548);
+            this.del_button.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.del_button.Location = new System.Drawing.Point(903, 548);
             this.del_button.Name = "del_button";
-            this.del_button.Size = new System.Drawing.Size(164, 146);
+            this.del_button.Size = new System.Drawing.Size(124, 106);
             this.del_button.TabIndex = 27;
             this.del_button.Text = "Delete";
             this.del_button.UseVisualStyleBackColor = false;
             this.del_button.Click += new System.EventHandler(this.del_button_Click);
+            // 
+            // sfChanges_button
+            // 
+            this.sfChanges_button.BackColor = System.Drawing.Color.SpringGreen;
+            this.sfChanges_button.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sfChanges_button.Location = new System.Drawing.Point(719, 548);
+            this.sfChanges_button.Name = "sfChanges_button";
+            this.sfChanges_button.Size = new System.Drawing.Size(124, 106);
+            this.sfChanges_button.TabIndex = 28;
+            this.sfChanges_button.Text = "Safe Changes";
+            this.sfChanges_button.UseVisualStyleBackColor = false;
+            this.sfChanges_button.Click += new System.EventHandler(this.sfChanges_button_Click);
+            // 
+            // fehlerMeldung_label
+            // 
+            this.fehlerMeldung_label.AutoSize = true;
+            this.fehlerMeldung_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fehlerMeldung_label.Location = new System.Drawing.Point(1044, 261);
+            this.fehlerMeldung_label.Name = "fehlerMeldung_label";
+            this.fehlerMeldung_label.Size = new System.Drawing.Size(0, 36);
+            this.fehlerMeldung_label.TabIndex = 0;
             // 
             // MeineSpiele
             // 
@@ -221,6 +245,8 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1685, 898);
             this.ControlBox = false;
+            this.Controls.Add(this.fehlerMeldung_label);
+            this.Controls.Add(this.sfChanges_button);
             this.Controls.Add(this.del_button);
             this.Controls.Add(this.titel);
             this.Controls.Add(this.instPfad);
@@ -265,5 +291,7 @@
         private TextBox instPfad;
         private TextBox titel;
         private Button del_button;
+        private Button sfChanges_button;
+        private Label fehlerMeldung_label;
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -78,7 +79,7 @@ namespace ForcePlayV2
             }
         }
 
-        //Methode um TextBoxen zu leeren
+        // Methode um TextBoxen zu leeren
         private void Text_Clear()
         {
             titel.Clear();
@@ -88,6 +89,35 @@ namespace ForcePlayV2
             usk.Clear();
             instDatum.Clear();
             instPfad.Clear();
+        }
+
+        private void sfChanges_button_Click(object sender, EventArgs e)
+        {
+
+            // Fehler Prüfung, ob man alle Felder ausgefüllt hat
+            if (titel.Text == "" || publisher.Text == "" || genres.Text == "" || zuletztGesp.Text == "" || usk.Text == "" || instDatum.Text == "" || instPfad.Text == "")
+            {
+                // Fehlermeldung
+                fehlerMeldung_label.Text = "Bitte alle Felder ausfüllen";
+            }
+            else
+            {
+                // Überschreibung der Daten
+                (spieleListBox.SelectedItem as Spiele).Titel = titel.Text;
+                (spieleListBox.SelectedItem as Spiele).Publisher = publisher.Text;
+                (spieleListBox.SelectedItem as Spiele).Kategorie = genres.Text;
+                (spieleListBox.SelectedItem as Spiele).Zuletzt = zuletztGesp.Text;
+                (spieleListBox.SelectedItem as Spiele).Usk = usk.Text;
+                (spieleListBox.SelectedItem as Spiele).Installationsdatum = instDatum.Text;
+                (spieleListBox.SelectedItem as Spiele).Installationspfad = instPfad.Text;
+
+                // Label Text wird entfernt
+                fehlerMeldung_label.Text = "";
+            }
+
+            // Das was in der ListBox steth wird null gesetzt und dann neu aufgefüllt
+            spieleListBox.DisplayMember = null;
+            spieleListBox.DisplayMember = "ListBoxAusgabe"; 
         }
     }
 }
