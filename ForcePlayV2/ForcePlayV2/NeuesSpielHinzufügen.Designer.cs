@@ -132,7 +132,7 @@
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(136, 121);
             exitButton.TabIndex = 8;
-            exitButton.Text = "Exit";
+            exitButton.Text = "Clear";
             exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += Button1_Click;
             // 
