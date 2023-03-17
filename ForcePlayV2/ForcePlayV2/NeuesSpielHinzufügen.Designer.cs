@@ -30,7 +30,7 @@
         {
             SpielHinzufügenButton = new Button();
             titel = new TextBox();
-            Installationsdatum = new TextBox();
+            installationsdatum = new TextBox();
             zuletztGespielt = new TextBox();
             installationspfad = new TextBox();
             kategorie = new TextBox();
@@ -43,7 +43,7 @@
             // 
             SpielHinzufügenButton.BackColor = Color.LightGoldenrodYellow;
             SpielHinzufügenButton.Location = new Point(15, 371);
-            SpielHinzufügenButton.Margin = new Padding(4, 4, 4, 4);
+            SpielHinzufügenButton.Margin = new Padding(4);
             SpielHinzufügenButton.Name = "SpielHinzufügenButton";
             SpielHinzufügenButton.Size = new Size(136, 121);
             SpielHinzufügenButton.TabIndex = 0;
@@ -54,7 +54,7 @@
             // titel
             // 
             titel.Location = new Point(49, 15);
-            titel.Margin = new Padding(4, 4, 4, 4);
+            titel.Margin = new Padding(4);
             titel.Name = "titel";
             titel.PlaceholderText = "Titel";
             titel.Size = new Size(228, 27);
@@ -62,20 +62,20 @@
             titel.TextAlign = HorizontalAlignment.Center;
             titel.TextChanged += textBox1_TextChanged;
             // 
-            // Installationsdatum
+            // installationsdatum
             // 
-            Installationsdatum.Location = new Point(49, 65);
-            Installationsdatum.Margin = new Padding(4, 4, 4, 4);
-            Installationsdatum.Name = "Installationsdatum";
-            Installationsdatum.PlaceholderText = "Installationsdatum";
-            Installationsdatum.Size = new Size(228, 27);
-            Installationsdatum.TabIndex = 2;
-            Installationsdatum.TextAlign = HorizontalAlignment.Center;
+            installationsdatum.Location = new Point(49, 65);
+            installationsdatum.Margin = new Padding(4);
+            installationsdatum.Name = "installationsdatum";
+            installationsdatum.PlaceholderText = "Installationsdatum";
+            installationsdatum.Size = new Size(228, 27);
+            installationsdatum.TabIndex = 2;
+            installationsdatum.TextAlign = HorizontalAlignment.Center;
             // 
             // zuletztGespielt
             // 
             zuletztGespielt.Location = new Point(49, 118);
-            zuletztGespielt.Margin = new Padding(4, 4, 4, 4);
+            zuletztGespielt.Margin = new Padding(4);
             zuletztGespielt.Name = "zuletztGespielt";
             zuletztGespielt.PlaceholderText = "Zuletzt gespielt";
             zuletztGespielt.Size = new Size(228, 27);
@@ -85,7 +85,7 @@
             // installationspfad
             // 
             installationspfad.Location = new Point(49, 171);
-            installationspfad.Margin = new Padding(4, 4, 4, 4);
+            installationspfad.Margin = new Padding(4);
             installationspfad.Name = "installationspfad";
             installationspfad.PlaceholderText = "Installationspfad";
             installationspfad.Size = new Size(228, 27);
@@ -95,7 +95,7 @@
             // kategorie
             // 
             kategorie.Location = new Point(49, 219);
-            kategorie.Margin = new Padding(4, 4, 4, 4);
+            kategorie.Margin = new Padding(4);
             kategorie.Name = "kategorie";
             kategorie.PlaceholderText = "Kategorie";
             kategorie.Size = new Size(228, 27);
@@ -105,7 +105,7 @@
             // publisher
             // 
             publisher.Location = new Point(49, 266);
-            publisher.Margin = new Padding(4, 4, 4, 4);
+            publisher.Margin = new Padding(4);
             publisher.Name = "publisher";
             publisher.PlaceholderText = "Publisher";
             publisher.Size = new Size(228, 27);
@@ -114,10 +114,11 @@
             // 
             // usk
             // 
+            usk.DropDownStyle = ComboBoxStyle.DropDownList;
             usk.FormattingEnabled = true;
             usk.Items.AddRange(new object[] { "0", "6", "12", "16", "18" });
             usk.Location = new Point(49, 318);
-            usk.Margin = new Padding(4, 4, 4, 4);
+            usk.Margin = new Padding(4);
             usk.Name = "usk";
             usk.Size = new Size(228, 28);
             usk.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             exitButton.BackColor = Color.MistyRose;
             exitButton.Location = new Point(159, 371);
-            exitButton.Margin = new Padding(4, 4, 4, 4);
+            exitButton.Margin = new Padding(4);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(136, 121);
             exitButton.TabIndex = 8;
@@ -149,10 +150,10 @@
             Controls.Add(kategorie);
             Controls.Add(installationspfad);
             Controls.Add(zuletztGespielt);
-            Controls.Add(Installationsdatum);
+            Controls.Add(installationsdatum);
             Controls.Add(titel);
             Controls.Add(SpielHinzufügenButton);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "NeuesSpielHinzufuegen";
             WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
@@ -163,7 +164,7 @@
 
         private Button SpielHinzufügenButton;
         private TextBox titel;
-        private TextBox Installationsdatum;
+        private TextBox installationsdatum;
         private TextBox zuletztGespielt;
         private TextBox installationspfad;
         private TextBox kategorie;

@@ -28,262 +28,266 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.publisher_label = new System.Windows.Forms.Label();
-            this.spieleListBox = new System.Windows.Forms.ListBox();
-            this.titel_label = new System.Windows.Forms.Label();
-            this.genres_label = new System.Windows.Forms.Label();
-            this.zuletztGesp_label = new System.Windows.Forms.Label();
-            this.instPfad_label = new System.Windows.Forms.Label();
-            this.instDatum_label = new System.Windows.Forms.Label();
-            this.usk_label = new System.Windows.Forms.Label();
-            this.publisher = new System.Windows.Forms.TextBox();
-            this.genres = new System.Windows.Forms.TextBox();
-            this.zuletztGesp = new System.Windows.Forms.TextBox();
-            this.usk = new System.Windows.Forms.TextBox();
-            this.instDatum = new System.Windows.Forms.TextBox();
-            this.instPfad = new System.Windows.Forms.TextBox();
-            this.titel = new System.Windows.Forms.TextBox();
-            this.del_button = new System.Windows.Forms.Button();
-            this.sfChanges_button = new System.Windows.Forms.Button();
-            this.fehlerMeldung_label = new System.Windows.Forms.Label();
-            this.startGame_button = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            publisher_label = new Label();
+            spieleListBox = new ListBox();
+            titel_label = new Label();
+            genres_label = new Label();
+            zuletztGesp_label = new Label();
+            instPfad_label = new Label();
+            instDatum_label = new Label();
+            usk_label = new Label();
+            publisher = new TextBox();
+            genres = new TextBox();
+            zuletztGesp = new TextBox();
+            usk = new TextBox();
+            instDatum = new TextBox();
+            instPfad = new TextBox();
+            titel = new TextBox();
+            del_button = new Button();
+            sfChanges_button = new Button();
+            fehlerMeldung_label = new Label();
+            startGame_button = new Button();
+            SuspendLayout();
             // 
             // publisher_label
             // 
-            this.publisher_label.AutoSize = true;
-            this.publisher_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.publisher_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.publisher_label.Location = new System.Drawing.Point(328, 94);
-            this.publisher_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.publisher_label.Name = "publisher_label";
-            this.publisher_label.Size = new System.Drawing.Size(100, 36);
-            this.publisher_label.TabIndex = 12;
-            this.publisher_label.Text = "Publisher";
+            publisher_label.AutoSize = true;
+            publisher_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            publisher_label.ImeMode = ImeMode.NoControl;
+            publisher_label.Location = new Point(273, 78);
+            publisher_label.Margin = new Padding(2, 0, 2, 0);
+            publisher_label.Name = "publisher_label";
+            publisher_label.Size = new Size(84, 29);
+            publisher_label.TabIndex = 12;
+            publisher_label.Text = "Publisher";
             // 
             // spieleListBox
             // 
-            this.spieleListBox.BackColor = System.Drawing.Color.White;
-            this.spieleListBox.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.spieleListBox.ForeColor = System.Drawing.Color.Black;
-            this.spieleListBox.FormattingEnabled = true;
-            this.spieleListBox.ItemHeight = 36;
-            this.spieleListBox.Location = new System.Drawing.Point(12, 12);
-            this.spieleListBox.Margin = new System.Windows.Forms.Padding(2);
-            this.spieleListBox.Name = "spieleListBox";
-            this.spieleListBox.Size = new System.Drawing.Size(296, 832);
-            this.spieleListBox.Sorted = true;
-            this.spieleListBox.TabIndex = 9;
-            this.spieleListBox.SelectedIndexChanged += new System.EventHandler(this.spieleListBox_SelectedIndexChanged);
+            spieleListBox.BackColor = Color.White;
+            spieleListBox.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            spieleListBox.ForeColor = Color.Black;
+            spieleListBox.FormattingEnabled = true;
+            spieleListBox.ItemHeight = 29;
+            spieleListBox.Location = new Point(10, 10);
+            spieleListBox.Margin = new Padding(2);
+            spieleListBox.Name = "spieleListBox";
+            spieleListBox.Size = new Size(247, 671);
+            spieleListBox.Sorted = true;
+            spieleListBox.TabIndex = 9;
+            spieleListBox.SelectedIndexChanged += SpieleListBox_SelectedIndexChanged;
             // 
             // titel_label
             // 
-            this.titel_label.AutoSize = true;
-            this.titel_label.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.titel_label.Location = new System.Drawing.Point(328, 12);
-            this.titel_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.titel_label.Name = "titel_label";
-            this.titel_label.Size = new System.Drawing.Size(154, 49);
-            this.titel_label.TabIndex = 13;
-            this.titel_label.Text = "Game Titel";
+            titel_label.AutoSize = true;
+            titel_label.Font = new Font("Agency FB", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            titel_label.Location = new Point(273, 10);
+            titel_label.Margin = new Padding(2, 0, 2, 0);
+            titel_label.Name = "titel_label";
+            titel_label.Size = new Size(123, 42);
+            titel_label.TabIndex = 13;
+            titel_label.Text = "Game Titel";
             // 
             // genres_label
             // 
-            this.genres_label.AutoSize = true;
-            this.genres_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.genres_label.Location = new System.Drawing.Point(328, 169);
-            this.genres_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.genres_label.Name = "genres_label";
-            this.genres_label.Size = new System.Drawing.Size(79, 36);
-            this.genres_label.TabIndex = 14;
-            this.genres_label.Text = "Genres";
+            genres_label.AutoSize = true;
+            genres_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            genres_label.Location = new Point(273, 141);
+            genres_label.Margin = new Padding(2, 0, 2, 0);
+            genres_label.Name = "genres_label";
+            genres_label.Size = new Size(67, 29);
+            genres_label.TabIndex = 14;
+            genres_label.Text = "Genres";
             // 
             // zuletztGesp_label
             // 
-            this.zuletztGesp_label.AutoSize = true;
-            this.zuletztGesp_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.zuletztGesp_label.Location = new System.Drawing.Point(328, 244);
-            this.zuletztGesp_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.zuletztGesp_label.Name = "zuletztGesp_label";
-            this.zuletztGesp_label.Size = new System.Drawing.Size(152, 36);
-            this.zuletztGesp_label.TabIndex = 15;
-            this.zuletztGesp_label.Text = "Zuletzt gespielt";
+            zuletztGesp_label.AutoSize = true;
+            zuletztGesp_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            zuletztGesp_label.Location = new Point(273, 203);
+            zuletztGesp_label.Margin = new Padding(2, 0, 2, 0);
+            zuletztGesp_label.Name = "zuletztGesp_label";
+            zuletztGesp_label.Size = new Size(123, 29);
+            zuletztGesp_label.TabIndex = 15;
+            zuletztGesp_label.Text = "Zuletzt gespielt";
             // 
             // instPfad_label
             // 
-            this.instPfad_label.AutoSize = true;
-            this.instPfad_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instPfad_label.Location = new System.Drawing.Point(328, 469);
-            this.instPfad_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.instPfad_label.Name = "instPfad_label";
-            this.instPfad_label.Size = new System.Drawing.Size(164, 36);
-            this.instPfad_label.TabIndex = 16;
-            this.instPfad_label.Text = "Installationspfad";
+            instPfad_label.AutoSize = true;
+            instPfad_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instPfad_label.Location = new Point(273, 391);
+            instPfad_label.Margin = new Padding(2, 0, 2, 0);
+            instPfad_label.Name = "instPfad_label";
+            instPfad_label.Size = new Size(133, 29);
+            instPfad_label.TabIndex = 16;
+            instPfad_label.Text = "Installationspfad";
             // 
             // instDatum_label
             // 
-            this.instDatum_label.AutoSize = true;
-            this.instDatum_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instDatum_label.Location = new System.Drawing.Point(328, 394);
-            this.instDatum_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.instDatum_label.Name = "instDatum_label";
-            this.instDatum_label.Size = new System.Drawing.Size(182, 36);
-            this.instDatum_label.TabIndex = 17;
-            this.instDatum_label.Text = "Installationsdatum";
+            instDatum_label.AutoSize = true;
+            instDatum_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instDatum_label.Location = new Point(273, 328);
+            instDatum_label.Margin = new Padding(2, 0, 2, 0);
+            instDatum_label.Name = "instDatum_label";
+            instDatum_label.Size = new Size(148, 29);
+            instDatum_label.TabIndex = 17;
+            instDatum_label.Text = "Installationsdatum";
             // 
             // usk_label
             // 
-            this.usk_label.AutoSize = true;
-            this.usk_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usk_label.Location = new System.Drawing.Point(328, 319);
-            this.usk_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.usk_label.Name = "usk_label";
-            this.usk_label.Size = new System.Drawing.Size(150, 36);
-            this.usk_label.TabIndex = 19;
-            this.usk_label.Text = "USK-Einstufung";
+            usk_label.AutoSize = true;
+            usk_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            usk_label.Location = new Point(273, 266);
+            usk_label.Margin = new Padding(2, 0, 2, 0);
+            usk_label.Name = "usk_label";
+            usk_label.Size = new Size(124, 29);
+            usk_label.TabIndex = 19;
+            usk_label.Text = "USK-Einstufung";
             // 
             // publisher
             // 
-            this.publisher.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.publisher.Location = new System.Drawing.Point(535, 98);
-            this.publisher.Margin = new System.Windows.Forms.Padding(2);
-            this.publisher.Name = "publisher";
-            this.publisher.Size = new System.Drawing.Size(492, 47);
-            this.publisher.TabIndex = 20;
+            publisher.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            publisher.Location = new Point(446, 82);
+            publisher.Margin = new Padding(2);
+            publisher.Name = "publisher";
+            publisher.Size = new Size(411, 41);
+            publisher.TabIndex = 20;
             // 
             // genres
             // 
-            this.genres.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.genres.Location = new System.Drawing.Point(535, 174);
-            this.genres.Margin = new System.Windows.Forms.Padding(2);
-            this.genres.Name = "genres";
-            this.genres.Size = new System.Drawing.Size(492, 47);
-            this.genres.TabIndex = 21;
+            genres.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            genres.Location = new Point(446, 145);
+            genres.Margin = new Padding(2);
+            genres.Name = "genres";
+            genres.Size = new Size(411, 41);
+            genres.TabIndex = 21;
             // 
             // zuletztGesp
             // 
-            this.zuletztGesp.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.zuletztGesp.Location = new System.Drawing.Point(535, 250);
-            this.zuletztGesp.Margin = new System.Windows.Forms.Padding(2);
-            this.zuletztGesp.Name = "zuletztGesp";
-            this.zuletztGesp.Size = new System.Drawing.Size(492, 47);
-            this.zuletztGesp.TabIndex = 22;
+            zuletztGesp.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            zuletztGesp.Location = new Point(446, 208);
+            zuletztGesp.Margin = new Padding(2);
+            zuletztGesp.Name = "zuletztGesp";
+            zuletztGesp.Size = new Size(411, 41);
+            zuletztGesp.TabIndex = 22;
             // 
             // usk
             // 
-            this.usk.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usk.Location = new System.Drawing.Point(535, 324);
-            this.usk.Margin = new System.Windows.Forms.Padding(2);
-            this.usk.Name = "usk";
-            this.usk.Size = new System.Drawing.Size(492, 47);
-            this.usk.TabIndex = 23;
+            usk.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            usk.Location = new Point(446, 270);
+            usk.Margin = new Padding(2);
+            usk.Name = "usk";
+            usk.Size = new Size(411, 41);
+            usk.TabIndex = 23;
             // 
             // instDatum
             // 
-            this.instDatum.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instDatum.Location = new System.Drawing.Point(535, 398);
-            this.instDatum.Margin = new System.Windows.Forms.Padding(2);
-            this.instDatum.Name = "instDatum";
-            this.instDatum.Size = new System.Drawing.Size(492, 47);
-            this.instDatum.TabIndex = 24;
+            instDatum.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instDatum.Location = new Point(446, 332);
+            instDatum.Margin = new Padding(2);
+            instDatum.Name = "instDatum";
+            instDatum.Size = new Size(411, 41);
+            instDatum.TabIndex = 24;
             // 
             // instPfad
             // 
-            this.instPfad.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instPfad.Location = new System.Drawing.Point(535, 474);
-            this.instPfad.Margin = new System.Windows.Forms.Padding(2);
-            this.instPfad.Name = "instPfad";
-            this.instPfad.Size = new System.Drawing.Size(492, 47);
-            this.instPfad.TabIndex = 25;
+            instPfad.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instPfad.Location = new Point(446, 395);
+            instPfad.Margin = new Padding(2);
+            instPfad.Name = "instPfad";
+            instPfad.Size = new Size(411, 41);
+            instPfad.TabIndex = 25;
             // 
             // titel
             // 
-            this.titel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.titel.Location = new System.Drawing.Point(535, 0);
-            this.titel.Margin = new System.Windows.Forms.Padding(2);
-            this.titel.Name = "titel";
-            this.titel.Size = new System.Drawing.Size(492, 61);
-            this.titel.TabIndex = 26;
+            titel.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            titel.Location = new Point(446, 0);
+            titel.Margin = new Padding(2);
+            titel.Name = "titel";
+            titel.Size = new Size(411, 52);
+            titel.TabIndex = 26;
             // 
             // del_button
             // 
-            this.del_button.BackColor = System.Drawing.Color.MistyRose;
-            this.del_button.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.del_button.Location = new System.Drawing.Point(903, 548);
-            this.del_button.Name = "del_button";
-            this.del_button.Size = new System.Drawing.Size(124, 106);
-            this.del_button.TabIndex = 27;
-            this.del_button.Text = "Delete";
-            this.del_button.UseVisualStyleBackColor = false;
-            this.del_button.Click += new System.EventHandler(this.del_button_Click);
+            del_button.BackColor = Color.MistyRose;
+            del_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            del_button.Location = new Point(752, 457);
+            del_button.Margin = new Padding(2, 2, 2, 2);
+            del_button.Name = "del_button";
+            del_button.Size = new Size(103, 88);
+            del_button.TabIndex = 27;
+            del_button.Text = "Delete";
+            del_button.UseVisualStyleBackColor = false;
+            del_button.Click += Del_button_Click;
             // 
             // sfChanges_button
             // 
-            this.sfChanges_button.BackColor = System.Drawing.Color.SpringGreen;
-            this.sfChanges_button.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sfChanges_button.Location = new System.Drawing.Point(719, 548);
-            this.sfChanges_button.Name = "sfChanges_button";
-            this.sfChanges_button.Size = new System.Drawing.Size(124, 106);
-            this.sfChanges_button.TabIndex = 28;
-            this.sfChanges_button.Text = "Safe Changes";
-            this.sfChanges_button.UseVisualStyleBackColor = false;
-            this.sfChanges_button.Click += new System.EventHandler(this.sfChanges_button_Click);
+            sfChanges_button.BackColor = Color.SpringGreen;
+            sfChanges_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            sfChanges_button.Location = new Point(599, 457);
+            sfChanges_button.Margin = new Padding(2, 2, 2, 2);
+            sfChanges_button.Name = "sfChanges_button";
+            sfChanges_button.Size = new Size(103, 88);
+            sfChanges_button.TabIndex = 28;
+            sfChanges_button.Text = "Safe Changes";
+            sfChanges_button.UseVisualStyleBackColor = false;
+            sfChanges_button.Click += SfChanges_button_Click;
             // 
             // fehlerMeldung_label
             // 
-            this.fehlerMeldung_label.AutoSize = true;
-            this.fehlerMeldung_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fehlerMeldung_label.Location = new System.Drawing.Point(1044, 261);
-            this.fehlerMeldung_label.Name = "fehlerMeldung_label";
-            this.fehlerMeldung_label.Size = new System.Drawing.Size(0, 36);
-            this.fehlerMeldung_label.TabIndex = 0;
+            fehlerMeldung_label.AutoSize = true;
+            fehlerMeldung_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            fehlerMeldung_label.Location = new Point(870, 218);
+            fehlerMeldung_label.Margin = new Padding(2, 0, 2, 0);
+            fehlerMeldung_label.Name = "fehlerMeldung_label";
+            fehlerMeldung_label.Size = new Size(0, 29);
+            fehlerMeldung_label.TabIndex = 0;
             // 
             // startGame_button
             // 
-            this.startGame_button.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.startGame_button.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.startGame_button.Location = new System.Drawing.Point(535, 548);
-            this.startGame_button.Name = "startGame_button";
-            this.startGame_button.Size = new System.Drawing.Size(124, 106);
-            this.startGame_button.TabIndex = 29;
-            this.startGame_button.Text = "Start";
-            this.startGame_button.UseVisualStyleBackColor = false;
+            startGame_button.BackColor = Color.LightGoldenrodYellow;
+            startGame_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            startGame_button.Location = new Point(446, 457);
+            startGame_button.Margin = new Padding(2, 2, 2, 2);
+            startGame_button.Name = "startGame_button";
+            startGame_button.Size = new Size(103, 88);
+            startGame_button.TabIndex = 29;
+            startGame_button.Text = "Start";
+            startGame_button.UseVisualStyleBackColor = false;
+            startGame_button.Click += StartGame_button_Click;
             // 
             // MeineSpiele
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1685, 898);
-            this.ControlBox = false;
-            this.Controls.Add(this.startGame_button);
-            this.Controls.Add(this.fehlerMeldung_label);
-            this.Controls.Add(this.sfChanges_button);
-            this.Controls.Add(this.del_button);
-            this.Controls.Add(this.titel);
-            this.Controls.Add(this.instPfad);
-            this.Controls.Add(this.instDatum);
-            this.Controls.Add(this.usk);
-            this.Controls.Add(this.zuletztGesp);
-            this.Controls.Add(this.genres);
-            this.Controls.Add(this.publisher);
-            this.Controls.Add(this.usk_label);
-            this.Controls.Add(this.instDatum_label);
-            this.Controls.Add(this.instPfad_label);
-            this.Controls.Add(this.zuletztGesp_label);
-            this.Controls.Add(this.genres_label);
-            this.Controls.Add(this.titel_label);
-            this.Controls.Add(this.publisher_label);
-            this.Controls.Add(this.spieleListBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MeineSpiele";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Activated += new System.EventHandler(this.MeineSpiele_Activated);
-            this.Load += new System.EventHandler(this.MeineSpiele_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(120F, 120F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSize = true;
+            BackColor = Color.Silver;
+            ClientSize = new Size(1404, 748);
+            ControlBox = false;
+            Controls.Add(startGame_button);
+            Controls.Add(fehlerMeldung_label);
+            Controls.Add(sfChanges_button);
+            Controls.Add(del_button);
+            Controls.Add(titel);
+            Controls.Add(instPfad);
+            Controls.Add(instDatum);
+            Controls.Add(usk);
+            Controls.Add(zuletztGesp);
+            Controls.Add(genres);
+            Controls.Add(publisher);
+            Controls.Add(usk_label);
+            Controls.Add(instDatum_label);
+            Controls.Add(instPfad_label);
+            Controls.Add(zuletztGesp_label);
+            Controls.Add(genres_label);
+            Controls.Add(titel_label);
+            Controls.Add(publisher_label);
+            Controls.Add(spieleListBox);
+            Margin = new Padding(2);
+            Name = "MeineSpiele";
+            WindowState = FormWindowState.Maximized;
+            Activated += MeineSpiele_Activated;
+            Load += MeineSpiele_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -21,8 +21,6 @@ namespace ForcePlayV2
 
         private string Formatierungsausgabe;
 
-        List<string> spieleVerwalten = new List<String>();
-
         // Um Fehleingaben micht prüfen zu müssen, werden allen Attributen direkt ein Wert zugewiesen.
         public Spiele()
         {
@@ -49,50 +47,6 @@ namespace ForcePlayV2
         {
             get { return Formatierungsausgabe = Titel; }
         }
-        
-        public bool pruefung()
-        {
-
-            if (titel == "")
-                return false;
-
-            if (installationsdatum == "")
-                return false;
-
-            if (installationspfad == "")
-                return false;
-
-            if (zuletzt == "")
-                return false;
-
-            if (kategorie == "")
-                return false;
-
-            if (publisher == "")
-                return false;
-
-            switch (usk)
-            {
-                case "0":
-                    return true;
-
-                case "6":
-                    return true;
-
-                case "12":
-                    return true;
-
-                case "16":
-                    return true;
-
-                case "18":
-                    return true;
-
-                default: return false;
-            }
-
-        }
-
     }
 }
 

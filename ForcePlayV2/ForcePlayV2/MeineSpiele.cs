@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ForcePlayV2
 {
@@ -15,6 +18,7 @@ namespace ForcePlayV2
     {
 
         static List<Spiele> spieleList = new List<Spiele>();
+
         BindingSource spieleBindingSource = new BindingSource();
 
         public MeineSpiele()
@@ -34,7 +38,7 @@ namespace ForcePlayV2
             spieleBindingSource.DataSource = spieleList;
 
             // Datenquelle der ListBox
-            spieleListBox.DataSource = spieleBindingSource; 
+            spieleListBox.DataSource = spieleBindingSource;
 
             // spieleBindingSource bezieht seine Spiele aus der Liste,
             // die zuvor ein Objekt aus NeuesSpielHinzufügen-Form bekommen hat.
@@ -48,11 +52,11 @@ namespace ForcePlayV2
             spieleBindingSource.ResetBindings(false);
         }
 
-        private void spieleListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {   
+        private void SpieleListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
             // Nur wenn man auf ein Objekt drückt (also nicht in die Leere), dann
             // werden die Attribute aus dem spiele-Objekt in die TextBoxen eingegeben
-            if(spieleListBox.SelectedIndex != -1)
+            if (spieleListBox.SelectedIndex != -1)
             {
 
                 Spiele spiele = spieleListBox.SelectedItem as Spiele;
@@ -67,10 +71,10 @@ namespace ForcePlayV2
             }
         }
 
-        private void del_button_Click(object sender, EventArgs e)
+        private void Del_button_Click(object sender, EventArgs e)
         {
             int i = spieleListBox.SelectedIndex;
-            if(i != -1)
+            if (i != -1)
             {
                 // Objekt das man ausgewählt hat wird gelöscht
                 spieleList.RemoveAt(i);
@@ -91,7 +95,7 @@ namespace ForcePlayV2
             instPfad.Clear();
         }
 
-        private void sfChanges_button_Click(object sender, EventArgs e)
+        private void SfChanges_button_Click(object sender, EventArgs e)
         {
 
             // Fehler Prüfung, ob man alle Felder ausgefüllt hat
@@ -115,9 +119,38 @@ namespace ForcePlayV2
                 fehlerMeldung_label.Text = "";
             }
 
-            // Das was in der ListBox steth wird null gesetzt und dann neu aufgefüllt
+            // Das was in der ListBox steht wird null gesetzt und dann neu aufgefüllt
             spieleListBox.DisplayMember = null;
-            spieleListBox.DisplayMember = "ListBoxAusgabe"; 
+            spieleListBox.DisplayMember = "ListBoxAusgabe";
+        }
+
+        private void StartGame_button_Click(object sender, EventArgs e)
+        {
+            // Falls ein gültiger Installationspfad vorhanden ist, kann die Anwendung gestartet werden.
+            if (instPfad.Text != "")
+            {
+                // Hier wird der Pfad (wo das Spiel sich befindet) unter der Variable 'spielPfad' deklariert.
+                string spielPfad = instPfad.Text;
+
+                // Hier wird ein Objekt der Process-Klasse erstellt.
+                // -> Die Process-Klasse ermöglicht es eine Anwendung zu starten.
+                Process spielStart = new Process();
+
+                // Hier wird der auszuführende Pfad erfasst.
+                spielStart.StartInfo.FileName = spielPfad;
+
+                // Hier wird das Arbeitsverzeichnis auf den auszuführenden Pfad gesetzt.
+                // -> Dies ist nötig, damit das Verzeichnis korrekt ausgeführt werden kann.
+                spielStart.StartInfo.WorkingDirectory = System.IO.Path.GetDirectoryName(spielPfad);
+
+                // Hier wird das Spiel gestartet.
+                spielStart.Start();
+            }
+
+            else
+            {
+                // FEHLERMELDUNG
+            }
         }
     }
 }
