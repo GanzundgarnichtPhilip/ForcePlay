@@ -19,6 +19,8 @@ namespace ForcePlayV2
         string publisher;
         string usk;
 
+        private string Formatierungsausgabe;
+
         List<string> spieleVerwalten = new List<String>();
 
         // Um Fehleingaben micht prüfen zu müssen, werden allen Attributen direkt ein Wert zugewiesen.
@@ -41,6 +43,12 @@ namespace ForcePlayV2
         public string Kategorie { get => kategorie; set => kategorie = value; }
         public string Publisher { get => publisher; set => publisher = value; }
         public string Usk { get => usk; set => usk = value; }
+
+        // Syntax für das, was in spieleListBox ausgegeben wird
+        public string ListBoxAusgabe
+        {
+            get { return Formatierungsausgabe = Titel; }
+        }
         
         public bool pruefung()
         {

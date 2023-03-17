@@ -39,6 +39,9 @@ namespace ForcePlayV2
         /// </summary>
         private void SpielHinzufügenButton_Click(object sender, EventArgs e)
         {
+            // Objekt des MeineSpiele-Forms wird erzeugt, um ReceiveData-Methode aufrufen zu können
+            MeineSpiele meineSpiele = new MeineSpiele();
+
             // Objekt von der Klasse Spiel wird erzeugt
             var spiel = new Spiele();
 
@@ -60,6 +63,9 @@ namespace ForcePlayV2
             // Spiel wird der Liste hinzugefügt.
             spieleVerwalten.Add(spiel);
 
+            // Spiel wird an MeineSpiele-Form weitergegeben
+            meineSpiele.ReceiveData(spiel);
+            
             // Textfelder werden gecleart
             titel.Clear();
             zuletztGespielt.Clear();

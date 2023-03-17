@@ -28,213 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            publisher_label = new Label();
-            spiele = new ListBox();
-            titel_label = new Label();
-            genres_label = new Label();
-            zuletztGesp_label = new Label();
-            instPfad_label = new Label();
-            instDatum_label = new Label();
-            usk_label = new Label();
-            publisher = new TextBox();
-            genres = new TextBox();
-            zuletztGesp = new TextBox();
-            usk = new TextBox();
-            instDatum = new TextBox();
-            instPfad = new TextBox();
-            titel = new TextBox();
-            SuspendLayout();
+            this.publisher_label = new System.Windows.Forms.Label();
+            this.spieleListBox = new System.Windows.Forms.ListBox();
+            this.titel_label = new System.Windows.Forms.Label();
+            this.genres_label = new System.Windows.Forms.Label();
+            this.zuletztGesp_label = new System.Windows.Forms.Label();
+            this.instPfad_label = new System.Windows.Forms.Label();
+            this.instDatum_label = new System.Windows.Forms.Label();
+            this.usk_label = new System.Windows.Forms.Label();
+            this.publisher = new System.Windows.Forms.TextBox();
+            this.genres = new System.Windows.Forms.TextBox();
+            this.zuletztGesp = new System.Windows.Forms.TextBox();
+            this.usk = new System.Windows.Forms.TextBox();
+            this.instDatum = new System.Windows.Forms.TextBox();
+            this.instPfad = new System.Windows.Forms.TextBox();
+            this.titel = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // publisher_label
             // 
-            publisher_label.AutoSize = true;
-            publisher_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            publisher_label.ImeMode = ImeMode.NoControl;
-            publisher_label.Location = new Point(273, 78);
-            publisher_label.Margin = new Padding(2, 0, 2, 0);
-            publisher_label.Name = "publisher_label";
-            publisher_label.Size = new Size(84, 29);
-            publisher_label.TabIndex = 12;
-            publisher_label.Text = "Publisher";
+            this.publisher_label.AutoSize = true;
+            this.publisher_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.publisher_label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.publisher_label.Location = new System.Drawing.Point(328, 94);
+            this.publisher_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.publisher_label.Name = "publisher_label";
+            this.publisher_label.Size = new System.Drawing.Size(100, 36);
+            this.publisher_label.TabIndex = 12;
+            this.publisher_label.Text = "Publisher";
             // 
-            // spiele
+            // spieleListBox
             // 
-            spiele.BackColor = Color.White;
-            spiele.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            spiele.ForeColor = Color.Black;
-            spiele.FormattingEnabled = true;
-            spiele.ItemHeight = 29;
-            spiele.Location = new Point(10, 10);
-            spiele.Margin = new Padding(2);
-            spiele.Name = "spiele";
-            spiele.Size = new Size(247, 700);
-            spiele.TabIndex = 9;
+            this.spieleListBox.BackColor = System.Drawing.Color.White;
+            this.spieleListBox.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.spieleListBox.ForeColor = System.Drawing.Color.Black;
+            this.spieleListBox.FormattingEnabled = true;
+            this.spieleListBox.ItemHeight = 36;
+            this.spieleListBox.Location = new System.Drawing.Point(12, 12);
+            this.spieleListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.spieleListBox.Name = "spieleListBox";
+            this.spieleListBox.Size = new System.Drawing.Size(296, 832);
+            this.spieleListBox.Sorted = true;
+            this.spieleListBox.TabIndex = 9;
+            this.spieleListBox.SelectedIndexChanged += new System.EventHandler(this.spieleListBox_SelectedIndexChanged);
             // 
             // titel_label
             // 
-            titel_label.AutoSize = true;
-            titel_label.Font = new Font("Agency FB", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            titel_label.Location = new Point(273, 10);
-            titel_label.Margin = new Padding(2, 0, 2, 0);
-            titel_label.Name = "titel_label";
-            titel_label.Size = new Size(123, 42);
-            titel_label.TabIndex = 13;
-            titel_label.Text = "Game Titel";
-            titel_label.Click += label1_Click;
+            this.titel_label.AutoSize = true;
+            this.titel_label.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.titel_label.Location = new System.Drawing.Point(328, 12);
+            this.titel_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titel_label.Name = "titel_label";
+            this.titel_label.Size = new System.Drawing.Size(154, 49);
+            this.titel_label.TabIndex = 13;
+            this.titel_label.Text = "Game Titel";
             // 
             // genres_label
             // 
-            genres_label.AutoSize = true;
-            genres_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            genres_label.Location = new Point(273, 141);
-            genres_label.Margin = new Padding(2, 0, 2, 0);
-            genres_label.Name = "genres_label";
-            genres_label.Size = new Size(67, 29);
-            genres_label.TabIndex = 14;
-            genres_label.Text = "Genres";
+            this.genres_label.AutoSize = true;
+            this.genres_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.genres_label.Location = new System.Drawing.Point(328, 169);
+            this.genres_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.genres_label.Name = "genres_label";
+            this.genres_label.Size = new System.Drawing.Size(79, 36);
+            this.genres_label.TabIndex = 14;
+            this.genres_label.Text = "Genres";
             // 
             // zuletztGesp_label
             // 
-            zuletztGesp_label.AutoSize = true;
-            zuletztGesp_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            zuletztGesp_label.Location = new Point(273, 203);
-            zuletztGesp_label.Margin = new Padding(2, 0, 2, 0);
-            zuletztGesp_label.Name = "zuletztGesp_label";
-            zuletztGesp_label.Size = new Size(123, 29);
-            zuletztGesp_label.TabIndex = 15;
-            zuletztGesp_label.Text = "Zuletzt gespielt";
+            this.zuletztGesp_label.AutoSize = true;
+            this.zuletztGesp_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.zuletztGesp_label.Location = new System.Drawing.Point(328, 244);
+            this.zuletztGesp_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.zuletztGesp_label.Name = "zuletztGesp_label";
+            this.zuletztGesp_label.Size = new System.Drawing.Size(152, 36);
+            this.zuletztGesp_label.TabIndex = 15;
+            this.zuletztGesp_label.Text = "Zuletzt gespielt";
             // 
             // instPfad_label
             // 
-            instPfad_label.AutoSize = true;
-            instPfad_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            instPfad_label.Location = new Point(273, 391);
-            instPfad_label.Margin = new Padding(2, 0, 2, 0);
-            instPfad_label.Name = "instPfad_label";
-            instPfad_label.Size = new Size(133, 29);
-            instPfad_label.TabIndex = 16;
-            instPfad_label.Text = "Installationspfad";
+            this.instPfad_label.AutoSize = true;
+            this.instPfad_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.instPfad_label.Location = new System.Drawing.Point(328, 469);
+            this.instPfad_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.instPfad_label.Name = "instPfad_label";
+            this.instPfad_label.Size = new System.Drawing.Size(164, 36);
+            this.instPfad_label.TabIndex = 16;
+            this.instPfad_label.Text = "Installationspfad";
             // 
             // instDatum_label
             // 
-            instDatum_label.AutoSize = true;
-            instDatum_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            instDatum_label.Location = new Point(273, 328);
-            instDatum_label.Margin = new Padding(2, 0, 2, 0);
-            instDatum_label.Name = "instDatum_label";
-            instDatum_label.Size = new Size(148, 29);
-            instDatum_label.TabIndex = 17;
-            instDatum_label.Text = "Installationsdatum";
+            this.instDatum_label.AutoSize = true;
+            this.instDatum_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.instDatum_label.Location = new System.Drawing.Point(328, 394);
+            this.instDatum_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.instDatum_label.Name = "instDatum_label";
+            this.instDatum_label.Size = new System.Drawing.Size(182, 36);
+            this.instDatum_label.TabIndex = 17;
+            this.instDatum_label.Text = "Installationsdatum";
             // 
             // usk_label
             // 
-            usk_label.AutoSize = true;
-            usk_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            usk_label.Location = new Point(273, 266);
-            usk_label.Margin = new Padding(2, 0, 2, 0);
-            usk_label.Name = "usk_label";
-            usk_label.Size = new Size(124, 29);
-            usk_label.TabIndex = 19;
-            usk_label.Text = "USK-Einstufung";
-            usk_label.Click += usk_Click;
+            this.usk_label.AutoSize = true;
+            this.usk_label.Font = new System.Drawing.Font("Agency FB", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usk_label.Location = new System.Drawing.Point(328, 319);
+            this.usk_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.usk_label.Name = "usk_label";
+            this.usk_label.Size = new System.Drawing.Size(150, 36);
+            this.usk_label.TabIndex = 19;
+            this.usk_label.Text = "USK-Einstufung";
             // 
             // publisher
             // 
-            publisher.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            publisher.Location = new Point(446, 82);
-            publisher.Margin = new Padding(2);
-            publisher.Name = "publisher";
-            publisher.Size = new Size(411, 41);
-            publisher.TabIndex = 20;
+            this.publisher.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.publisher.Location = new System.Drawing.Point(535, 98);
+            this.publisher.Margin = new System.Windows.Forms.Padding(2);
+            this.publisher.Name = "publisher";
+            this.publisher.Size = new System.Drawing.Size(492, 47);
+            this.publisher.TabIndex = 20;
             // 
             // genres
             // 
-            genres.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            genres.Location = new Point(446, 145);
-            genres.Margin = new Padding(2);
-            genres.Name = "genres";
-            genres.Size = new Size(411, 41);
-            genres.TabIndex = 21;
+            this.genres.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.genres.Location = new System.Drawing.Point(535, 174);
+            this.genres.Margin = new System.Windows.Forms.Padding(2);
+            this.genres.Name = "genres";
+            this.genres.Size = new System.Drawing.Size(492, 47);
+            this.genres.TabIndex = 21;
             // 
             // zuletztGesp
             // 
-            zuletztGesp.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            zuletztGesp.Location = new Point(446, 208);
-            zuletztGesp.Margin = new Padding(2);
-            zuletztGesp.Name = "zuletztGesp";
-            zuletztGesp.Size = new Size(411, 41);
-            zuletztGesp.TabIndex = 22;
+            this.zuletztGesp.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.zuletztGesp.Location = new System.Drawing.Point(535, 250);
+            this.zuletztGesp.Margin = new System.Windows.Forms.Padding(2);
+            this.zuletztGesp.Name = "zuletztGesp";
+            this.zuletztGesp.Size = new System.Drawing.Size(492, 47);
+            this.zuletztGesp.TabIndex = 22;
             // 
             // usk
             // 
-            usk.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            usk.Location = new Point(446, 270);
-            usk.Margin = new Padding(2);
-            usk.Name = "usk";
-            usk.Size = new Size(411, 41);
-            usk.TabIndex = 23;
+            this.usk.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usk.Location = new System.Drawing.Point(535, 324);
+            this.usk.Margin = new System.Windows.Forms.Padding(2);
+            this.usk.Name = "usk";
+            this.usk.Size = new System.Drawing.Size(492, 47);
+            this.usk.TabIndex = 23;
             // 
             // instDatum
             // 
-            instDatum.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            instDatum.Location = new Point(446, 332);
-            instDatum.Margin = new Padding(2);
-            instDatum.Name = "instDatum";
-            instDatum.Size = new Size(411, 41);
-            instDatum.TabIndex = 24;
+            this.instDatum.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.instDatum.Location = new System.Drawing.Point(535, 398);
+            this.instDatum.Margin = new System.Windows.Forms.Padding(2);
+            this.instDatum.Name = "instDatum";
+            this.instDatum.Size = new System.Drawing.Size(492, 47);
+            this.instDatum.TabIndex = 24;
             // 
             // instPfad
             // 
-            instPfad.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            instPfad.Location = new Point(446, 395);
-            instPfad.Margin = new Padding(2);
-            instPfad.Name = "instPfad";
-            instPfad.Size = new Size(411, 41);
-            instPfad.TabIndex = 25;
+            this.instPfad.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.instPfad.Location = new System.Drawing.Point(535, 474);
+            this.instPfad.Margin = new System.Windows.Forms.Padding(2);
+            this.instPfad.Name = "instPfad";
+            this.instPfad.Size = new System.Drawing.Size(492, 47);
+            this.instPfad.TabIndex = 25;
             // 
             // titel
             // 
-            titel.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            titel.Location = new Point(446, 0);
-            titel.Margin = new Padding(2);
-            titel.Name = "titel";
-            titel.Size = new Size(411, 52);
-            titel.TabIndex = 26;
+            this.titel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.titel.Location = new System.Drawing.Point(535, 0);
+            this.titel.Margin = new System.Windows.Forms.Padding(2);
+            this.titel.Name = "titel";
+            this.titel.Size = new System.Drawing.Size(492, 61);
+            this.titel.TabIndex = 26;
             // 
             // MeineSpiele
             // 
-            AutoScaleDimensions = new SizeF(120F, 120F);
-            AutoScaleMode = AutoScaleMode.Dpi;
-            AutoSize = true;
-            BackColor = Color.Silver;
-            ClientSize = new Size(1404, 748);
-            ControlBox = false;
-            Controls.Add(titel);
-            Controls.Add(instPfad);
-            Controls.Add(instDatum);
-            Controls.Add(usk);
-            Controls.Add(zuletztGesp);
-            Controls.Add(genres);
-            Controls.Add(publisher);
-            Controls.Add(usk_label);
-            Controls.Add(instDatum_label);
-            Controls.Add(instPfad_label);
-            Controls.Add(zuletztGesp_label);
-            Controls.Add(genres_label);
-            Controls.Add(titel_label);
-            Controls.Add(publisher_label);
-            Controls.Add(spiele);
-            Margin = new Padding(2);
-            Name = "MeineSpiele";
-            WindowState = FormWindowState.Maximized;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1685, 898);
+            this.ControlBox = false;
+            this.Controls.Add(this.titel);
+            this.Controls.Add(this.instPfad);
+            this.Controls.Add(this.instDatum);
+            this.Controls.Add(this.usk);
+            this.Controls.Add(this.zuletztGesp);
+            this.Controls.Add(this.genres);
+            this.Controls.Add(this.publisher);
+            this.Controls.Add(this.usk_label);
+            this.Controls.Add(this.instDatum_label);
+            this.Controls.Add(this.instPfad_label);
+            this.Controls.Add(this.zuletztGesp_label);
+            this.Controls.Add(this.genres_label);
+            this.Controls.Add(this.titel_label);
+            this.Controls.Add(this.publisher_label);
+            this.Controls.Add(this.spieleListBox);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MeineSpiele";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.MeineSpiele_Activated);
+            this.Load += new System.EventHandler(this.MeineSpiele_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private Label publisher_label;
-        public ListBox spiele;
+        public ListBox spieleListBox;
         private Label titel_label;
         private Label genres_label;
         private Label zuletztGesp_label;

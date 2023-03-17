@@ -12,19 +12,58 @@ namespace ForcePlayV2
 {
     public partial class MeineSpiele : Form
     {
+
+        static List<Spiele> spieleList = new List<Spiele>();
+        BindingSource spieleBindingSource = new BindingSource();
+
         public MeineSpiele()
         {
             InitializeComponent();
+            spieleListBox.DisplayMember = "ListBoxAusgabe";
+        }
+        internal void ReceiveData(Spiele meinSpiel)
+        {
+            // Spiel aus NeuesSpielHinzufügen-Form wird spieleList-Liste hinzugefügt
+            spieleList.Add(meinSpiel);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void MeineSpiele_Load(object sender, EventArgs e)
         {
+            // Datenquelle von der BindingSource
+            spieleBindingSource.DataSource = spieleList;
 
+            // Datenquelle der ListBox
+            spieleListBox.DataSource = spieleBindingSource; 
+
+            // spieleBindingSource bezieht seine Spiele aus der Liste,
+            // die zuvor ein Objekt aus NeuesSpielHinzufügen-Form bekommen hat.
+            // spieleListBox bezieht Daten aus der BindingSource
         }
 
-        private void usk_Click(object sender, EventArgs e)
+        private void MeineSpiele_Activated(object sender, EventArgs e)
         {
+            // Wenn MeineSpiele-Form aktiviert wird, das heißt wieder in den Vordergrund kommt,
+            // werden die Daten aktualisiert und neu eingelesen
+            spieleBindingSource.ResetBindings(false);
+        }
 
+        private void spieleListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {   
+            // Nur wenn man auf ein Objekt drückt (also nicht in die Leere), dann
+            // werden die Attribute aus dem spiele-Objekt in die TextBoxen eingegeben
+            if(spieleListBox.SelectedIndex != -1)
+            {
+
+                Spiele spiele = spieleListBox.SelectedItem as Spiele;
+
+                titel.Text = spiele.Titel;
+                publisher.Text = spiele.Publisher;
+                genres.Text = spiele.Kategorie;
+                zuletztGesp.Text = spiele.Zuletzt;
+                usk.Text = spiele.Usk;
+                instDatum.Text = spiele.Installationsdatum;
+                instPfad.Text = spiele.Installationspfad;
+            }
         }
     }
 }
