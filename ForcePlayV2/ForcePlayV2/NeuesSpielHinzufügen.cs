@@ -31,7 +31,7 @@ namespace ForcePlayV2
             titel.Clear();
             zuletztGespielt.Clear();
             installationspfad.Clear();
-            Installationsdatum.Clear();
+            installationspfad.Clear();
             kategorie.Clear();
             publisher.Clear();
             usk.Text = "";
