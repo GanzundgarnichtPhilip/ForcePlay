@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ForcePlayV2
 {
@@ -15,6 +18,7 @@ namespace ForcePlayV2
     {
 
         static List<Spiele> spieleList = new List<Spiele>();
+
         BindingSource spieleBindingSource = new BindingSource();
 
         public MeineSpiele()
@@ -34,7 +38,7 @@ namespace ForcePlayV2
             spieleBindingSource.DataSource = spieleList;
 
             // Datenquelle der ListBox
-            spieleListBox.DataSource = spieleBindingSource; 
+            spieleListBox.DataSource = spieleBindingSource;
 
             // spieleBindingSource bezieht seine Spiele aus der Liste,
             // die zuvor ein Objekt aus NeuesSpielHinzufügen-Form bekommen hat.
@@ -48,11 +52,11 @@ namespace ForcePlayV2
             spieleBindingSource.ResetBindings(false);
         }
 
-        private void spieleListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {   
+        private void SpieleListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
             // Nur wenn man auf ein Objekt drückt (also nicht in die Leere), dann
             // werden die Attribute aus dem spiele-Objekt in die TextBoxen eingegeben
-            if(spieleListBox.SelectedIndex != -1)
+            if (spieleListBox.SelectedIndex != -1)
             {
 
                 Spiele spiele = spieleListBox.SelectedItem as Spiele;
@@ -67,10 +71,10 @@ namespace ForcePlayV2
             }
         }
 
-        private void del_button_Click(object sender, EventArgs e)
+        private void Del_button_Click(object sender, EventArgs e)
         {
             int i = spieleListBox.SelectedIndex;
-            if(i != -1)
+            if (i != -1)
             {
                 // Objekt das man ausgewählt hat wird gelöscht
                 spieleList.RemoveAt(i);
@@ -91,7 +95,7 @@ namespace ForcePlayV2
             instPfad.Clear();
         }
 
-        private void sfChanges_button_Click(object sender, EventArgs e)
+        private void SfChanges_button_Click(object sender, EventArgs e)
         {
 
             // Fehler Prüfung, ob man alle Felder ausgefüllt hat
@@ -115,9 +119,49 @@ namespace ForcePlayV2
                 fehlerMeldung_label.Text = "";
             }
 
-            // Das was in der ListBox steth wird null gesetzt und dann neu aufgefüllt
+            // Das was in der ListBox steht wird null gesetzt und dann neu aufgefüllt
             spieleListBox.DisplayMember = null;
-            spieleListBox.DisplayMember = "ListBoxAusgabe"; 
+            spieleListBox.DisplayMember = "ListBoxAusgabe";
+        }
+
+        private void StartGame_button_Click(object sender, EventArgs e)
+        {
+            // Hier wird ein Objekt der Process-Klasse erstellt.
+            // -> Die Process-Klasse ermöglicht es eine Anwendung zu starten.
+            Process spielStart = new Process();
+
+            // Hier wird der auszuführende Pfad erfasst.
+            spielStart.StartInfo.FileName = instPfad.Text;
+
+            // Hier wird geprüft, ob das angegebene Verzeichnis vorhanden ist
+            if (File.Exists(spielStart.StartInfo.FileName))
+            {
+                // Hier wird die Anwendung gestartet.
+                spielStart.Start();
+            }
+
+            // Falls das angegeben Verzeichnis nicht existiert, poppt eine Fehlermeldung auf.
+            else
+            {
+                // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                transparenzschicht.Show();
+
+                // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
+                FehlermeldungMeineSpiele fehlermeldung = new FehlermeldungMeineSpiele();
+
+                // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
+                fehlermeldung.TopLevel = true;
+
+                // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                fehlermeldung.BringToFront();
+
+                // Hier poppt das Form 'Fehlermeldung' auf.
+                fehlermeldung.ShowDialog();
+            }
         }
     }
 }

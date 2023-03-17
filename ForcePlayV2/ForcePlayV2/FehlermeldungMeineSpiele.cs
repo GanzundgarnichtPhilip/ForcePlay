@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ForcePlayV2
 {
-    public partial class FehlermeldungNeuesSpielHinzufügen : Form
+    public partial class FehlermeldungMeineSpiele : Form
     {
-        public FehlermeldungNeuesSpielHinzufügen()
+        public FehlermeldungMeineSpiele()
         {
             InitializeComponent();
         }
