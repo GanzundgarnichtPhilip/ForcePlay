@@ -39,14 +39,13 @@
             publisher = new TextBox();
             genres = new TextBox();
             usk = new TextBox();
-            instDatum = new TextBox();
             instPfad = new TextBox();
             titel = new TextBox();
             del_button = new Button();
             sfChanges_button = new Button();
             startGame_button = new Button();
             zuletztGesp = new TextBox();
-            fehlerMeldung_label = new Label();
+            instDatum = new TextBox();
             SuspendLayout();
             // 
             // publisher_label
@@ -163,20 +162,11 @@
             // usk
             // 
             usk.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            usk.Location = new Point(532, 281);
+            usk.Location = new Point(532, 214);
             usk.Margin = new Padding(2);
             usk.Name = "usk";
             usk.Size = new Size(870, 37);
             usk.TabIndex = 23;
-            // 
-            // instDatum
-            // 
-            instDatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            instDatum.Location = new Point(532, 343);
-            instDatum.Margin = new Padding(2);
-            instDatum.Name = "instDatum";
-            instDatum.Size = new Size(870, 37);
-            instDatum.TabIndex = 24;
             // 
             // instPfad
             // 
@@ -199,6 +189,7 @@
             // del_button
             // 
             del_button.BackColor = Color.FromArgb(255, 192, 255);
+            del_button.Cursor = Cursors.Hand;
             del_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             del_button.Location = new Point(1132, 468);
             del_button.Margin = new Padding(2);
@@ -212,6 +203,7 @@
             // sfChanges_button
             // 
             sfChanges_button.BackColor = Color.FromArgb(192, 255, 192);
+            sfChanges_button.Cursor = Cursors.Hand;
             sfChanges_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             sfChanges_button.Location = new Point(833, 468);
             sfChanges_button.Margin = new Padding(2);
@@ -225,6 +217,7 @@
             // startGame_button
             // 
             startGame_button.BackColor = Color.FromArgb(255, 255, 192);
+            startGame_button.Cursor = Cursors.Hand;
             startGame_button.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             startGame_button.Location = new Point(532, 468);
             startGame_button.Margin = new Padding(2);
@@ -238,21 +231,19 @@
             // zuletztGesp
             // 
             zuletztGesp.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            zuletztGesp.Location = new Point(532, 219);
+            zuletztGesp.Location = new Point(532, 277);
             zuletztGesp.Margin = new Padding(2);
             zuletztGesp.Name = "zuletztGesp";
             zuletztGesp.Size = new Size(870, 37);
             zuletztGesp.TabIndex = 22;
             // 
-            // fehlerMeldung_label
+            // instDatum
             // 
-            fehlerMeldung_label.AutoSize = true;
-            fehlerMeldung_label.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            fehlerMeldung_label.Location = new Point(956, 229);
-            fehlerMeldung_label.Margin = new Padding(2, 0, 2, 0);
-            fehlerMeldung_label.Name = "fehlerMeldung_label";
-            fehlerMeldung_label.Size = new Size(0, 29);
-            fehlerMeldung_label.TabIndex = 0;
+            instDatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            instDatum.Location = new Point(532, 343);
+            instDatum.Name = "instDatum";
+            instDatum.Size = new Size(870, 37);
+            instDatum.TabIndex = 31;
             // 
             // MeineSpiele
             // 
@@ -262,13 +253,12 @@
             BackColor = Color.Silver;
             ClientSize = new Size(1432, 782);
             ControlBox = false;
+            Controls.Add(instDatum);
             Controls.Add(startGame_button);
-            Controls.Add(fehlerMeldung_label);
             Controls.Add(sfChanges_button);
             Controls.Add(del_button);
             Controls.Add(titel);
             Controls.Add(instPfad);
-            Controls.Add(instDatum);
             Controls.Add(usk);
             Controls.Add(zuletztGesp);
             Controls.Add(genres);
@@ -303,13 +293,12 @@
         private TextBox publisher;
         private TextBox genres;
         private TextBox usk;
-        private TextBox instDatum;
         private TextBox instPfad;
         private TextBox titel;
         private Button del_button;
         private Button sfChanges_button;
         private Button startGame_button;
         private TextBox zuletztGesp;
-        private Label fehlerMeldung_label;
+        private TextBox instDatum;
     }
 }

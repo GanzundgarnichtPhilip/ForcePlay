@@ -1,6 +1,6 @@
 ﻿namespace ForcePlayV2
 {
-    partial class FehlermeldungMeineSpiele
+    partial class Fehlermeldung2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FehlermeldungMeineSpiele));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fehlermeldung2));
             ok_button = new Button();
             fehlerbeschreibung_textBox = new TextBox();
             ueberschrift_label = new Label();
@@ -79,7 +79,7 @@
             ueberschrift_label.Text = "ACHTUNG";
             ueberschrift_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // FehlermeldungMeineSpiele
+            // Fehlermeldung2
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
@@ -92,7 +92,7 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximumSize = new Size(530, 315);
             MinimumSize = new Size(530, 315);
-            Name = "FehlermeldungMeineSpiele";
+            Name = "Fehlermeldung2";
             StartPosition = FormStartPosition.CenterScreen;
             ResumeLayout(false);
             PerformLayout();

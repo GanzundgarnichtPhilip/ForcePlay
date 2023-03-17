@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NeuesSpielHinzufuegen));
             SpielHinzufügenButton = new Button();
             titel = new TextBox();
-            installationsdatum = new TextBox();
             zuletztGespielt = new TextBox();
             kategorie = new TextBox();
             publisher = new TextBox();
@@ -46,11 +45,13 @@
             installationsdatum2_label = new Label();
             installationspfad = new TextBox();
             explorer_Button = new Button();
+            installationsdatum = new DateTimePicker();
             SuspendLayout();
             // 
             // SpielHinzufügenButton
             // 
             SpielHinzufügenButton.BackColor = Color.FromArgb(255, 255, 192);
+            SpielHinzufügenButton.Cursor = Cursors.Hand;
             SpielHinzufügenButton.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             SpielHinzufügenButton.Location = new Point(216, 424);
             SpielHinzufügenButton.Margin = new Padding(4);
@@ -70,15 +71,6 @@
             titel.Size = new Size(870, 47);
             titel.TabIndex = 1;
             titel.TextChanged += textBox1_TextChanged;
-            // 
-            // installationsdatum
-            // 
-            installationsdatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            installationsdatum.Location = new Point(216, 305);
-            installationsdatum.Margin = new Padding(4);
-            installationsdatum.Name = "installationsdatum";
-            installationsdatum.Size = new Size(870, 37);
-            installationsdatum.TabIndex = 2;
             // 
             // zuletztGespielt
             // 
@@ -109,6 +101,7 @@
             // 
             // usk
             // 
+            usk.Cursor = Cursors.Hand;
             usk.DropDownStyle = ComboBoxStyle.DropDownList;
             usk.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             usk.FormattingEnabled = true;
@@ -123,6 +116,7 @@
             // exitButton
             // 
             exitButton.BackColor = Color.FromArgb(255, 192, 255);
+            exitButton.Cursor = Cursors.Hand;
             exitButton.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
             exitButton.Location = new Point(816, 424);
             exitButton.Margin = new Padding(4);
@@ -222,6 +216,7 @@
             // 
             // explorer_Button
             // 
+            explorer_Button.Cursor = Cursors.Hand;
             explorer_Button.Image = (Image)resources.GetObject("explorer_Button.Image");
             explorer_Button.Location = new Point(1048, 359);
             explorer_Button.Name = "explorer_Button";
@@ -229,6 +224,18 @@
             explorer_Button.TabIndex = 27;
             explorer_Button.UseVisualStyleBackColor = true;
             explorer_Button.Click += Explorer_Button_Click;
+            // 
+            // installationsdatum
+            // 
+            installationsdatum.Cursor = Cursors.Hand;
+            installationsdatum.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            installationsdatum.Format = DateTimePickerFormat.Short;
+            installationsdatum.ImeMode = ImeMode.NoControl;
+            installationsdatum.Location = new Point(216, 305);
+            installationsdatum.Name = "installationsdatum";
+            installationsdatum.RightToLeft = RightToLeft.No;
+            installationsdatum.Size = new Size(870, 37);
+            installationsdatum.TabIndex = 28;
             // 
             // NeuesSpielHinzufuegen
             // 
@@ -238,6 +245,7 @@
             BackColor = Color.Silver;
             ClientSize = new Size(1148, 611);
             ControlBox = false;
+            Controls.Add(installationsdatum);
             Controls.Add(explorer_Button);
             Controls.Add(kategorie2_label);
             Controls.Add(publisher2_label);
@@ -252,7 +260,6 @@
             Controls.Add(kategorie);
             Controls.Add(installationspfad);
             Controls.Add(zuletztGespielt);
-            Controls.Add(installationsdatum);
             Controls.Add(titel);
             Controls.Add(SpielHinzufügenButton);
             Margin = new Padding(4);
@@ -266,7 +273,6 @@
 
         private Button SpielHinzufügenButton;
         private TextBox titel;
-        private TextBox installationsdatum;
         private TextBox zuletztGespielt;
         private TextBox kategorie;
         private TextBox publisher;
@@ -281,5 +287,6 @@
         private Label installationsdatum2_label;
         private TextBox installationspfad;
         private Button explorer_Button;
+        private DateTimePicker installationsdatum;
     }
 }

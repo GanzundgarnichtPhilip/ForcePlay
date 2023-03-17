@@ -26,6 +26,7 @@ namespace ForcePlayV2
             InitializeComponent();
             spieleListBox.DisplayMember = "ListBoxAusgabe";
         }
+
         internal void ReceiveData(Spiele meinSpiel)
         {
             // Spiel aus NeuesSpielHinzufügen-Form wird spieleList-Liste hinzugefügt
@@ -58,7 +59,6 @@ namespace ForcePlayV2
             // werden die Attribute aus dem spiele-Objekt in die TextBoxen eingegeben
             if (spieleListBox.SelectedIndex != -1)
             {
-
                 Spiele spiele = spieleListBox.SelectedItem as Spiele;
 
                 titel.Text = spiele.Titel;
@@ -97,13 +97,61 @@ namespace ForcePlayV2
 
         private void SfChanges_button_Click(object sender, EventArgs e)
         {
-
-            // Fehler Prüfung, ob man alle Felder ausgefüllt hat
+            // Fehlerprüfung, ob man alle Felder ausgefüllt hat.
             if (titel.Text == "" || publisher.Text == "" || genres.Text == "" || zuletztGesp.Text == "" || usk.Text == "" || instDatum.Text == "" || instPfad.Text == "")
             {
-                // Fehlermeldung
-                fehlerMeldung_label.Text = "Bitte alle Felder ausfüllen";
-            }
+                // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
+                if (spieleList.Count <= 0)
+                {
+                    // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                    using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                    // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                    // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                    transparenzschicht.Show();
+
+                    // Hier wird ein Objekt des 'Fehlermeldung4' Forms generiert.
+                    Fehlermeldung4 fehlermeldung = new Fehlermeldung4();
+
+                    // Hier wird festgelegt, dass das 'Fehlermeldung4' Form als die vorderste Anwendung gezählt wird.
+                    fehlermeldung.TopLevel = true;
+
+                    // Hier wird die Sichtbarkeit des 'Fehlermeldung4' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                    fehlermeldung.BringToFront();
+
+                    // Hier poppt das Form 'Fehlermeldung4' auf.
+                    fehlermeldung.ShowDialog();
+
+                    // Alle eingegebene Werte werden verworfen.
+                    Text_Clear();
+                }
+
+                else
+                {
+                    // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                    using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                    // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                    // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                    transparenzschicht.Show();
+
+                    // Hier wird ein Objekt des 'Fehlermeldung3' Forms generiert.
+                    Fehlermeldung3 fehlermeldung = new Fehlermeldung3();
+
+                    // Hier wird festgelegt, dass das 'Fehlermeldung3' Form als die vorderste Anwendung gezählt wird.
+                    fehlermeldung.TopLevel = true;
+
+                    // Hier wird die Sichtbarkeit des 'Fehlermeldung3' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                    fehlermeldung.BringToFront();
+
+                    // Hier poppt das Form 'Fehlermeldung3' auf.
+                    fehlermeldung.ShowDialog();
+
+                    // Alle eingegebene Werte werden verworfen.
+                    Text_Clear();
+                }
+            }       
+
             else
             {
                 // Überschreibung der Daten
@@ -114,9 +162,6 @@ namespace ForcePlayV2
                 (spieleListBox.SelectedItem as Spiele).Usk = usk.Text;
                 (spieleListBox.SelectedItem as Spiele).Installationsdatum = instDatum.Text;
                 (spieleListBox.SelectedItem as Spiele).Installationspfad = instPfad.Text;
-
-                // Label Text wird entfernt
-                fehlerMeldung_label.Text = "";
             }
 
             // Das was in der ListBox steht wird null gesetzt und dann neu aufgefüllt
@@ -150,16 +195,16 @@ namespace ForcePlayV2
                 // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
                 transparenzschicht.Show();
 
-                // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
-                FehlermeldungMeineSpiele fehlermeldung = new FehlermeldungMeineSpiele();
+                // Hier wird ein Objekt des 'Fehlermeldung2' Forms generiert.
+                Fehlermeldung2 fehlermeldung = new Fehlermeldung2();
 
-                // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
+                // Hier wird festgelegt, dass das 'Fehlermeldung2' Form als die vorderste Anwendung gezählt wird.
                 fehlermeldung.TopLevel = true;
 
-                // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                // Hier wird die Sichtbarkeit des 'Fehlermeldung2' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
                 fehlermeldung.BringToFront();
 
-                // Hier poppt das Form 'Fehlermeldung' auf.
+                // Hier poppt das Form 'Fehlermeldung2' auf.
                 fehlermeldung.ShowDialog();
             }
         }

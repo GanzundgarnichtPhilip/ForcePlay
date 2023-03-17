@@ -34,7 +34,7 @@ namespace ForcePlayV2
             titel.Clear();
             zuletztGespielt.Clear();
             installationspfad.Clear();
-            installationsdatum.Clear();
+            installationsdatum.Value = DateTime.Today;
             kategorie.Clear();
             publisher.Clear();
             usk.Text = null;
@@ -49,7 +49,6 @@ namespace ForcePlayV2
             // -> Falls einem Attribut kein neuer Wert zugewiesen wurde, poppt ein Form der Klasse 'FehlermeldungNeuesSpielHinzufügen' und 'Transparentschicht' auf.
             if (titel.Text == ""
                 || zuletztGespielt.Text == ""
-                || installationsdatum.Text == ""
                 || installationspfad.Text == ""
                 || kategorie.Text == ""
                 || publisher.Text == ""
@@ -62,23 +61,23 @@ namespace ForcePlayV2
                 // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
                 transparenzschicht.Show();
 
-                // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
-                FehlermeldungNeuesSpielHinzufügen fehlermeldung = new FehlermeldungNeuesSpielHinzufügen();
+                // Hier wird ein Objekt des 'Fehlermeldung1' Forms generiert.
+                Fehlermeldung1 fehlermeldung = new Fehlermeldung1();
 
-                // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
+                // Hier wird festgelegt, dass das 'Fehlermeldung1' Form als die vorderste Anwendung gezählt wird.
                 fehlermeldung.TopLevel = true;
 
-                // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                // Hier wird die Sichtbarkeit des 'Fehlermeldung1' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
                 fehlermeldung.BringToFront();
 
-                // Hier poppt das Form 'Fehlermeldung' auf.
+                // Hier poppt das Form 'Fehlermeldung1' auf.
                 fehlermeldung.ShowDialog();
 
                 // Textfelder werden gecleart.
                 titel.Clear();
                 zuletztGespielt.Clear();
                 installationspfad.Clear();
-                installationsdatum.Clear();
+                installationsdatum.Value = DateTime.Today;
                 kategorie.Clear();
                 publisher.Clear();
                 usk.Text = null;
@@ -110,7 +109,7 @@ namespace ForcePlayV2
                 titel.Clear();
                 zuletztGespielt.Clear();
                 installationspfad.Clear();
-                installationsdatum.Clear();
+                installationsdatum.Value = DateTime.Today;
                 kategorie.Clear();
                 publisher.Clear();
                 usk.Text = null;
