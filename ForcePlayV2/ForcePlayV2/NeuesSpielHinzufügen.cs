@@ -29,8 +29,9 @@ namespace ForcePlayV2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
+            // Das Form wird geschlossen.
             Close();
         }
 
@@ -53,27 +54,59 @@ namespace ForcePlayV2
             spiel.Kategorie = kategorie.Text;
             spiel.Publisher = publisher.Text;
             spiel.Usk = usk.Text;
+            // Überprüfung der Eingabe.
+            // -> Falls einem Attribut kein Wert zugewiesen wurde, poppt ein Form der Klasse 'Fehlermeldung' auf.
+            if (spiel.Titel == ""
+                || spiel.Zuletzt == ""
+                || spiel.Installationsdatum == ""
+                || spiel.Installationspfad == ""
+                || spiel.Kategorie == ""
+                || spiel.Publisher == ""
+                || spiel.Usk == "")
+            {
+                // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                using Transparenzschicht transparenzschicht = new Transparenzschicht();
 
-            // Eingabe wird überprüft
-            if (!spiel.pruefung())
-                prüfung.Text = "Problem";
+                // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                transparenzschicht.Show();
 
-            else prüfung.Text = "Perfekt";
+                // Hier wird ein Objekt des 'Fehlermeldung' Forms generiert.
+                Fehlermeldung fehlermeldung = new Fehlermeldung();
 
-            // Spiel wird der Liste hinzugefügt.
-            spieleVerwalten.Add(spiel);
+                // Hier wird festgelegt, dass das 'Fehlermeldung' Form als die vorderste Anwendung gezählt wird.
+                fehlermeldung.TopLevel = true;
 
-            // Spiel wird an MeineSpiele-Form weitergegeben
-            meineSpiele.ReceiveData(spiel);
-            
-            // Textfelder werden gecleart
-            titel.Clear();
-            zuletztGespielt.Clear();
-            installationspfad.Clear();
-            Installationsdatum.Clear();
-            kategorie.Clear();
-            publisher.Clear();
-            usk.Text = "";
+                // Hier wird die Sichtbarkeit des 'Fehlermeldung' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                fehlermeldung.BringToFront();
+
+                // Hier poppt das Form 'Fehlermeldung' auf.
+                fehlermeldung.ShowDialog();
+
+                // Textfelder werden gecleart.
+                titel.Clear();
+                zuletztGespielt.Clear();
+                installationspfad.Clear();
+                Installationsdatum.Clear();
+                kategorie.Clear();
+                publisher.Clear();
+                usk.Text = "";
+            }
+
+            else
+            {
+                // Spiel wird der Liste hinzugefügt.
+                spieleVerwalten.Add(spiel);
+
+                // Textfelder werden gecleart.
+                titel.Clear();
+                zuletztGespielt.Clear();
+                installationspfad.Clear();
+                Installationsdatum.Clear();
+                kategorie.Clear();
+                publisher.Clear();
+                usk.Text = "";
+            }
 
         }
 
