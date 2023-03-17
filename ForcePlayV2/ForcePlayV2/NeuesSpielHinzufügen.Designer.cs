@@ -37,7 +37,6 @@
             publisher = new TextBox();
             usk = new ComboBox();
             exitButton = new Button();
-            prüfung = new Label();
             SuspendLayout();
             // 
             // SpielHinzufügenButton
@@ -123,18 +122,9 @@
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(109, 97);
             exitButton.TabIndex = 8;
-            exitButton.Text = "Exit";
+            exitButton.Text = "Clear";
             exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += button1_Click;
-            // 
-            // prüfung
-            // 
-            prüfung.AutoSize = true;
-            prüfung.Location = new Point(228, 140);
-            prüfung.Name = "prüfung";
-            prüfung.Size = new Size(38, 15);
-            prüfung.TabIndex = 9;
-            prüfung.Text = "label1";
             // 
             // NeuesSpielHinzufuegen
             // 
@@ -144,7 +134,6 @@
             BackColor = Color.Silver;
             ClientSize = new Size(339, 406);
             ControlBox = false;
-            Controls.Add(prüfung);
             Controls.Add(exitButton);
             Controls.Add(usk);
             Controls.Add(publisher);
@@ -172,6 +161,5 @@
         private ComboBox usk;
         private Button exitButton;
         private Label label2;
-        private Label prüfung;
     }
 }

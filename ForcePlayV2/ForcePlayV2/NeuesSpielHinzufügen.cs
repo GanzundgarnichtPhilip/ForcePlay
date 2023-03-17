@@ -31,7 +31,13 @@ namespace ForcePlayV2
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            titel.Clear();
+            zuletztGespielt.Clear();
+            installationspfad.Clear();
+            Installationsdatum.Clear();
+            kategorie.Clear();
+            publisher.Clear();
+            usk.Text = "";
         }
 
         /// <summary>
@@ -50,12 +56,6 @@ namespace ForcePlayV2
             spiel.Kategorie = kategorie.Text;
             spiel.Publisher = publisher.Text;
             spiel.Usk = usk.Text;
-
-            // Eingabe wird überprüft
-            if (!spiel.pruefung())
-                prüfung.Text = "Problem";
-
-            else prüfung.Text = "Perfekt";
 
             // Spiel wird der Liste hinzugefügt.
             spieleVerwalten.Add(spiel);
