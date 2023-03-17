@@ -28,8 +28,15 @@ namespace ForcePlayV2
         /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
-            // Das Form wird geschlossen.
-            Close();
+            // Die Eingabe wird geleert
+            titel.Clear();
+            zuletztGespielt.Clear();
+            installationspfad.Clear();
+            installationsdatum.Clear();
+            kategorie.Clear();
+            publisher.Clear();
+            usk.Text = "";
+
         }
 
         /// <summary>
