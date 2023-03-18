@@ -147,26 +147,56 @@ namespace ForcePlayV2
                     // Hier poppt das Form 'Fehlermeldung3' auf.
                     fehlermeldung.ShowDialog();
 
+                    // Das was in der ListBox steht wird null gesetzt und dann neu aufgefüllt
+                    spieleListBox.DisplayMember = null;
+                    spieleListBox.DisplayMember = "ListBoxAusgabe";
+                }
+            }
+
+            if (titel.Text != "" || publisher.Text != "" || genres.Text != "" || zuletztGesp.Text != "" || usk.Text != "" || instDatum.Text != "" || instPfad.Text != "")
+            {
+                // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
+                if (spieleList.Count <= 0)
+                {
+                    // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                    using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                    // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                    // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                    transparenzschicht.Show();
+
+                    // Hier wird ein Objekt des 'Fehlermeldung4' Forms generiert.
+                    Fehlermeldung4 fehlermeldung = new Fehlermeldung4();
+
+                    // Hier wird festgelegt, dass das 'Fehlermeldung4' Form als die vorderste Anwendung gezählt wird.
+                    fehlermeldung.TopLevel = true;
+
+                    // Hier wird die Sichtbarkeit des 'Fehlermeldung4' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                    fehlermeldung.BringToFront();
+
+                    // Hier poppt das Form 'Fehlermeldung4' auf.
+                    fehlermeldung.ShowDialog();
+
                     // Alle eingegebene Werte werden verworfen.
                     Text_Clear();
                 }
-            }       
 
-            else
-            {
-                // Überschreibung der Daten
-                (spieleListBox.SelectedItem as Spiele).Titel = titel.Text;
-                (spieleListBox.SelectedItem as Spiele).Publisher = publisher.Text;
-                (spieleListBox.SelectedItem as Spiele).Kategorie = genres.Text;
-                (spieleListBox.SelectedItem as Spiele).Zuletzt = zuletztGesp.Text;
-                (spieleListBox.SelectedItem as Spiele).Usk = usk.Text;
-                (spieleListBox.SelectedItem as Spiele).Installationsdatum = instDatum.Text;
-                (spieleListBox.SelectedItem as Spiele).Installationspfad = instPfad.Text;
+                else
+                {
+                    // Überschreibung der Daten
+                    (spieleListBox.SelectedItem as Spiele).Titel = titel.Text;
+                    (spieleListBox.SelectedItem as Spiele).Publisher = publisher.Text;
+                    (spieleListBox.SelectedItem as Spiele).Kategorie = genres.Text;
+                    (spieleListBox.SelectedItem as Spiele).Zuletzt = zuletztGesp.Text;
+                    (spieleListBox.SelectedItem as Spiele).Usk = usk.Text;
+                    (spieleListBox.SelectedItem as Spiele).Installationsdatum = instDatum.Text;
+                    (spieleListBox.SelectedItem as Spiele).Installationspfad = instPfad.Text;
+
+                    // Das was in der ListBox steht wird null gesetzt und dann neu aufgefüllt
+                    spieleListBox.DisplayMember = null;
+                    spieleListBox.DisplayMember = "ListBoxAusgabe";
+                }
             }
-
-            // Das was in der ListBox steht wird null gesetzt und dann neu aufgefüllt
-            spieleListBox.DisplayMember = null;
-            spieleListBox.DisplayMember = "ListBoxAusgabe";
         }
 
         private void StartGame_button_Click(object sender, EventArgs e)
