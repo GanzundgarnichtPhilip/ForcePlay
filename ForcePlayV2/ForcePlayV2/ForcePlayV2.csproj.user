@@ -4,22 +4,10 @@
     <Compile Update="BreakOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Fehlermeldung.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Fehlermeldung3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Fehlermeldung4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FehlermeldungMeineSpiele.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Information.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MeineSpiele.cs">

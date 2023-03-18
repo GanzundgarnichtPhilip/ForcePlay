@@ -90,7 +90,7 @@ namespace ForcePlayV2
             publisher.Clear();
             genres.Clear();
             zuletztGesp.Clear();
-            usk.Clear();
+            usk.Text = "";
             instDatum.Clear();
             instPfad.Clear();
         }

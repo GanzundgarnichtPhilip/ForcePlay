@@ -39,7 +39,6 @@
             usk_label = new Label();
             publisher = new TextBox();
             genres = new TextBox();
-            usk = new TextBox();
             instPfad = new TextBox();
             titel = new TextBox();
             del_button = new Button();
@@ -48,6 +47,7 @@
             zuletztGesp = new TextBox();
             instDatum = new TextBox();
             explorer_Button = new Button();
+            usk = new ComboBox();
             SuspendLayout();
             // 
             // publisher_label
@@ -161,15 +161,6 @@
             genres.Size = new Size(697, 31);
             genres.TabIndex = 21;
             // 
-            // usk
-            // 
-            usk.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            usk.Location = new Point(426, 171);
-            usk.Margin = new Padding(2);
-            usk.Name = "usk";
-            usk.Size = new Size(697, 31);
-            usk.TabIndex = 23;
-            // 
             // instPfad
             // 
             instPfad.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
@@ -260,6 +251,17 @@
             explorer_Button.UseVisualStyleBackColor = true;
             explorer_Button.Click += Explorer_Button_Click;
             // 
+            // usk
+            // 
+            usk.DropDownStyle = ComboBoxStyle.DropDownList;
+            usk.Font = new Font("Agency FB", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            usk.FormattingEnabled = true;
+            usk.Items.AddRange(new object[] { "0", "6", "12", "16", "18" });
+            usk.Location = new Point(426, 175);
+            usk.Name = "usk";
+            usk.Size = new Size(696, 32);
+            usk.TabIndex = 33;
+            // 
             // MeineSpiele
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -268,6 +270,7 @@
             BackColor = Color.Silver;
             ClientSize = new Size(1146, 626);
             ControlBox = false;
+            Controls.Add(usk);
             Controls.Add(explorer_Button);
             Controls.Add(instDatum);
             Controls.Add(startGame_button);
@@ -275,7 +278,6 @@
             Controls.Add(del_button);
             Controls.Add(titel);
             Controls.Add(instPfad);
-            Controls.Add(usk);
             Controls.Add(zuletztGesp);
             Controls.Add(genres);
             Controls.Add(publisher);
@@ -308,7 +310,6 @@
         private Label usk_label;
         private TextBox publisher;
         private TextBox genres;
-        private TextBox usk;
         private TextBox instPfad;
         private TextBox titel;
         private Button del_button;
@@ -317,5 +318,6 @@
         private TextBox zuletztGesp;
         private TextBox instDatum;
         private Button explorer_Button;
+        private ComboBox usk;
     }
 }
