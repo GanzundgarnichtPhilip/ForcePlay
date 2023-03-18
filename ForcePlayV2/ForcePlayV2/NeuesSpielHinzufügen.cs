@@ -119,6 +119,7 @@ namespace ForcePlayV2
 
         private void Explorer_Button_Click(object sender, EventArgs e)
         {
+            // Hier wird das Arbeitsverzeichnis ausgeführt.
             Process.Start("explorer.exe");
         }
     }

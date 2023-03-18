@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MeineSpiele));
             publisher_label = new Label();
             spieleListBox = new ListBox();
             titel_label = new Label();
@@ -46,6 +47,7 @@
             startGame_button = new Button();
             zuletztGesp = new TextBox();
             instDatum = new TextBox();
+            explorer_Button = new Button();
             SuspendLayout();
             // 
             // publisher_label
@@ -174,7 +176,7 @@
             instPfad.Location = new Point(532, 406);
             instPfad.Margin = new Padding(2);
             instPfad.Name = "instPfad";
-            instPfad.Size = new Size(870, 37);
+            instPfad.Size = new Size(830, 37);
             instPfad.TabIndex = 25;
             // 
             // titel
@@ -245,6 +247,17 @@
             instDatum.Size = new Size(870, 37);
             instDatum.TabIndex = 31;
             // 
+            // explorer_Button
+            // 
+            explorer_Button.Cursor = Cursors.Hand;
+            explorer_Button.Image = (Image)resources.GetObject("explorer_Button.Image");
+            explorer_Button.Location = new Point(1364, 405);
+            explorer_Button.Name = "explorer_Button";
+            explorer_Button.Size = new Size(38, 38);
+            explorer_Button.TabIndex = 32;
+            explorer_Button.UseVisualStyleBackColor = true;
+            explorer_Button.Click += Explorer_Button_Click;
+            // 
             // MeineSpiele
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
@@ -253,6 +266,7 @@
             BackColor = Color.Silver;
             ClientSize = new Size(1432, 782);
             ControlBox = false;
+            Controls.Add(explorer_Button);
             Controls.Add(instDatum);
             Controls.Add(startGame_button);
             Controls.Add(sfChanges_button);
@@ -300,5 +314,6 @@
         private Button startGame_button;
         private TextBox zuletztGesp;
         private TextBox instDatum;
+        private Button explorer_Button;
     }
 }

@@ -218,25 +218,60 @@ namespace ForcePlayV2
             // Falls das angegeben Verzeichnis nicht existiert, poppt eine Fehlermeldung auf.
             else
             {
-                // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
-                using Transparenzschicht transparenzschicht = new Transparenzschicht();
+                // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
+                if (spieleList.Count <= 0)
+                {
+                    // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                    using Transparenzschicht transparenzschicht = new Transparenzschicht();
 
-                // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
-                // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
-                transparenzschicht.Show();
+                    // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                    // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                    transparenzschicht.Show();
 
-                // Hier wird ein Objekt des 'Fehlermeldung2' Forms generiert.
-                Fehlermeldung2 fehlermeldung = new Fehlermeldung2();
+                    // Hier wird ein Objekt des 'Fehlermeldung4' Forms generiert.
+                    Fehlermeldung4 fehlermeldung = new Fehlermeldung4();
 
-                // Hier wird festgelegt, dass das 'Fehlermeldung2' Form als die vorderste Anwendung gezählt wird.
-                fehlermeldung.TopLevel = true;
+                    // Hier wird festgelegt, dass das 'Fehlermeldung4' Form als die vorderste Anwendung gezählt wird.
+                    fehlermeldung.TopLevel = true;
 
-                // Hier wird die Sichtbarkeit des 'Fehlermeldung2' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
-                fehlermeldung.BringToFront();
+                    // Hier wird die Sichtbarkeit des 'Fehlermeldung4' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                    fehlermeldung.BringToFront();
 
-                // Hier poppt das Form 'Fehlermeldung2' auf.
-                fehlermeldung.ShowDialog();
+                    // Hier poppt das Form 'Fehlermeldung4' auf.
+                    fehlermeldung.ShowDialog();
+
+                    // Alle eingegebene Werte werden verworfen.
+                    Text_Clear();
+                }
+
+                else
+                {
+                    // Hier wird ein Objekt des 'Transparenzschicht' Forms generiert.
+                    using Transparenzschicht transparenzschicht = new Transparenzschicht();
+
+                    // Hier erscheint das Form 'Transparenzschicht' im Hintergrund.
+                    // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
+                    transparenzschicht.Show();
+
+                    // Hier wird ein Objekt des 'Fehlermeldung2' Forms generiert.
+                    Fehlermeldung2 fehlermeldung = new Fehlermeldung2();
+
+                    // Hier wird festgelegt, dass das 'Fehlermeldung2' Form als die vorderste Anwendung gezählt wird.
+                    fehlermeldung.TopLevel = true;
+
+                    // Hier wird die Sichtbarkeit des 'Fehlermeldung2' Forms sichergestellt, indem es an die Vorderseite vor allen Steuerelementen gesetzt wird.
+                    fehlermeldung.BringToFront();
+
+                    // Hier poppt das Form 'Fehlermeldung2' auf.
+                    fehlermeldung.ShowDialog();
+                }
             }
+        }
+
+        private void Explorer_Button_Click(object sender, EventArgs e)
+        {
+            // Hier wird das Arbeitsverzeichnis ausgeführt.
+            Process.Start("explorer.exe");
         }
     }
 }
