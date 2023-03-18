@@ -34,6 +34,7 @@
             logo_label = new Label();
             exit_button = new Button();
             navigationBar_panel = new Panel();
+            easterEgg = new Button();
             info_button = new Button();
             content_panel = new Panel();
             navigationBar_panel.SuspendLayout();
@@ -82,10 +83,21 @@
             // navigationBar_panel
             // 
             navigationBar_panel.BackColor = Color.FromArgb(0, 0, 64);
+            navigationBar_panel.Controls.Add(easterEgg);
             navigationBar_panel.Controls.Add(info_button);
+            navigationBar_panel.Controls.Add(logo_label);
             navigationBar_panel.Controls.Add(meineSpiele_button);
             resources.ApplyResources(navigationBar_panel, "navigationBar_panel");
             navigationBar_panel.Name = "navigationBar_panel";
+            // 
+            // easterEgg
+            // 
+            easterEgg.Cursor = Cursors.Hand;
+            resources.ApplyResources(easterEgg, "easterEgg");
+            easterEgg.ForeColor = Color.White;
+            easterEgg.Name = "easterEgg";
+            easterEgg.UseVisualStyleBackColor = true;
+            easterEgg.Click += easterEgg_Click;
             // 
             // info_button
             // 
@@ -110,7 +122,6 @@
             ControlBox = false;
             Controls.Add(content_panel);
             Controls.Add(exit_button);
-            Controls.Add(logo_label);
             Controls.Add(neuesSpielHinzufügen_button);
             Controls.Add(navigationBar_panel);
             Name = "Menue";
@@ -127,5 +138,6 @@
         private Panel navigationBar_panel;
         private Panel content_panel;
         private Button info_button;
+        private Button easterEgg;
     }
 }

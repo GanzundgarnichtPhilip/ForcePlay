@@ -15,14 +15,14 @@ namespace ForcePlayV2
             foreach (Form form in Application.OpenForms)
             {
                 // Falls ein Form der Klasse 'MeineSpiele' geoeffnet ist, wird es geschlossen.
-                if (form is MeineSpiele)             
+                if (form is MeineSpiele)
                 {
                     form.Close();
                     break;
                 }
 
                 // Falls ein Form der Klasse 'NeuesSpielHinzufuegen' geoeffnet ist, wird es geschlossen.
-                if (form is NeuesSpielHinzufuegen)              
+                if (form is NeuesSpielHinzufuegen)
                 {
                     form.Close();
                     break;
@@ -43,7 +43,7 @@ namespace ForcePlayV2
             meineSpiele.BringToFront();
 
             // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'MeineSpiele') ermoeglicht.
-            meineSpiele.Show();         
+            meineSpiele.Show();
         }
 
         private void NeuesSpielHinzufügen_button_Click(object sender, EventArgs e)
@@ -51,10 +51,10 @@ namespace ForcePlayV2
             // Hier werden nach offenen Forms gesucht und unter der Variable 'form' initialisiert.
             // -> Die Schleifenanweisung 'foreach' sorgt dafuer, dass jedes Formular durchlaufen bzw. geprueft wird.
             // -> Der Opperator 'in' prueft, ob das aktuelle Element der Sammlung 'offenen Forms' zugehoert.
-            foreach (Form form in Application.OpenForms)     
+            foreach (Form form in Application.OpenForms)
             {
                 // Falls ein Form der Klasse 'MeineSpiele' geoeffnet ist, wird es geschlossen.
-                if (form is MeineSpiele)     
+                if (form is MeineSpiele)
                 {
                     form.Close();
                     break;
@@ -62,7 +62,7 @@ namespace ForcePlayV2
 
                 // Falls ein Form der Klasse 'NeuesSpielHinzufuegen' geoeffnet ist, wird es geschlossen.
                 if (form is NeuesSpielHinzufuegen)
-                
+
                 {
                     form.Close();
                     break;
@@ -70,7 +70,7 @@ namespace ForcePlayV2
             }
 
             // Hier wird ein Objekt des 'NeuesSpielHinzufuegen' Forms generiert.
-            NeuesSpielHinzufuegen neuesSpielHinzufügen = new NeuesSpielHinzufuegen();     
+            NeuesSpielHinzufuegen neuesSpielHinzufügen = new NeuesSpielHinzufuegen();
 
             // Hier wird festgelegt, dass das 'NeuesSpielHinzufuegen' Form nicht als die vorderste Anwendung gezählt wird.
             // -> Das ist wichtig, damit das 'NeuesSpielHinzufuegen' Form als eine Teilanwendung genutzt werden kann.
@@ -83,13 +83,13 @@ namespace ForcePlayV2
             neuesSpielHinzufügen.BringToFront();
 
             // Hier wird die Interaktion mit dem angezeigten Form (in diesem Fall 'NeuesSpielHinzufuegen') ermoeglicht.
-            neuesSpielHinzufügen.Show();    
+            neuesSpielHinzufügen.Show();
         }
 
         private void Exit_button_Click(object sender, EventArgs e)
         {
             // Das Menue (und zugleich das ganze Programm) wird geschlossen.
-            Close();         
+            Close();
         }
 
         private void content_panel_Paint(object sender, PaintEventArgs e)
@@ -117,6 +117,19 @@ namespace ForcePlayV2
 
             // Hier poppt das Form 'Informationsanzeige' auf.
             informationsanzeige.ShowDialog();
+        }
+        /// <summary>
+        /// EasterEgg Button funktion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void easterEgg_Click(object sender, EventArgs e)
+        {
+            // Objekt des BreakOut Spiels wird erzeugt
+            BreakOut breakout = new BreakOut();
+
+            // Easter Egg wird geöffnet
+            breakout.ShowDialog();
         }
     }
 }
