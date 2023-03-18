@@ -1,6 +1,6 @@
 ﻿namespace ForcePlayV2
 {
-    partial class FehlermeldungNeuesSpielHinzufügen
+    partial class Fehlermeldung2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ueberschrift_label = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fehlermeldung2));
             ok_button = new Button();
             fehlerbeschreibung_textBox = new TextBox();
+            ueberschrift_label = new Label();
             SuspendLayout();
-            // 
-            // ueberschrift_label
-            // 
-            ueberschrift_label.BackColor = Color.Silver;
-            ueberschrift_label.Font = new Font("Agency FB", 28.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            ueberschrift_label.ForeColor = Color.Black;
-            ueberschrift_label.Location = new Point(0, 0);
-            ueberschrift_label.MaximumSize = new Size(530, 85);
-            ueberschrift_label.MinimumSize = new Size(530, 85);
-            ueberschrift_label.Name = "ueberschrift_label";
-            ueberschrift_label.Size = new Size(530, 85);
-            ueberschrift_label.TabIndex = 0;
-            ueberschrift_label.Text = "ACHTUNG";
-            ueberschrift_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ok_button
             // 
@@ -57,7 +44,7 @@
             ok_button.MinimumSize = new Size(170, 50);
             ok_button.Name = "ok_button";
             ok_button.Size = new Size(170, 50);
-            ok_button.TabIndex = 1;
+            ok_button.TabIndex = 4;
             ok_button.Text = "OK";
             ok_button.UseVisualStyleBackColor = true;
             ok_button.Click += Ok_button_Click;
@@ -75,14 +62,27 @@
             fehlerbeschreibung_textBox.Name = "fehlerbeschreibung_textBox";
             fehlerbeschreibung_textBox.ReadOnly = true;
             fehlerbeschreibung_textBox.Size = new Size(530, 150);
-            fehlerbeschreibung_textBox.TabIndex = 2;
-            fehlerbeschreibung_textBox.Text = "Bitte füllen Sie alle Felder aus, um das von Ihnen gewünschte Spiel dem ForcePlay Game Launcher hinzufügen zu können.\r\n\r\nKlicken Sie auf \"OK\", um den ForcePlay Game Launcher weiter bedienen zu können.";
+            fehlerbeschreibung_textBox.TabIndex = 5;
+            fehlerbeschreibung_textBox.Text = resources.GetString("fehlerbeschreibung_textBox.Text");
             // 
-            // FehlermeldungNeuesSpielHinzufügen
+            // ueberschrift_label
+            // 
+            ueberschrift_label.BackColor = Color.Silver;
+            ueberschrift_label.Font = new Font("Agency FB", 28.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            ueberschrift_label.ForeColor = Color.Black;
+            ueberschrift_label.Location = new Point(0, 0);
+            ueberschrift_label.MaximumSize = new Size(530, 85);
+            ueberschrift_label.MinimumSize = new Size(530, 85);
+            ueberschrift_label.Name = "ueberschrift_label";
+            ueberschrift_label.Size = new Size(530, 85);
+            ueberschrift_label.TabIndex = 3;
+            ueberschrift_label.Text = "ACHTUNG";
+            ueberschrift_label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Fehlermeldung2
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            AutoSize = true;
             BackColor = Color.Silver;
             ClientSize = new Size(524, 309);
             ControlBox = false;
@@ -92,7 +92,7 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximumSize = new Size(530, 315);
             MinimumSize = new Size(530, 315);
-            Name = "FehlermeldungNeuesSpielHinzufügen";
+            Name = "Fehlermeldung2";
             StartPosition = FormStartPosition.CenterScreen;
             ResumeLayout(false);
             PerformLayout();
@@ -100,8 +100,8 @@
 
         #endregion
 
-        private Label ueberschrift_label;
         private Button ok_button;
         private TextBox fehlerbeschreibung_textBox;
+        private Label ueberschrift_label;
     }
 }

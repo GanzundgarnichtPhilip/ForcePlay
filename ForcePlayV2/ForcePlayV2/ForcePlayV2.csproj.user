@@ -7,6 +7,12 @@
     <Compile Update="Fehlermeldung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Fehlermeldung3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Fehlermeldung4.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FehlermeldungMeineSpiele.cs">
       <SubType>Form</SubType>
     </Compile>
