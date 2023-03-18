@@ -178,23 +178,23 @@
     <value>NoControl</value>
   </data>
   <data name="meineSpiele_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 200</value>
+    <value>0, 160</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="meineSpiele_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="meineSpiele_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="meineSpiele_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="meineSpiele_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="meineSpiele_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="meineSpiele_button.TabIndex" type="System.Int32, mscorlib">
@@ -216,7 +216,7 @@
     <value>navigationBar_panel</value>
   </data>
   <data name="&gt;&gt;meineSpiele_button.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="neuesSpielHinzufügen_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -328,22 +328,22 @@
     <value>NoControl</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 315</value>
+    <value>0, 252</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="neuesSpielHinzufügen_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="neuesSpielHinzufügen_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="neuesSpielHinzufügen_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="neuesSpielHinzufügen_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="neuesSpielHinzufügen_button.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -364,7 +364,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;neuesSpielHinzufügen_button.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="logo_label.Font" type="System.Drawing.Font, System.Drawing">
     <value>Agency FB, 48pt, style=Bold, Italic</value>
@@ -373,13 +373,13 @@
     <value>NoControl</value>
   </data>
   <data name="logo_label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>2, 0</value>
   </data>
   <data name="logo_label.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="logo_label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 120</value>
+    <value>344, 96</value>
   </data>
   <data name="logo_label.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -397,7 +397,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;logo_label.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>navigationBar_panel</value>
   </data>
   <data name="&gt;&gt;logo_label.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -503,22 +503,22 @@
     <value>NoControl</value>
   </data>
   <data name="exit_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 430</value>
+    <value>0, 344</value>
   </data>
   <data name="exit_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="exit_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="exit_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="exit_button.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="exit_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="exit_button.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -540,6 +540,36 @@
   </data>
   <data name="&gt;&gt;exit_button.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="easterEgg.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="easterEgg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Agency FB, 19.800001pt, style=Bold</value>
+  </data>
+  <data name="easterEgg.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="easterEgg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 218</value>
+  </data>
+  <data name="easterEgg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="easterEgg.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;easterEgg.Name" xml:space="preserve">
+    <value>easterEgg</value>
+  </data>
+  <data name="&gt;&gt;easterEgg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;easterEgg.Parent" xml:space="preserve">
+    <value>navigationBar_panel</value>
+  </data>
+  <data name="&gt;&gt;easterEgg.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="info_button.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -652,19 +682,19 @@
     <value>MiddleLeft</value>
   </data>
   <data name="info_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 545</value>
+    <value>0, 436</value>
   </data>
   <data name="info_button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="info_button.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="info_button.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="info_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 100</value>
+    <value>344, 80</value>
   </data>
   <data name="info_button.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -685,7 +715,7 @@
     <value>navigationBar_panel</value>
   </data>
   <data name="&gt;&gt;info_button.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="navigationBar_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -700,7 +730,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="navigationBar_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 778</value>
+    <value>344, 622</value>
   </data>
   <data name="navigationBar_panel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -715,19 +745,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;navigationBar_panel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="content_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="content_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 0</value>
+    <value>344, 0</value>
   </data>
   <data name="content_panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="content_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 778</value>
+    <value>779, 622</value>
   </data>
   <data name="content_panel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -748,10 +778,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1404, 778</value>
+    <value>1123, 622</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
