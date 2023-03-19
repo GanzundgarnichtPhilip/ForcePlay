@@ -93,9 +93,13 @@ namespace ForcePlayV2
                 // Alles wird neu geschrieben, nur ohne selText
                 File.WriteAllLines("daten.txt", unselText);
 
-                spieleList.RemoveAt(i);
+                // Inhalt der Liste löschen
+                spieleList.Clear();
                 Text_Clear();
                 zuletztGesp.Text = "";
+                // Daten aus der .txt Datei in Liste aufnehmen
+                // Bei uns gab es Probleme mit RemoveAt(i), weshalb wir uns für diesen Weg entschieden haben
+                DatenLesen();
                 spieleBindingSource.ResetBindings(false);
             }
         }
