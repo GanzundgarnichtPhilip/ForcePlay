@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Net.Security;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.AxHost;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.IO;
 
 namespace ForcePlayV2
 {
@@ -86,10 +73,19 @@ namespace ForcePlayV2
             if (i != -1)
             {
                 // Objekt das man ausgewählt hat wird gelöscht
-                spieleList.RemoveAt(i);
+
+                string titelText = (spieleListBox.SelectedItem as Spiele).Titel;
+                string publisherText = (spieleListBox.SelectedItem as Spiele).Publisher;
+                string genresText = (spieleListBox.SelectedItem as Spiele).Kategorie;
+                string uskText = (spieleListBox.SelectedItem as Spiele).Usk;
+                string zuletztGespText = (spieleListBox.SelectedItem as Spiele).Zuletzt;
+                string instDatumText = (spieleListBox.SelectedItem as Spiele).Installationsdatum;
+                string instPfadText = (spieleListBox.SelectedItem as Spiele).Installationspfad;
+
+
 
                 // Das was in der .txt Datei gelöscht werden soll
-                var selText = titel.Text + ";" + publisher.Text + ";" + genres.Text + ";" + usk.Text + ";" + zuletztGesp.Text + ";" + instDatum.Text + ";" + instPfad.Text + ";";
+                var selText = titelText + ";" + publisherText + ";" + genresText + ";" + uskText + ";" + zuletztGespText + ";" + instDatumText + ";" + instPfadText + ";";
 
                 // Das was erhalten bleiben soll, also alle Zeilen außer die ausgewählte
                 var unselText = from line in File.ReadAllLines("daten.txt").Where(l => l != selText) select line;
@@ -97,6 +93,7 @@ namespace ForcePlayV2
                 // Alles wird neu geschrieben, nur ohne selText
                 File.WriteAllLines("daten.txt", unselText);
 
+                spieleList.RemoveAt(i);
                 Text_Clear();
                 zuletztGesp.Text = "";
                 spieleBindingSource.ResetBindings(false);
@@ -218,10 +215,10 @@ namespace ForcePlayV2
                     {
                         // string für derzeitigen Inhalt der .txt Datei festlegen
                         string text = File.ReadAllText("daten.txt");
-                        
+
                         // im derzeitigem Inhalt wird "line" mit aktuellen werten ersetzt
                         text = text.Replace(line, titel.Text + ";" + publisher.Text + ";" + genres.Text + ";" + usk.Text + ";" + zuletztGesp.Text + ";" + instDatum.Text + ";" + instPfad.Text + ";");
-                        
+
                         // Derzeitiger Inhalt der .txt Datei wird überschrieben mit aktuellen Daten
                         File.WriteAllText("daten.txt", text);
                     }
