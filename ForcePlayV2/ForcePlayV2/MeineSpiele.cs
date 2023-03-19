@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace ForcePlayV2
 {
@@ -33,6 +34,12 @@ namespace ForcePlayV2
         {
             // Spiel aus NeuesSpielHinzufügen-Form wird spieleList-Liste hinzugefügt
             spieleList.Add(meinSpiel);
+
+            // StreamWriter der Text an die daten.txt Datei anhängt
+            using(StreamWriter sw = File.AppendText("daten.txt"))
+            {
+                sw.WriteLine(meinSpiel.Titel + ";" + meinSpiel.Publisher + ";" + meinSpiel.Kategorie + ";" + meinSpiel.Usk + ";" + meinSpiel.Zuletzt + ";" + meinSpiel.Installationsdatum + ";" + meinSpiel.Installationspfad + ";");
+            }
         }
 
         private void MeineSpiele_Load(object sender, EventArgs e)
@@ -286,6 +293,36 @@ namespace ForcePlayV2
         {
             // Hier wird das Arbeitsverzeichnis ausgeführt.
             Process.Start("explorer.exe");
+        }
+
+        public void DatenLesen()
+        {
+            // StreamReader der aus der daten.txt Datei liest
+            StreamReader sr = new StreamReader("daten.txt");
+            string dateiZeile;
+
+            // Solange man nicht am ende der .txt Datei ist
+            while (!sr.EndOfStream)
+            {
+                Spiele diesesSpiel = new Spiele();
+                dateiZeile = sr.ReadLine();
+
+                // Array für die Daten, die vor den ";" stehen um unterscheiden zu können, z.B. was in der Zeile der Titel ist
+                string[] teilString = dateiZeile.Split(';');
+
+                // Liest Daten aus der .txt Datei
+                diesesSpiel.Titel = teilString[0];
+                diesesSpiel.Publisher = teilString[1];
+                diesesSpiel.Kategorie = teilString[2];
+                diesesSpiel.Usk = teilString[3];
+                diesesSpiel.Zuletzt = teilString[4];
+                diesesSpiel.Installationsdatum = teilString[5];
+                diesesSpiel.Installationspfad = teilString[6];
+                
+                //Spiel wird der Liste und somit der ListBox hinzugefügt
+                spieleList.Add(diesesSpiel);
+            }
+            sr.Close();
         }
     }
 }
