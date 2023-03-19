@@ -100,7 +100,7 @@ namespace ForcePlayV2
         private void SfChanges_button_Click(object sender, EventArgs e)
         {
             // Fehlerprüfung, ob man alle Felder ausgefüllt hat.
-            if (titel.Text == "" || publisher.Text == "" || genres.Text == "" || usk.Text == "" || instDatum.Text == "" || instPfad.Text == "")
+            if (titel.Text == "" || publisher.Text == "" || genres.Text == "" || usk.Text == "" || instPfad.Text == "")
             {
                 // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
                 if (spieleList.Count <= 0)
@@ -155,7 +155,7 @@ namespace ForcePlayV2
                 }
             }
 
-            if (titel.Text != "" || publisher.Text != "" || genres.Text != "" || usk.Text != "" || instDatum.Text != "" || instPfad.Text != "")
+            if (titel.Text != "" || publisher.Text != "" || genres.Text != "" || usk.Text != "" || instPfad.Text != "")
             {
                 // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
                 if (spieleList.Count <= 0)
@@ -219,7 +219,7 @@ namespace ForcePlayV2
                 string datumFormat = "dd.MM.yyyy HH:mm";
 
                 // Hier wird der 'zuletztGespielt' Variable das heutige Datum als Wert initialsiert.
-                // Außerdem wird festgelegt, dass die Ausgabe über die (zuvor) festegelgte Schreibweise ausgeschrieben wird.
+                // Außerdem wird festgelegt, dass die Ausgabe über die (zuvor) festegelgte Schreibweise ausgegeben wird.
                 zuletztGespielt = DateTime.Now.ToString(datumFormat);
 
                 // Hier wird dem Steuerelement (welch das "Zuletzt gespielt" Attribut vertritt) der Wert der 'zuletztGespielt' Variable zugewiesen.

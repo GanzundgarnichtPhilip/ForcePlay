@@ -7,6 +7,8 @@ namespace ForcePlayV2
 {
     public partial class NeuesSpielHinzufuegen : Form
     {
+        string instDatum;
+
         public NeuesSpielHinzufuegen()
         {
 
@@ -33,7 +35,6 @@ namespace ForcePlayV2
             // Die Eingabe wird geleert
             titel.Clear();
             installationspfad.Clear();
-            installationsdatum.Value = DateTime.Today;
             kategorie.Clear();
             publisher.Clear();
             usk.Text = null;
@@ -74,7 +75,6 @@ namespace ForcePlayV2
                 // Textfelder werden gecleart.
                 titel.Clear();
                 installationspfad.Clear();
-                installationsdatum.Value = DateTime.Today;
                 kategorie.Clear();
                 publisher.Clear();
                 usk.Text = null;
@@ -85,9 +85,16 @@ namespace ForcePlayV2
                 // Objekt von der Klasse Spiel wird erzeugt.
                 var spiel = new Spiele();
 
+                // Hier wird eine Schreibweise festgelegt, wie das Datum ausgegeben werden soll.
+                string datumFormat = "dd.MM.yyyy";
+
+                // Hier wird der 'instDatum' Variable das heutige Datum als Wert initialsiert.
+                // Außerdem wird festgelegt, dass die Ausgabe über die (zuvor) festegelgte Schreibweise ausgegeben wird.
+                instDatum = DateTime.Now.ToString(datumFormat);
+
                 // Alle Daten werden den Attributen zugewiesen.
                 spiel.Titel = titel.Text;
-                spiel.Installationsdatum = installationsdatum.Text;
+                spiel.Installationsdatum = instDatum;
                 spiel.Installationspfad = installationspfad.Text;
                 spiel.Kategorie = kategorie.Text;
                 spiel.Publisher = publisher.Text;
@@ -104,7 +111,6 @@ namespace ForcePlayV2
                 // Textfelder werden gecleart.
                 titel.Clear();
                 installationspfad.Clear();
-                installationsdatum.Value = DateTime.Today;
                 kategorie.Clear();
                 publisher.Clear();
                 usk.Text = null;
@@ -116,6 +122,19 @@ namespace ForcePlayV2
         {
             // Hier wird das Arbeitsverzeichnis ausgeführt.
             Process.Start("explorer.exe");
+        }
+
+        private void NeuesSpielHinzufuegen_Load(object sender, EventArgs e)
+        {
+            // Hier wird eine Schreibweise festgelegt, wie das Datum ausgegeben werden soll.
+            string datumFormat = "dd.MM.yyyy";
+
+            // Hier wird der 'instDatum' Variable das heutige Datum als Wert initialsiert.
+            // Außerdem wird festgelegt, dass die Ausgabe über die (zuvor) festegelgte Schreibweise ausgegeben wird.
+            instDatum = DateTime.Now.ToString(datumFormat);
+
+            // Hier wird dem Steuerelement (welch das "Installationsdatum" Attribut vertritt) der Wert der 'ausgegebenesDatum' Variable zugewiesen.
+            installationsdatum.Text = Convert.ToString(instDatum);
         }
     }
 }
