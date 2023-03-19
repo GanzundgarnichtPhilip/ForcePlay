@@ -231,8 +231,6 @@ namespace ForcePlayV2
                     (spieleListBox.SelectedItem as Spiele).Installationsdatum = instDatum.Text;
                     (spieleListBox.SelectedItem as Spiele).Installationspfad = instPfad.Text;
 
-
-
                     spieleListBox.DisplayMember = null;
                     spieleListBox.DisplayMember = "ListBoxAusgabe";
                 }
