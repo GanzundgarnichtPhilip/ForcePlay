@@ -12,8 +12,12 @@ namespace ForcePlayV2
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Menue());
+            MeineSpiele meineSpiele = new MeineSpiele();
 
+            // Daten aus der daten.txt Datei werden gelesen und sind somit in der ListBox vorhanden
+            meineSpiele.DatenLesen();
+
+            Application.Run(new Menue());
         }
     }
 }
