@@ -242,8 +242,8 @@ namespace ForcePlayV2
                     // -> Diese Funktion ist nötig, damit der Benutzer seinen Fokus möglichst auf die Fehlermeldung setzt.
                     transparenzschicht.Show();
 
-                    // Hier wird ein Objekt des 'Fehlermeldung4' Forms generiert.
-                    Fehlermeldung4 fehlermeldung = new Fehlermeldung4();
+                    // Hier wird ein Objekt des 'Fehlermeldung5' Forms generiert.
+                    Fehlermeldung5 fehlermeldung = new Fehlermeldung5();
 
                     // Hier wird festgelegt, dass das 'Fehlermeldung4' Form als die vorderste Anwendung gezählt wird.
                     fehlermeldung.TopLevel = true;
