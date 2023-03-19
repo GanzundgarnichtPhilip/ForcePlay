@@ -32,7 +32,6 @@ namespace ForcePlayV2
         {
             // Die Eingabe wird geleert
             titel.Clear();
-            zuletztGespielt.Clear();
             installationspfad.Clear();
             installationsdatum.Value = DateTime.Today;
             kategorie.Clear();
@@ -48,7 +47,6 @@ namespace ForcePlayV2
             // Überprüfung der Eingabe.
             // -> Falls einem Attribut kein neuer Wert zugewiesen wurde, poppt ein Form der Klasse 'FehlermeldungNeuesSpielHinzufügen' und 'Transparentschicht' auf.
             if (titel.Text == ""
-                || zuletztGespielt.Text == ""
                 || installationspfad.Text == ""
                 || kategorie.Text == ""
                 || publisher.Text == ""
@@ -75,7 +73,6 @@ namespace ForcePlayV2
 
                 // Textfelder werden gecleart.
                 titel.Clear();
-                zuletztGespielt.Clear();
                 installationspfad.Clear();
                 installationsdatum.Value = DateTime.Today;
                 kategorie.Clear();
@@ -90,7 +87,6 @@ namespace ForcePlayV2
 
                 // Alle Daten werden den Attributen zugewiesen.
                 spiel.Titel = titel.Text;
-                spiel.Zuletzt = zuletztGespielt.Text;
                 spiel.Installationsdatum = installationsdatum.Text;
                 spiel.Installationspfad = installationspfad.Text;
                 spiel.Kategorie = kategorie.Text;
@@ -107,7 +103,6 @@ namespace ForcePlayV2
 
                 // Textfelder werden gecleart.
                 titel.Clear();
-                zuletztGespielt.Clear();
                 installationspfad.Clear();
                 installationsdatum.Value = DateTime.Today;
                 kategorie.Clear();

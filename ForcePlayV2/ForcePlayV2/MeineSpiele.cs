@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Net.Security;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,11 @@ namespace ForcePlayV2
 {
     public partial class MeineSpiele : Form
     {
-
         static List<Spiele> spieleList = new List<Spiele>();
 
         BindingSource spieleBindingSource = new BindingSource();
+
+        string zuletztGespielt;
 
         public MeineSpiele()
         {
@@ -79,6 +81,7 @@ namespace ForcePlayV2
                 // Objekt das man ausgewählt hat wird gelöscht
                 spieleList.RemoveAt(i);
                 Text_Clear();
+                zuletztGesp.Text = "";
                 spieleBindingSource.ResetBindings(false);
             }
         }
@@ -89,8 +92,7 @@ namespace ForcePlayV2
             titel.Clear();
             publisher.Clear();
             genres.Clear();
-            zuletztGesp.Clear();
-            usk.Text = "";
+            usk.Text = null;
             instDatum.Clear();
             instPfad.Clear();
         }
@@ -98,7 +100,7 @@ namespace ForcePlayV2
         private void SfChanges_button_Click(object sender, EventArgs e)
         {
             // Fehlerprüfung, ob man alle Felder ausgefüllt hat.
-            if (titel.Text == "" || publisher.Text == "" || genres.Text == "" || zuletztGesp.Text == "" || usk.Text == "" || instDatum.Text == "" || instPfad.Text == "")
+            if (titel.Text == "" || publisher.Text == "" || genres.Text == "" || usk.Text == "" || instDatum.Text == "" || instPfad.Text == "")
             {
                 // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
                 if (spieleList.Count <= 0)
@@ -153,7 +155,7 @@ namespace ForcePlayV2
                 }
             }
 
-            if (titel.Text != "" || publisher.Text != "" || genres.Text != "" || zuletztGesp.Text != "" || usk.Text != "" || instDatum.Text != "" || instPfad.Text != "")
+            if (titel.Text != "" || publisher.Text != "" || genres.Text != "" || usk.Text != "" || instDatum.Text != "" || instPfad.Text != "")
             {
                 // Überprüfung, ob ein Objekt der Klasse 'Spiele' vorhanden ist.
                 if (spieleList.Count <= 0)
@@ -187,7 +189,6 @@ namespace ForcePlayV2
                     (spieleListBox.SelectedItem as Spiele).Titel = titel.Text;
                     (spieleListBox.SelectedItem as Spiele).Publisher = publisher.Text;
                     (spieleListBox.SelectedItem as Spiele).Kategorie = genres.Text;
-                    (spieleListBox.SelectedItem as Spiele).Zuletzt = zuletztGesp.Text;
                     (spieleListBox.SelectedItem as Spiele).Usk = usk.Text;
                     (spieleListBox.SelectedItem as Spiele).Installationsdatum = instDatum.Text;
                     (spieleListBox.SelectedItem as Spiele).Installationspfad = instPfad.Text;
@@ -213,6 +214,19 @@ namespace ForcePlayV2
             {
                 // Hier wird die Anwendung gestartet.
                 spielStart.Start();
+
+                // Hier wird eine Schreibweise festgelegt, wie das Datum ausgegeben werden soll.
+                string datumFormat = "dd.MM.yyyy HH:mm";
+
+                // Hier wird der 'zuletztGespielt' Variable das heutige Datum als Wert initialsiert.
+                // Außerdem wird festgelegt, dass die Ausgabe über die (zuvor) festegelgte Schreibweise ausgeschrieben wird.
+                zuletztGespielt = DateTime.Now.ToString(datumFormat);
+
+                // Hier wird dem Steuerelement (welch das "Zuletzt gespielt" Attribut vertritt) der Wert der 'zuletztGespielt' Variable zugewiesen.
+                zuletztGesp.Text = Convert.ToString(zuletztGespielt);
+
+                // Hier wird dem Attribut 'Zuletzt' der 'Spiele' Klasse der Wert der 'zuletztGespielt' Variable zugewiesen (- prinzipiel -).
+                (spieleListBox.SelectedItem as Spiele).Zuletzt = zuletztGesp.Text;
             }
 
             // Falls das angegeben Verzeichnis nicht existiert, poppt eine Fehlermeldung auf.
