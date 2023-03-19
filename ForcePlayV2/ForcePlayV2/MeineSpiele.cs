@@ -327,32 +327,35 @@ namespace ForcePlayV2
 
         public void DatenLesen()
         {
-            // StreamReader der aus der daten.txt Datei liest
-            StreamReader sr = new StreamReader("daten.txt");
-            string dateiZeile;
-
-            // Solange man nicht am ende der .txt Datei ist
-            while (!sr.EndOfStream)
+            if (File.Exists("daten.txt"))
             {
-                Spiele diesesSpiel = new Spiele();
-                dateiZeile = sr.ReadLine();
+                // StreamReader der aus der daten.txt Datei liest
+                StreamReader sr = new StreamReader("daten.txt");
+                string dateiZeile;
 
-                // Array für die Daten, die vor den ";" stehen um unterscheiden zu können, z.B. was in der Zeile der Titel ist
-                string[] teilString = dateiZeile.Split(';');
+                // Solange man nicht am ende der .txt Datei ist
+                while (!sr.EndOfStream)
+                {
+                    Spiele diesesSpiel = new Spiele();
+                    dateiZeile = sr.ReadLine();
 
-                // Liest Daten aus der .txt Datei
-                diesesSpiel.Titel = teilString[0];
-                diesesSpiel.Publisher = teilString[1];
-                diesesSpiel.Kategorie = teilString[2];
-                diesesSpiel.Usk = teilString[3];
-                diesesSpiel.Zuletzt = teilString[4];
-                diesesSpiel.Installationsdatum = teilString[5];
-                diesesSpiel.Installationspfad = teilString[6];
+                    // Array für die Daten, die vor den ";" stehen um unterscheiden zu können, z.B. was in der Zeile der Titel ist
+                    string[] teilString = dateiZeile.Split(';');
 
-                //Spiel wird der Liste und somit der ListBox hinzugefügt
-                spieleList.Add(diesesSpiel);
+                    // Liest Daten aus der .txt Datei
+                    diesesSpiel.Titel = teilString[0];
+                    diesesSpiel.Publisher = teilString[1];
+                    diesesSpiel.Kategorie = teilString[2];
+                    diesesSpiel.Usk = teilString[3];
+                    diesesSpiel.Zuletzt = teilString[4];
+                    diesesSpiel.Installationsdatum = teilString[5];
+                    diesesSpiel.Installationspfad = teilString[6];
+
+                    //Spiel wird der Liste und somit der ListBox hinzugefügt
+                    spieleList.Add(diesesSpiel);
+                }
+                sr.Close();
             }
-            sr.Close();
         }
     }
 }

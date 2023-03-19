@@ -14,17 +14,15 @@ namespace ForcePlayV2
 
             MeineSpiele meineSpiele = new MeineSpiele();
 
+            Application.Run(new Menue());
+
+            // .txt Datei wird automatisch angelegt (falls diese noch nicht vorhanden ist)
+            File.Create("daten.txt");
+            // Ordner wird erstellt
+
             // Daten aus der daten.txt Datei werden gelesen und sind somit in der ListBox vorhanden
             meineSpiele.DatenLesen();
 
-            // .txt Datei wird automatisch angelegt (falls diese noch nicht vorhanden ist)
-            if (!File.Exists("daten.txt"))
-            {
-                // Ordner wird erstellt
-                File.Create("daten.txt");
-            }
-
-            Application.Run(new Menue());
         }
     }
 }
