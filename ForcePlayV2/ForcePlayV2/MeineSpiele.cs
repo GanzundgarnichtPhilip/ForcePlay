@@ -36,7 +36,7 @@ namespace ForcePlayV2
             spieleList.Add(meinSpiel);
 
             // StreamWriter der Text an die daten.txt Datei anhängt
-            using(StreamWriter sw = File.AppendText("daten.txt"))
+            using (StreamWriter sw = File.AppendText("daten.txt"))
             {
                 sw.WriteLine(meinSpiel.Titel + ";" + meinSpiel.Publisher + ";" + meinSpiel.Kategorie + ";" + meinSpiel.Usk + ";" + meinSpiel.Zuletzt + ";" + meinSpiel.Installationsdatum + ";" + meinSpiel.Installationspfad + ";");
             }
@@ -87,6 +87,18 @@ namespace ForcePlayV2
             {
                 // Objekt das man ausgewählt hat wird gelöscht
                 spieleList.RemoveAt(i);
+
+                // Das was in der .txt Datei gelöscht werden soll
+                var selText = titel.Text + ";" + publisher.Text + ";" + genres.Text + ";" + usk.Text + ";" + zuletztGesp.Text + ";" + instDatum.Text + ";" + instPfad.Text + ";";
+                
+                // Das was erhalten bleiben soll, also alle Zeilen außer die ausgewählte
+                var unselText =
+                    from line in File.ReadAllLines("daten.txt").Where(l => l != selText)
+                    select line;
+
+                // Alles wird neu geschrieben, nur ohne selText
+                File.WriteAllLines("daten.txt", unselText);
+
                 Text_Clear();
                 zuletztGesp.Text = "";
                 spieleBindingSource.ResetBindings(false);
@@ -318,7 +330,7 @@ namespace ForcePlayV2
                 diesesSpiel.Zuletzt = teilString[4];
                 diesesSpiel.Installationsdatum = teilString[5];
                 diesesSpiel.Installationspfad = teilString[6];
-                
+
                 //Spiel wird der Liste und somit der ListBox hinzugefügt
                 spieleList.Add(diesesSpiel);
             }
