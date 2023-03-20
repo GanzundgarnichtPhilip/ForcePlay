@@ -127,7 +127,7 @@ namespace ForcePlayV2
             if (openFileDialog.ShowDialog() == DialogResult.OK)
 
                 // ... wird hier der Pfad der jeweiligen Datei als ein Attribut der Datei initialisiert.
-                instPfad.Text = openFileDialog.FileName;
+                installationspfad.Text = openFileDialog.FileName;
         }
 
         private void NeuesSpielHinzufuegen_Load(object sender, EventArgs e)
