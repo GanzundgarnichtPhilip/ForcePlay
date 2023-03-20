@@ -120,8 +120,14 @@ namespace ForcePlayV2
 
         private void Explorer_Button_Click(object sender, EventArgs e)
         {
-            // Hier wird das Arbeitsverzeichnis ausgeführt.
-            Process.Start("explorer.exe");
+            // Hier wird ein Objekt der Klasse OpenFileDialog erzeugt.
+            var openFileDialog = new OpenFileDialog();
+
+            // Falls in dem geöffneten Arbeitsverzeichnis auf eine Datei geklickt wurde ...
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+
+                // ... wird hier der Pfad der jeweiligen Datei als ein Attribut der Datei initialisiert.
+                instPfad.Text = openFileDialog.FileName;
         }
 
         private void NeuesSpielHinzufuegen_Load(object sender, EventArgs e)
